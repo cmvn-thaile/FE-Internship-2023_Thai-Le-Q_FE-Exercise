@@ -1,0 +1,2 @@
+function sums(a, b) {
+  }
