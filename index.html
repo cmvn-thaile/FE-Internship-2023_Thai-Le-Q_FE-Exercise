@@ -9,229 +9,317 @@
     />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <img src="#" alt="E-Shop" />
-      </div>
-      <nav class="nav">
-        <ul>
-          <li class="nav-items"><a href="#">Men</a></li>
-          <li class="nav-items"><a href="#">Women</a></li>
-          <li class="nav-items"><a href="#">Kids</a></li>
+    <header>
+      <div class="container">
+        <h1 class="logo"><a>E-Shop</a></h1>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#">Men</a></li>
+            <li class="nav-item"><a href="#">Women</a></li>
+            <li class="nav-item"><a href="#">Kids</a></li>
+          </ul>
+        </nav>
+        <ul class="header-icons">
+          <li>
+            <a href=""><i class="bx bx-search-alt-2"></i></a>
+          </li>
+          <li>
+            <a href=""> <i class="bx bx-cart-alt"></i></a>
+          </li>
+          <li>
+            <a href=""> <i class="bx bx-user"></i></a>
+          </li>
         </ul>
-      </nav>
-      <ul class="header-icons">
-        <li>
-          <i class="bx bx-search-alt-2"></i>
-        </li>
-        <li>
-          <i class="bx bx-cart-alt"></i>
-        </li>
-        <li>
-          <i class="bx bx-user"></i>
-        </li>
-      </ul>
+      </div>
     </header>
 
-    <section class="billboard">
-      <h1 class="billboard-title">Sale of the summer collection</h1>
-      <button class="billboard-button">
-        <i class="bx bx-right-arrow-circle"></i>
-        <p class="upper-case">SHOP NOW</p>
-      </button>
-      <div class="billboard-features">
-        <div class="features-group">
-          <i class="bx bxs-truck"></i>
-          <p class="txt-bold">Free shipping</p>
-          <p class="features-desc">On purchases over $199</p>
-        </div>
-        <div class="features-group">
-          <i class="bx bx-happy-alt"></i>
-          <p class="txt-bold">99% Satisfied Customers</p>
-          <p class="features-desc">Our clients opinions speak for themselves</p>
-        </div>
-        <div class="features-group">
-          <i class="bx bx-check-shield"></i>
-          <p class="txt-bold">Originality Guaranteed</p>
-          <p class="features-desc">
-            30 days warranty for each product from our store
-          </p>
-        </div>
-      </div>
-    </section>
-    <article class="features-products">
-      <div class="features-product">
-        <p class="features-product-desc">New arrivalsare now in!</p>
-        <button class="features-product-btn upper-case">SHOW COLLECTION</button>
-      </div>
-      <div class="features-product">
-        <p class="features-product-desc">Basic t-shirts $29,99</p>
-        <button class="features-product-btn upper-case">MORE DETAILS</button>
-      </div>
-      <div class="features-product">
-        <span class="features-product-discount">-50%</span>
-        <p class="features-product-desc">Sale this summer</p>
-        <button class="features-product-btn upper-case">VIEW ALL</button>
-      </div>
-    </article>
-    <section>
-      <div>
-        <h3 class="txt-title">Selected just for you</h3>
-        <button class="upper-case">SHOW MORE</button>
-      </div>
-      <ul class="products">
-        <li class="product">
-          <span class="product-discount">-30%</span>
-          <img src="#" alt="product" />
-          <p class="product-name">T-Shirt Summer Vibes</p>
-          <div class="product-price-group">
-            <p class="product-price product-discounted-price">$89,99</p>
-            <p class="product-price product-before-discount">$119,99</p>
+    <main>
+      <section class="section section-banner">
+        <div class="container">
+          <h2 class="banner-title">
+            <a href="">Sale of the summer collection</a>
+          </h2>
+          <button class="banner-button">
+            <i class="bx bx-right-arrow-circle"></i>
+            <p class="upper-case">SHOP NOW</p>
+          </button>
+          <div class="banner-features">
+            <ul class="feature-list">
+              <li class="feature-item"><i class="bx bxs-truck"></i></li>
+              <li class="feature-item">
+                <div class="feature-item-detail">
+                  <p class="txt-bold">Free shipping</p>
+                  <p class="feature-item-desc">On purchases over $199</p>
+                </div>
+              </li>
+            </ul>
+            <ul class="feature-list">
+              <li class="feature-item"><i class="bx bx-happy-alt"></i></li>
+              <li class="feature-item">
+                <div class="feature-item-detail">
+                  <p class="feature-item-desc">
+                    Our clients opinions speak for themselves
+                  </p>
+                  <p class="txt-bold">99% Satisfied Customers</p>
+                </div>
+              </li>
+            </ul>
+            <ul class="feature-list">
+              <i class="bx bx-check-shield"></i>
+              <li class="feature-item">
+                <div class="feature-item-detail">
+                  <p class="txt-bold">Originality Guaranteed</p>
+                  <p class="feature-item-desc">
+                    30 days warranty for each product from our store
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
-        </li>
-        <li class="product">
-          <img src="#" alt="product" />
-          <p class="product-name">Loose Knit 3/4 Sleeve</p>
-          <p class="product-price">$99,99</p>
-        </li>
-        <li class="product">
-          <img src="#" alt="product" />
-          <p class="product-name">Basic Slim Fit T-Shirt</p>
-          <p class="product-price">$99,99</p>
-        </li>
-        <li class="product">
-          <img src="#" alt="product" />
-          <p class="product-name">Loose Textured T-Shirt</p>
-          <p class="product-price">$99,99</p>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h3 class="txt-title">Why should you choose us?</h3>
-      <ul class="services">
-        <li class="service">
-          <i class="bx bxs-truck"></i>
-          <p class="service-title txt-bold">Free shipping</p>
-          <p class="service-desc">
-            All purchases over $199 are eligible forfree shipping via USPS First
-            Class Mail.
-          </p>
-        </li>
-        <li class="service">
-          <i class="bx bx-credit-card-alt"></i>
-          <p class="service-title txt-bold">Easy Payments</p>
-          <p class="service-desc">
-            All payments are processed instantlyover a secure payment protocol.
-          </p>
-        </li>
-        <li class="service">
-          <i class="bx bxs-wallet-alt"></i>
-          <p class="service-title txt-bold">Money-Back Guarantee</p>
-          <p class="service-desc">
-            If an item arrived damaged or you'vechanged your mind, you can send
-            itback for a full refund.
-          </p>
-        </li>
-        <li class="service">
-          <i class="bx bx-check-square"></i>
-          <p class="service-title txt-bold">Finest Quality</p>
-          <p class="service-desc">
-            Designed to last, each of our products hasbeen crafted with the
-            finest materials.
-          </p>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h3 class="txt-title">Selected just for you</h3>
-      <ul class="products">
-        <li class="product">
-          <span class="product-discount">-30%</span>
-          <img src="#" alt="product" />
-          <p class="product-name">T-Shirt Summer Vibes</p>
-          <div class="product-price-group">
-            <p class="product-price product-discounted-price">$89,99</p>
-            <p class="product-price product-before-discount">$119,99</p>
+        </div>
+      </section>
+
+      <section class="section section-categories">
+        <div class="container">
+          <ul class="features-product-list">
+            <li class="features-product-item">
+              <h4 class="features-product-desc">
+                <a href="">New arrivalsare now in!</a>
+              </h4>
+              <button class="features-product-btn upper-case">
+                SHOW COLLECTION
+              </button>
+            </li>
+            <li class="features-product-item">
+              <h4 class="features-product-desc">
+                <a href="">Basic t-shirts $29,99</a>
+              </h4>
+              <button class="features-product-btn upper-case">
+                MORE DETAILS
+              </button>
+            </li>
+            <li class="features-product-item">
+              <span class="features-product-discount">-50%</span>
+              <h4 class="features-product-desc">
+                <a href="">Sale this summer</a>
+              </h4>
+              <button class="features-product-btn upper-case">VIEW ALL</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-recommended">
+        <div class="container">
+          <div>
+            <h3 class="section-title">Selected just for you</h3>
+            <button class="upper-case">SHOW MORE</button>
           </div>
-        </li>
-        <li class="product">
-          <img src="#" alt="product" />
-          <p class="product-name">Loose Knit 3/4 Sleeve</p>
-          <p class="product-price">$99,99</p>
-        </li>
-        <li class="product">
-          <img src="#" alt="product" />
-          <p class="product-name">Basic Slim Fit T-Shirt</p>
-          <p class="product-price">$99,99</p>
-        </li>
-        <li class="product">
-          <img src="#" alt="product" />
-          <p class="product-name">Loose Textured T-Shirt</p>
-          <p class="product-price">$99,99</p>
-        </li>
-      </ul>
-    </section>
+          <ul class="product-list">
+            <li class="product-item">
+              <a href="">
+                <span class="product-discount">-30%</span>
+                <img src="#" alt="product" />
+                <h4p class="product-name">T-Shirt Summer Vibes</h4p>
+                <div class="product-price-group">
+                  <p class="product-price product-discounted-price">$89,99</p>
+                  <p class="product-price product-before-discount">$119,99</p>
+                </div>
+              </a>
+            </li>
+            <li class="product-item">
+              <a href="">
+                <img src="#" alt="product" />
+                <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
+                <p class="product-price">$99,99</p>
+              </a>
+            </li>
+            <li class="product-item">
+              <a href="">
+                <img src="#" alt="product" />
+                <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
+                <p class="product-price">$99,99</p>
+              </a>
+            </li>
+            <li class="product-item">
+              <a href="">
+                <img src="#" alt="product" />
+                <h4 class="product-name">Loose Textured T-Shirt</h4>
+                <p class="product-price">$99,99</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-reason">
+        <div class="container">
+          <h3 class="section-title">Why should you choose us?</h3>
+          <ul class="services">
+            <li class="service">
+              <a href="">
+                <i class="bx bxs-truck"></i>
+                <h4 class="service-title txt-bold">Free shipping</h4>
+                <p class="service-desc">
+                  All purchases over $199 are eligible for free shipping via
+                  USPS First Class Mail.
+                </p>
+              </a>
+            </li>
+            <li class="service service-active">
+              <a href="">
+                <i class="bx bx-credit-card-alt"></i>
+                <h4 class="service-title txt-bold">Easy Payments</h4>
+                <p class="service-desc">
+                  All payments are processed instant lover a secure payment
+                  protocol.
+                </p>
+              </a>
+            </li>
+            <li class="service">
+              <a href="">
+                <i class="bx bxs-wallet-alt"></i>
+                <h4 class="service-title txt-bold">Money-Back Guarantee</h4>
+                <p class="service-desc">
+                  If an item arrived damaged or you'vechanged your mind, you can
+                  send itback for a full refund.
+                </p>
+              </a>
+            </li>
+            <li class="service">
+              <a href="">
+                <i class="bx bx-check-square"></i>
+                <h4 class="service-title txt-bold">Finest Quality</h4>
+                <p class="service-desc">
+                  Designed to last, each of our products hasbeen crafted with
+                  the finest materials.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-new-arrived">
+        <div class="container">
+          <h3 class="section-title">Product in today</h3>
+          <ul class="product-list">
+            <li class="product-item">
+              <a href="">
+                <span class="product-discount">-30%</span>
+                <img src="#" alt="product" />
+                <h4 class="product-name">T-Shirt Summer Vibes</h4>
+                <div class="product-price-group">
+                  <p class="product-price product-discounted-price">$89,99</p>
+                  <p class="product-price product-before-discount">$119,99</p>
+                </div>
+              </a>
+            </li>
+            <li class="product-item">
+              <a href="">
+                <img src="#" alt="product" />
+                <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
+                <p class="product-price">$99,99</p>
+              </a>
+            </li>
+            <li class="product-item">
+              <a href="">
+                <img src="#" alt="product" />
+                <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
+                <p class="product-price">$99,99</p>
+              </a>
+            </li>
+            <li class="product-item">
+              <a href="">
+                <img src="#" alt="product" />
+                <h4 class="product-name">Loose Textured T-Shirt</h4>
+                <p class="product-price">$99,99</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-subscribe">
+        <div class="container">
+          <p class="subscribe-txt">
+            Subscribe to our newsletter and receive exclusive offers every week
+          </p>
+          <form action="">
+            <input placeholder="Enter your email" class="subscribe-input" />
+            <button type="submit" class="subscribe-btn upper-case">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
     <footer>
-      <article class="subscribe">
-        <p class="subscribe-txt">
-          Subscribe to our newsletter and receive exclusive offers every week
-        </p>
-        <input placeholder="Enter your email" class="subscribe-input" />
-        <button class="subscribe-btn upper-case">SUBSCRIBE</button>
-      </article>
-      <div class="shop-details">
-        <img src="" alt="Shop Logo" />
-        <p class="shop-details-desc">
-          House My Brand designs clothing for the young, the old &everyone in
-          between – but most importantly, for the fashionable
-        </p>
-        <ul class="shop-details-iconsGroup">
-          <li class="shop-icon">
-            <a><i class="bx bxl-facebook"></i></a>
-          </li>
-          <li class="shop-icon">
-            <a><i class="bx bxl-twitter"></i></a>
-          </li>
-          <li class="shop-icon">
-            <a><i class="bx bxl-linkedin"></i></a>
-          </li>
-          <li class="shop-icon">
-            <a><i class="bx bxl-instagram"></i></a>
-          </li>
-          <li class="shop-icon">
-            <a><i class="bx bxl-youtube"></i></a>
-          </li>
-        </ul>
-        <div class="shop-details-policy">
-          <h3 class="policy-title">Shopping online</h3>
-          <ul class="policy-items">
-            <li class="policy-item"><a href="">Order Status</a></li>
-            <li class="policy-item"><a href="">Shipping and Delivery</a></li>
-            <li class="policy-item"><a href="">Returns</a></li>
-            <li class="policy-item"><a href="">Payment Options</a></li>
-            <li class="policy-item"><a href="">Contact Us</a></li>
+      <div class="container">
+        <div class="footer-top">
+          <div class="shop-details-sums">
+            <div class="shop-details-logo">
+              <img src="" alt="Shop Logo" />
+            </div>
+            <p class="shop-details-desc">
+              House My Brand designs clothing for the young, the old &everyone
+              in between – but most importantly, for the fashionable
+            </p>
+            <ul class="social-list">
+              <li class="social-item">
+                <a><i class="bx bxl-facebook"></i></a>
+              </li>
+              <li class="social-item">
+                <a><i class="bx bxl-twitter"></i></a>
+              </li>
+              <li class="social-item">
+                <a><i class="bx bxl-linkedin"></i></a>
+              </li>
+              <li class="social-item">
+                <a><i class="bx bxl-instagram"></i></a>
+              </li>
+              <li class="social-item">
+                <a><i class="bx bxl-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="shop-details-list">
+            <li class="shop-details-infor">
+              <p class="infor-shop-title">Shopping online</p>
+              <ul class="infor-shop-list">
+                <li class="infor-shop-item"><a href="">Order Status</a></li>
+                <li class="infor-shop-item">
+                  <a href="">Shipping and Delivery</a>
+                </li>
+                <li class="infor-shop-item"><a href="">Returns</a></li>
+                <li class="infor-shop-item"><a href="">Payment Options</a></li>
+                <li class="infor-shop-item"><a href="">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="shop-details-infor">
+              <p class="infor-shop-title">Information</p>
+              <ul class="infor-shop-list">
+                <li class="infor-shop-item"><a href="">Gift Cards</a></li>
+                <li class="infor-shop-item"><a href="">Find a store</a></li>
+                <li class="infor-shop-item"><a href="">Newsletter</a></li>
+                <li class="iinfor-shop-item"><a href="">Become a member</a></li>
+                <li class="infor-shop-item"><a href="">Site feedback</a></li>
+              </ul>
+            </li>
+            <li class="shop-details-infor">
+              <p class="cinfor-shop-title">Contact</p>
+              <ul class="infor-shop-list">
+                <li class="infor-shop-item">store@uikit.com</li>
+                <li class="infor-shop-item">Hotline: +1 131 138 138</li>
+              </ul>
+            </li>
           </ul>
         </div>
-        <div class="shop-details-info">
-          <h3 class="info-title">Information</h3>
-          <ul class="info-items">
-            <li class="info-item"><a href="">Gift Cards</a></li>
-            <li class="info-item"><a href="">Find a store</a></li>
-            <li class="info-item"><a href="">Newsletter</a></li>
-            <li class="info-item"><a href="">Become a member</a></li>
-            <li class="info-item"><a href="">Site feedback</a></li>
-          </ul>
-        </div>
-        <div class="shop-details-contact">
-          <h3 class="contact-title">Contact</h3>
-          <ul class="contact-items">
-            <li class="contact-item">store@uikit.com</li>
-            <li class="contact-item">Hotline: +1 131 138 138</li>
-          </ul>
-        </div>
+        <hr />
+        <p class="copyright">DESIGN BY CEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
       </div>
-      <hr />
-      <p class="copyright">DESIGN BY CEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
     </footer>
   </body>
 </html>
