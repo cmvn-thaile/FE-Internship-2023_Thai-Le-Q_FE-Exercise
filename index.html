@@ -8,6 +8,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header>
       <div class="container">
@@ -18,22 +19,22 @@
         </h1>
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-item"><a href="#">Men</a></li>
-            <li class="nav-item"><a href="#">Women</a></li>
-            <li class="nav-item"><a href="#">Kids</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
           </ul>
         </nav>
         <ul class="header-icons-list">
           <li class="header-icon-item">
-            <a href=""
+            <a class="search-link" href=""
               ><img src="assets/img/ic-search.svg" alt="Search Icon"
             /></a>
           </li>
           <li class="header-icon-item">
-            <a href=""><img src="assets/img/ic-cart.svg" alt="Cart Icon" /></a>
+            <a class="cart-link" href=""><img src="assets/img/ic-cart.svg" alt="Cart Icon" /></a>
           </li>
           <li class="header-icon-item">
-            <a href=""><img src="assets/img/ic-user.svg" alt="User Icon" /></a>
+            <a class="user-link" href=""><img src="assets/img/ic-user.svg" alt="User Icon" /></a>
           </li>
         </ul>
       </div>
@@ -49,14 +50,18 @@
           </a>
           <ul class="banner-features feature-list">
             <li class="feature-item">
-              <span class="feature-img"><img src="assets/img/ic-free-shipping.svg" alt="Free Shipping"></span>
+              <span class="feature-img"
+                ><img src="assets/img/ic-free-shipping.svg" alt="Free Shipping"
+              /></span>
               <div class="feature-detail">
                 <h4 class="feature-name">Free shipping</h4>
                 <p class="feature-desc">On purchases over $199</p>
               </div>
             </li>
             <li class="feature-item">
-              <span class="feature-img"><img src="assets/img/ic-happpy.svg" alt="Satisfied"></span>
+              <span class="feature-img"
+                ><img src="assets/img/ic-happpy.svg" alt="Satisfied"
+              /></span>
               <div class="feature-detail">
                 <h4 class="feature-name">
                   Our clients opinions speak for themselves
@@ -65,7 +70,9 @@
               </div>
             </li>
             <li class="feature-item">
-              <span class="feature-img"><img src="assets/img/ic-guarantee.svg" alt="Guaranteed"></span>
+              <span class="feature-img"
+                ><img src="assets/img/ic-guarantee.svg" alt="Guaranteed"
+              /></span>
               <div class="feature-detail">
                 <h4 class="feature-name">Originality Guaranteed</h4>
                 <p class="feature-desc">
@@ -86,14 +93,14 @@
             </li>
             <li class="category-item">
               <h4 class="category-desc">
-                <a href="">Basic t-shirts $29,99</a>
+                <a class="product-link" href="">Basic t-shirts $29,99</a>
               </h4>
               <a class="category-btn upper-case"> MORE DETAILS </a>
             </li>
             <li class="category-item">
               <span class="category-discount">-50%</span>
               <h4 class="category-desc">
-                <a href="">Sale this summer</a>
+                <a class="category-link" href="">Sale this summer</a>
               </h4>
               <a class="category-btn upper-case">VIEW ALL</a>
             </li>
@@ -105,11 +112,11 @@
         <div class="container">
           <div>
             <h3 class="section-title">Selected just for you</h3>
-            <a href="" class="upper-case">SHOW MORE</a>
+            <a class="category-btn" href="">SHOW MORE</a>
           </div>
           <ul class="product-list">
             <li class="product-item">
-              <a href="">
+              <a class="product-link" href="">
                 <span class="product-discount">-30%</span>
                 <img
                   src="assets/img/product-1.png"
@@ -123,7 +130,7 @@
               </a>
             </li>
             <li class="product-item">
-              <a href="">
+              <a class="product-link" href="">
                 <img
                   src="assets/img/product-2.png"
                   alt="Loose Knit 3/4 Sleeve"
@@ -135,7 +142,7 @@
               </a>
             </li>
             <li class="product-item">
-              <a href="">
+              <a class="product-link" href="">
                 <img
                   src="assets/img/product-3.png"
                   alt="Basic Slim Fit T-Shirt"
@@ -147,7 +154,7 @@
               </a>
             </li>
             <li class="product-item">
-              <a href="">
+              <a class="product-link" href="">
                 <img
                   src="assets/img/product-4.png"
                   alt="Loose Textured T-Shirt"
@@ -167,8 +174,11 @@
           <h3 class="section-title">Why should you choose us?</h3>
           <ul class="services">
             <li class="service">
-              <a href="">
-                <img src="assets/img/ic-free-shipping.svg" alt="Free shipping">
+              <a class="free-ship-link" href="">
+                <img
+                  src="assets/img/ic-free-shipping.svg"
+                  alt="Free shipping"
+                />
                 <h4 class="service-title txt-bold">Free shipping</h4>
                 <p class="service-desc">
                   All purchases over $199 are eligible for free shipping via
@@ -177,8 +187,8 @@
               </a>
             </li>
             <li class="service service-active">
-              <a href="">
-                <img src="assets/img/ic-payment.svg" alt="Easy Payments">
+              <a class="payment-link" href="">
+                <img src="assets/img/ic-payment.svg" alt="Easy Payments" />
                 <h4 class="service-title txt-bold">Easy Payments</h4>
                 <p class="service-desc">
                   All payments are processed instant lover a secure payment
@@ -187,8 +197,8 @@
               </a>
             </li>
             <li class="service">
-              <a href="">
-                <img src="assets/img/ic-guarantee.svg" alt="Guarantee">
+              <a class="guarantee-link" href="">
+                <img src="assets/img/ic-guarantee.svg" alt="Guarantee" />
                 <h4 class="service-title txt-bold">Money-Back Guarantee</h4>
                 <p class="service-desc">
                   If an item arrived damaged or you'vechanged your mind, you can
@@ -197,8 +207,8 @@
               </a>
             </li>
             <li class="service">
-              <a href="">
-                <img src="assets/img/ic-quality.svg" alt="Finest Quality">
+              <a class="quality-link" href="">
+                <img src="assets/img/ic-quality.svg" alt="Finest Quality" />
                 <h4 class="service-title txt-bold">Finest Quality</h4>
                 <p class="service-desc">
                   Designed to last, each of our products hasbeen crafted with
@@ -215,7 +225,7 @@
           <h3 class="section-title">Product in today</h3>
           <ul class="product-list">
             <li class="product-item">
-              <a href="">
+              <a class="product-link" href="">
                 <span class="product-discount">-30%</span>
                 <img
                   src="assets/img/product-1.png"
@@ -229,7 +239,7 @@
               </a>
             </li>
             <li class="product-item">
-              <a href="">
+              <a class="product-link" href="">
                 <img
                   src="assets/img/product-2.png"
                   alt="Loose Knit 3/4 Sleeve"
@@ -241,7 +251,7 @@
               </a>
             </li>
             <li class="product-item">
-              <a href="">
+              <a class="product-link" href="">
                 <img
                   src="assets/img/product-3.png"
                   alt="Basic Slim Fit T-Shirt"
@@ -253,7 +263,7 @@
               </a>
             </li>
             <li class="product-item">
-              <a href="">
+              <a class="product-link" href="">
                 <img
                   src="assets/img/product-4.png"
                   alt="Loose Textured T-Shirt"
@@ -288,7 +298,7 @@
         <div class="footer-top">
           <div class="shop-details-sums">
             <div class="shop-details-logo">
-              <a href="">
+              <a class="logo-link" href="">
                 <img class="logo-img" src="assets/img/logo.png" alt="E-Shop" />
               </a>
             </div>
@@ -298,19 +308,29 @@
             </p>
             <ul class="social-list">
               <li class="social-item">
-                <a class="social-ic" href=""><img src="assets/img/ic-facebook.svg" alt="Facebook Logo"></a>
+                <a class="social-ic" href=""
+                  ><img src="assets/img/ic-facebook.svg" alt="Facebook Logo"
+                /></a>
               </li>
               <li class="social-item">
-                <a class="social-ic" href=""><img src="assets/img/ic-twitter.svg" alt="Twitter Logo"></a>
+                <a class="social-ic" href=""
+                  ><img src="assets/img/ic-twitter.svg" alt="Twitter Logo"
+                /></a>
               </li>
               <li class="social-item">
-                <a class="social-ic" href=""><img src="assets/img/ic-linkedin.svg" alt="Linkedin Logo"></a>
+                <a class="social-ic" href=""
+                  ><img src="assets/img/ic-linkedin.svg" alt="Linkedin Logo"
+                /></a>
               </li>
               <li class="social-item">
-                <a class="social-ic" href=""><img src="assets/img/ic-instagram.svg" alt="Instagram Logo"></a>
+                <a class="social-ic" href=""
+                  ><img src="assets/img/ic-instagram.svg" alt="Instagram Logo"
+                /></a>
               </li>
               <li class="social-item">
-                <a class="social-ic" href=""><img src="assets/img/ic-youtube.svg" alt="Youtube Logo"></a>
+                <a class="social-ic" href=""
+                  ><img src="assets/img/ic-youtube.svg" alt="Youtube Logo"
+                /></a>
               </li>
             </ul>
           </div>
@@ -319,23 +339,41 @@
             <li class="shop-details-item">
               <p class="infor-shop-title">Shopping online</p>
               <ul class="infor-shop-list">
-                <li class="infor-shop-item"><a href="">Order Status</a></li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Order Status</a>
+                </li>
                 <li class="infor-shop-item">
                   <a href="">Shipping and Delivery</a>
                 </li>
-                <li class="infor-shop-item"><a href="">Returns</a></li>
-                <li class="infor-shop-item"><a href="">Payment Options</a></li>
-                <li class="infor-shop-item"><a href="">Contact Us</a></li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Returns</a>
+                </li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Payment Options</a>
+                </li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Contact Us</a>
+                </li>
               </ul>
             </li>
             <li class="shop-details-item">
               <p class="infor-shop-title">Information</p>
               <ul class="infor-shop-list">
-                <li class="infor-shop-item"><a href="">Gift Cards</a></li>
-                <li class="infor-shop-item"><a href="">Find a store</a></li>
-                <li class="infor-shop-item"><a href="">Newsletter</a></li>
-                <li class="infor-shop-item"><a href="">Become a member</a></li>
-                <li class="infor-shop-item"><a href="">Site feedback</a></li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Gift Cards</a>
+                </li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Find a store</a>
+                </li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Newsletter</a>
+                </li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Become a member</a>
+                </li>
+                <li class="infor-shop-item">
+                  <a class="info-item-link" href="">Site feedback</a>
+                </li>
               </ul>
             </li>
             <li class="shop-details-item">
