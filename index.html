@@ -20,7 +20,7 @@
   <body>
     <header class="header">
       <div
-        class="center container flex flex-rows justify-space-between header-container"
+        class="container flex flex-rows justify-space-between header-container"
       >
         <h1 class="logo">
           <a href="">
@@ -64,21 +64,22 @@
               collection
             </h2>
             <a class="banner-button flex align-center justify-space-between">
-              <i class="left-arrow-icon"></i>
+              <span class="left-arrow-bg"><i class="left-arrow-icon"></i></span>
+
               <p class="banner-btn-desc">SHOP NOW</p>
             </a>
           </div>
           <div class="banner-features">
-            <ul class="feature-list row flex">
+            <ul class="feature-list  flex">
               <li class="feature-item">
-                <i class="truck-icon"></i>
+                <span class="border-icon icon-yellow"><i class="truck-icon"></i></span>
                 <div class="feature-detail f">
                   <h4 class="feature-name">Free shipping</h4>
                   <p class="feature-desc">On purchases over $199</p>
                 </div>
               </li>
               <li class="feature-item">
-                <i class="happy-icon"></i>
+                <span class="border-icon icon-yellow"><i class="happy-icon"></i></span>
                 <div class="feature-detail">
                   <h4 class="feature-name">99% Satisfied Customers</h4>
                   <p class="feature-desc">
@@ -87,7 +88,7 @@
                 </div>
               </li>
               <li class="feature-item">
-                <i class="guarantee-icon"></i>
+                <span class="border-icon icon-yellow"><i class="guarantee-icon"></i></span>
                 <div class="feature-detail">
                   <h4 class="feature-name">Originality Guaranteed</h4>
                   <p class="feature-desc">
@@ -101,24 +102,24 @@
       </section>
 
       <section class="section section-categories">
-        <div class="container center">
-          <ul class="category-list minus-margin row flex justify-space-between">
+        <div class="container">
+          <ul class="category-list row">
             <li class="category-item col col-6 relative">
-              <div class="category  category-1">
+              <div class="category category-1">
                 <h4 class="category-desc absolute">New arrival sale now in!</h4>
                 <a class="btn category-btn absolute"> SHOW COLLECTION </a>
               </div>
             </li>
-            <li class="category-item col col-3 relative ">
+            <li class="category-item col col-3 relative">
               <div class="category category-2">
                 <h4 class="category-desc side-item-category absolute">
                   <a class="product-link" href="">Basic t-shirts $29,99</a>
                 </h4>
               </div>
-              
+
               <a class="btn category-btn absolute"> MORE DETAILS </a>
             </li>
-            <li class="category-item col col-3 relative ">
+            <li class="category-item col col-3 relative">
               <div class="category category-3">
                 <span class="btn absolute category-discount">-50%</span>
                 <h4 class="category-desc side-item-category absolute">
@@ -132,13 +133,13 @@
       </section>
 
       <section class="section section-recommended">
-        <div class="container center">
+        <div class="container">
           <div class="flex justify-space-between align-center mb-30">
             <h3 class="section-title">Selected just for you</h3>
             <a class="btn recommended-btn" href="">SHOW MORE</a>
           </div>
-          <ul class="product-list flex justify-space-between mb-30">
-            <li class="product-item">
+          <ul class="product-list row mb-30">
+            <li class="product-item col col-3">
               <a class="product-link" href="">
                 <span class="btn product-discount absolute">-30%</span>
                 <img
@@ -152,7 +153,7 @@
                 </div>
               </a>
             </li>
-            <li class="product-item">
+            <li class="product-item col col-3">
               <a class="product-link" href="">
                 <img
                   src="assets/img/product-2.png"
@@ -164,7 +165,7 @@
                 </div>
               </a>
             </li>
-            <li class="product-item">
+            <li class="product-item col col-3">
               <a class="product-link" href="">
                 <img
                   src="assets/img/product-3.png"
@@ -176,7 +177,7 @@
                 </div>
               </a>
             </li>
-            <li class="product-item">
+            <li class="product-item col col-3">
               <a class="product-link" href="">
                 <img
                   src="assets/img/product-4.png"
@@ -193,14 +194,14 @@
       </section>
 
       <section class="section section-reason">
-        <div class="container center pb-30 mb-30">
+        <div class="container pb-30 mb-30">
           <h3 class="section-title mt-30 pt-30 center-text">
             Why should you choose us?
           </h3>
           <ul class="service-list flex mt-30">
             <li class="service-item">
               <a class="free-ship-link" href="">
-                <i class="shipping-icon"></i>
+                <span class="border-icon"><i class="shipping-icon"></i></span>
                 <h4 class="service-title txt-bold mt-30">Free shipping</h4>
                 <p class="service-desc">
                   All purchases over $199 are eligible for free shipping via
@@ -210,7 +211,8 @@
             </li>
             <li class="service-item service-item-active">
               <a class="payment-link" href="">
-                <i class="payment-icon"></i>
+                <span class="border-icon"><i class="payment-icon"></i></span>
+
                 <h4 class="service-title txt-bold mt-30">Easy Payments</h4>
                 <p class="service-desc">
                   All payments are processed instant lover a secure payment
@@ -220,7 +222,10 @@
             </li>
             <li class="service-item">
               <a class="guarantee-link" href="">
-                <i class="guarantee-icon-b"></i>
+                <span class="border-icon"
+                  ><i class="guarantee-icon-b"></i
+                ></span>
+
                 <h4 class="service-title mt-30">Money-Back Guarantee</h4>
                 <p class="service-desc">
                   If an item arrived damaged or you'vechanged your mind, you can
@@ -230,7 +235,8 @@
             </li>
             <li class="service-item">
               <a class="quality-link" href="">
-                <i class="quality-icon"></i>
+                <span class="border-icon"><i class="quality-icon"></i></span>
+
                 <h4 class="service-title txt-bold mt-30">Finest Quality</h4>
                 <p class="service-desc">
                   Designed to last, each of our products hasbeen crafted with
@@ -243,10 +249,10 @@
       </section>
 
       <section class="section section-new-arrived">
-        <div class="container center pb-30">
+        <div class="container pb-30">
           <h3 class="section-title center-text mb-30">Product in today</h3>
-          <ul class="product-list flex justify-space-between mb-30">
-            <li class="product-item">
+          <ul class="product-list row mb-30">
+            <li class="product-item col col-3">
               <a class="product-link" href="">
                 <span class="btn product-discount absolute">-30%</span>
                 <img
@@ -260,7 +266,7 @@
                 </div>
               </a>
             </li>
-            <li class="product-item">
+            <li class="product-item col col-3">
               <a class="product-link" href="">
                 <img
                   src="assets/img/product-2.png"
@@ -272,7 +278,7 @@
                 </div>
               </a>
             </li>
-            <li class="product-item">
+            <li class="product-item col col-3">
               <a class="product-link" href="">
                 <img
                   src="assets/img/product-3.png"
@@ -284,7 +290,7 @@
                 </div>
               </a>
             </li>
-            <li class="product-item">
+            <li class="product-item col col-3">
               <a class="product-link" href="">
                 <img
                   src="assets/img/product-4.png"
@@ -301,7 +307,7 @@
       </section>
 
       <section class="section section-subscribe">
-        <div class="container center subscribe-container">
+        <div class="container subscribe-container">
           <p class="subscribe-desc">
             Subscribe to our newsletter and receive exclusive offers every week
           </p>
@@ -318,7 +324,7 @@
     </main>
 
     <footer>
-      <div class="container center">
+      <div class="container">
         <div class="footer-top pt-30 flex justify-space-between">
           <div class="shop-details-sums">
             <h2 class="shop-details-logo">

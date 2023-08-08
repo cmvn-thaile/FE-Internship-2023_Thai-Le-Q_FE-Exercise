@@ -3,8 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  margin-block-start: 0;
-  margin-block-end: 0;
 }
 
 /* Set default font family and size */
@@ -58,6 +56,9 @@ a {
 }
 
 .banner-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -131,18 +132,6 @@ a {
   position: relative;
 }
 
-.truck::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border: 2px solid #fbb03b; /* Change this value to the color you want */
-  z-index: -1;
-  background-color:#fbb03b ;
-}
-
 .happy-icon {
   background-image: url("../assets/img/ic-happy.svg");
 }
@@ -154,13 +143,13 @@ a {
 .left-arrow-icon {
   background-image: url("../assets/img/ic-left-arrow.svg");
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.left-arrow-icon::after{
+.left-arrow-icon::after {
   padding: 10px;
   border-radius: 16px;
   background-color: #fbb03b;
@@ -188,7 +177,7 @@ a {
   display: flex;
   box-sizing: border-box;
   padding-right: 40px;
- margin-inline: 40px;
+  margin-inline: 40px;
   width: 80%;
   height: 125px;
   background-color: white;
@@ -197,9 +186,11 @@ a {
 }
 
 .feature-list {
-  justify-content: flex-end;
-  align-self: center;
-  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 30%);
+  gap: 50px;
+  margin-right: 40px;
 }
 
 .feature-item {
@@ -228,7 +219,6 @@ a {
 
 .category-list {
   height: 360px;
-  width: 1152px;
 }
 
 .category-1 {
@@ -245,7 +235,6 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 89%;
@@ -265,7 +254,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 89%;
@@ -274,6 +263,7 @@ a {
 .category-3 {
   position: relative;
   height: 100%;
+
   background-image: url("../assets/img/home-3.png");
   background-size: cover;
   background-position: center;
@@ -321,14 +311,9 @@ a {
   max-width: 179px;
 }
 
-
-
-.category
-
-.product-list {
+.category .product-list {
   gap: 10px;
 }
-
 
 .product-item {
   position: relative;
@@ -367,6 +352,14 @@ a {
   gap: 20px;
 }
 
+.service-title {
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .section-reason {
   background-color: #f6f6f6;
 }
@@ -392,11 +385,43 @@ a {
 .guarantee-icon-b,
 .quality-icon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   background-size: contain;
   background-repeat: no-repeat;
   fill: #000000 !important;
+}
+
+.free-ship-link:hover .shipping-icon {
+  background-image: url("../assets/img/ic-truck-yellow.svg");
+}
+
+.free-ship-link:hover .service-title {
+  color: #fbb03b;
+}
+
+.payment-link:hover .payment-icon {
+  background-image: url("../assets/img/ic-payment-hl.svg");
+}
+
+.payment-link:hover .service-title {
+  color: #fbb03b;
+}
+
+.guarantee-link:hover .guarantee-icon-b {
+  background-image: url("../assets/img/ic-guarantee-yellow.svg");
+}
+
+.guarantee-link:hover .service-title {
+  color: #fbb03b;
+}
+
+.quality-link:hover .quality-icon {
+  background-image: url("../assets/img/ic-quality-hl.svg");
+}
+
+.quality-link:hover .service-title {
+  color: #fbb03b;
 }
 
 .section-subscribe {
@@ -490,6 +515,13 @@ footer {
   font-weight: 700;
 }
 
+.infor-shop-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .infor-shop-item {
   font-size: 14px;
   color: white;
@@ -506,13 +538,45 @@ footer {
   color: white;
 }
 
-.banner-btn-desc{
+.banner-btn-desc {
   text-decoration: underline;
   font-size: 24px;
   color: white;
   line-height: 36px;
+  font-weight: 700;
 }
 
-.banner-button{
-  max-width: 170px;
+.banner-button {
+  max-width: 190px;
+}
+
+.left-arrow-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #fbb03b;
+}
+
+.border-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 8px;
+  background-color: white;
+}
+
+.icon-yellow {
+  width: 40px;
+  height: 40px;
+
+  background-color: #fff3df;
+  border-radius: 12px;
 }
