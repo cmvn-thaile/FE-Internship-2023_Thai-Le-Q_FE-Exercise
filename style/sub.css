@@ -1,0 +1,148 @@
+.container {
+  width: 1152px;
+  z-index: 1;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.section {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.wrap-txt {
+  flex-wrap: wrap;
+}
+
+.flex-rows {
+  flex-direction: row;
+}
+
+.flex-cols {
+  flex-direction: column;
+}
+
+.col {
+  padding: 0 10px;
+}
+
+.col-1 {
+  width:  8.333333%;
+}
+.col-2 {
+  width:  16.666667%;
+}
+.col-3 {
+  width: 25%;
+
+}
+.col-4 {
+  width: 33.333333%;
+}
+.col-5 {
+  width:  41.666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.333333%;
+}
+.col-8 {
+  flex: 0 0 66.666667%;
+}
+.col-9 {
+  flex: 0 0 75%;
+}
+.col-10 {
+  flex: 0 0 83.333333%;
+}
+.col-11 {
+  flex: 0 0 91.666667%;
+}
+.col-12 {
+  flex: 0 0 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.margin-20 {
+  margin: 20px;
+}
+
+.btn {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19.5px;
+  border: 1px solid #c4c4c4;
+  border-radius: 24px;
+  padding: 10px 20px;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+.minus-margin {
+  margin: 0 -5px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.gap-20 {
+  gap: 20;
+}
