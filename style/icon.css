@@ -15,10 +15,25 @@
   background-image: url("../assets/img/ic-menu.svg");
 }
 
+.cart-icon-black {
+  background-image: url("../assets/img/ic-cart-black.svg");
+}
+
+.user-icon-black {
+  background-image: url("../assets/img/ic-user-black.svg");
+}
+
+.menu-icon-black {
+  background-image: url("../assets/img/ic-menu-black.svg");
+}
+
 .search-icon,
 .cart-icon,
 .user-icon,
-.menu-icon {
+.menu-icon,
+.cart-icon-black,
+.user-icon-black,
+.menu-icon-black {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -52,7 +67,6 @@
   fill: var(--primary) !important;
 }
 
-
 /* arrow icon */
 .left-arrow-icon {
   background-image: url("../assets/img/ic-left-arrow.svg");
@@ -68,7 +82,6 @@
   border-radius: 16px;
   background-color: var(--primary);
 }
-
 
 /* icon reason */
 
