@@ -1,4 +1,13 @@
-.header-wrapper {
+.header-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-mobile{
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -29,20 +38,32 @@
 /* Responsive */
 
 @media only screen and (max-width: 576px) {
+  .header-mobile {
+    display: block;
+    width: 100vw;
+  }
+
+  .header-desktop {
+    display: none;
+  }
+
   .nav {
     display: none !important;
   }
   .header-icons-list {
-    width: 120px;
+    max-width: 110px;
   }
 
-  .header-container{
+  .header-container {
     justify-content: space-between;
-    max-width: 327px;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0;
+    width: 327px !important;
   }
 
   .logo {
     max-width: 125px;
-    max-height: 32px ;
+    max-height: 32px;
   }
 }

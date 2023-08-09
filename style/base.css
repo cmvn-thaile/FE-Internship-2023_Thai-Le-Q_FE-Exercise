@@ -230,12 +230,16 @@ br {
 
 /* Responsive */
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .container {
     max-width: 327px !important;
   }
 
   .banner-features{
     display: none !important;
+  }
+
+  .padding-section{
+    padding: 24px;
   }
 }

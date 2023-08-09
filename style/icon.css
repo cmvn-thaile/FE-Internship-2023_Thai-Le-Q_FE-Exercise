@@ -11,9 +11,14 @@
   background-image: url("../assets/img/ic-user.svg");
 }
 
+.menu-icon {
+  background-image: url("../assets/img/ic-menu.svg");
+}
+
 .search-icon,
 .cart-icon,
-.user-icon {
+.user-icon,
+.menu-icon {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -142,4 +147,11 @@
 
   background-color: var(--beige);
   border-radius: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .left-arrow-icon {
+    width: 15px;
+    height: 15px;
+  }
 }

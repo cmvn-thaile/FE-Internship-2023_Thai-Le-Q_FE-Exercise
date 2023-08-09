@@ -89,7 +89,7 @@ li:nth-of-type(3) .category {
 
 /* responsive */
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .banner-features{
     display: none !important;
   }

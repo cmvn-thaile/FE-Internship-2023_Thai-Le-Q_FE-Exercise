@@ -106,13 +106,42 @@
 
 /* responsive */
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .banner-features {
     display: none !important;
   }
 
   .section-banner {
     background-image: url("../assets/img/banner-sm.png");
+  }
+
+  .banner-desc {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+    position: relative;
+    top: 50%;
+    left: 10%;
+    transform: translate(-7.5%, 120%);
+  }
+
+  .banner-title {
+    max-width: 270px !important;
+    font-size: 48px;
+  }
+
+  .banner-button {
+    max-width: 125px;
+  }
+
+  .banner-btn-desc{
+    font-size: 14px;
+  }
+
+  .left-arrow-bg {
+    width: 32px;
+    height: 32px;
   }
   
 }
