@@ -276,5 +276,8 @@ br {
     padding: 24px;
   }
 
+  .section-title{
+    font-size: 18px;
+  }
   
 }

@@ -2,8 +2,6 @@
   position: relative;
 }
 
-
-
 .product-price {
   font-weight: 300;
   font-size: 21px;
@@ -18,21 +16,49 @@
   background-color: var(--white);
   padding: 15px 30px;
   border-radius: 32px;
-  
-  border: 1px solid var(--cool-gray) !important;
+
+  border: 1px solid var(--cool-gray) ;
 }
 
-.badge-danger {
+/* .badge-danger {
   color: var(--light-gray);
   font-size: 12px;
   font-weight: 700;
   background-color: var(--red);
   padding: 6px 9px;
   border-radius: 20px;
-}
+} */
 
 .product-discount {
   top: 5%;
   left: 10%;
 }
 
+@media only screen and (max-width: 768px) {
+  .product-img {
+    width: 100%;
+  }
+
+  .product-name{
+    font-size: 12px;
+  }
+
+  .product-price{
+    font-size: 10px;
+  }
+
+  .recommended-btn{
+    border: none ;
+    font-size: 10px;
+    padding: 0;
+  }
+
+  .mb-40{
+    margin-bottom: 16px;
+  }
+
+  .product-discount {
+    top: 7%;
+    left: 9%;
+  }
+}
