@@ -13,44 +13,46 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/sub.css" />
+    <link rel="stylesheet" href="./style/main.css" />
   </head>
 
   <body>
-    <header class="header">
-      <div
-        class="container flex flex-rows justify-space-between header-container"
-      >
-        <h1 class="logo">
-          <a href="">
-            <img class="logo-img" src="assets/img/logo.png" alt="E-Shop" />
-          </a>
-        </h1>
-        <nav class="nav">
-          <ul class="nav-list flex justify-space-between">
-            <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
-          </ul>
-        </nav>
-        <ul class="header-icons-list flex justify-space-between">
-          <li class="header-icon-item">
-            <a class="search-link" href="">
-              <i class="search-icon"></i>
-            </a>
-          </li>
-          <li class="header-icon-item">
-            <a class="cart-link" href="">
-              <i class="cart-icon"></i>
-            </a>
-          </li>
-          <li class="header-icon-item">
-            <a class="user-link" href="">
-              <i class="user-icon"></i>
-            </a>
-          </li>
-        </ul>
+    <header>
+      <div class="header-wrapper">
+        <div class="container">
+          <div class="d-flex flex-rows justify-space-between header-container">
+            <h1 class="logo">
+              <a href="">
+                <img class="logo-img" src="assets/img/logo.png" alt="E-Shop" />
+              </a>
+            </h1>
+            <nav class="nav">
+              <ul class="nav-list d-flex justify-space-between">
+                <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
+              </ul>
+            </nav>
+            <ul class="header-icons-list d-flex justify-space-between">
+              <li class="header-icon-item">
+                <a class="search-link" href="">
+                  <i class="search-icon"></i>
+                </a>
+              </li>
+              <li class="header-icon-item">
+                <a class="cart-link" href="">
+                  <i class="cart-icon"></i>
+                </a>
+              </li>
+              <li class="header-icon-item">
+                <a class="user-link" href="">
+                  <i class="user-icon"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -59,27 +61,31 @@
         <div class="container">
           <div class="banner-desc">
             <h2 class="banner-title">
-              Sale of the <br /><span class="banner-highlight">summer</span
-              ><br />
+              Sale of the <br /><span class="text-primary">summer</span><br />
               collection
             </h2>
-            <a class="banner-button flex align-center justify-space-between">
+            <a class="banner-button d-flex align-center justify-space-between">
               <span class="left-arrow-bg"><i class="left-arrow-icon"></i></span>
 
               <p class="banner-btn-desc">SHOP NOW</p>
             </a>
           </div>
-          <div class="banner-features">
-            <ul class="feature-list  flex">
+
+          <div class="banner-features ">
+            <ul class="feature-list  ">
               <li class="feature-item">
-                <span class="border-icon icon-yellow"><i class="truck-icon"></i></span>
-                <div class="feature-detail f">
+                <span class="wrapper-ic wrapper-ic-primary"
+                  ><i class="truck-icon"></i
+                ></span>
+                <div class="feature-detail">
                   <h4 class="feature-name">Free shipping</h4>
                   <p class="feature-desc">On purchases over $199</p>
                 </div>
               </li>
               <li class="feature-item">
-                <span class="border-icon icon-yellow"><i class="happy-icon"></i></span>
+                <span class="wrapper-ic wrapper-ic-primary"
+                  ><i class="happy-icon"></i
+                ></span>
                 <div class="feature-detail">
                   <h4 class="feature-name">99% Satisfied Customers</h4>
                   <p class="feature-desc">
@@ -88,7 +94,9 @@
                 </div>
               </li>
               <li class="feature-item">
-                <span class="border-icon icon-yellow"><i class="guarantee-icon"></i></span>
+                <span class="wrapper-ic wrapper-ic-primary"
+                  ><i class="guarantee-icon"></i
+                ></span>
                 <div class="feature-detail">
                   <h4 class="feature-name">Originality Guaranteed</h4>
                   <p class="feature-desc">
@@ -101,17 +109,17 @@
         </div>
       </section>
 
-      <section class="section section-categories">
+      <section class="section section-categories padding-section">
         <div class="container">
-          <ul class="category-list row">
+          <ul class="category-list row ">
             <li class="category-item col col-6 relative">
-              <div class="category category-1">
+              <div class="category relative">
                 <h4 class="category-desc absolute">New arrival sale now in!</h4>
                 <a class="btn category-btn absolute"> SHOW COLLECTION </a>
               </div>
             </li>
             <li class="category-item col col-3 relative">
-              <div class="category category-2">
+              <div class="category relative">
                 <h4 class="category-desc side-item-category absolute">
                   <a class="product-link" href="">Basic t-shirts $29,99</a>
                 </h4>
@@ -120,8 +128,10 @@
               <a class="btn category-btn absolute"> MORE DETAILS </a>
             </li>
             <li class="category-item col col-3 relative">
-              <div class="category category-3">
-                <span class="btn absolute category-discount">-50%</span>
+              <div class="category relative">
+                <span class="badge absolute badge-danger category-discount"
+                  >-50%</span
+                >
                 <h4 class="category-desc side-item-category absolute">
                   <a class="category-link" href="">Sale this summer</a>
                 </h4>
@@ -132,24 +142,26 @@
         </div>
       </section>
 
-      <section class="section section-recommended">
+      <section class="section  section-recommended padding-section ">
         <div class="container">
-          <div class="flex justify-space-between align-center mb-30">
-            <h3 class="section-title">Selected just for you</h3>
+          <div class="d-flex justify-space-between mb-40 align-center ">
+            <h3 class="section-title ">Selected just for you</h3>
             <a class="btn recommended-btn" href="">SHOW MORE</a>
           </div>
-          <ul class="product-list row mb-30">
+          <ul class="product-list row ">
             <li class="product-item col col-3">
               <a class="product-link" href="">
-                <span class="btn product-discount absolute">-30%</span>
+                <span class="badge badge-danger product-discount absolute"
+                  >-30%</span
+                >
                 <img
                   src="assets/img/product-1.png"
                   alt="T-Shirt Summer Vibes"
                 />
                 <h4 class="product-name">T-Shirt Summer Vibes</h4>
-                <div class="product-price-group flex justify-space-between">
-                  <p class="product-price product-discounted-price">$89,99</p>
-                  <p class="product-price product-before-discount">$119,99</p>
+                <div class="product-price-group d-flex justify-space-between">
+                  <p class="product-price text-danger">$89,99</p>
+                  <p class="product-price text-gray">$119,99</p>
                 </div>
               </a>
             </li>
@@ -193,16 +205,16 @@
         </div>
       </section>
 
-      <section class="section section-reason">
-        <div class="container pb-30 mb-30">
-          <h3 class="section-title mt-30 pt-30 center-text">
-            Why should you choose us?
-          </h3>
-          <ul class="service-list flex mt-30">
+      <section class="section section-reason padding-section">
+        <div class="container">
+          <h3 class="section-title mb-40  center-text">Why should you choose us?</h3>
+          <ul class="service-list justify-space-between d-flex">
             <li class="service-item">
               <a class="free-ship-link" href="">
-                <span class="border-icon"><i class="shipping-icon"></i></span>
-                <h4 class="service-title txt-bold mt-30">Free shipping</h4>
+                <span class="wrapper-ic wrapper-ic-white mb-40"
+                  ><i class="shipping-icon"></i
+                ></span>
+                <h4 class="service-title txt-bold ">Free shipping</h4>
                 <p class="service-desc">
                   All purchases over $199 are eligible for free shipping via
                   USPS First Class Mail.
@@ -211,9 +223,11 @@
             </li>
             <li class="service-item service-item-active">
               <a class="payment-link" href="">
-                <span class="border-icon"><i class="payment-icon"></i></span>
+                <span class="wrapper-ic wrapper-ic-white mb-40"
+                  ><i class="payment-icon"></i
+                ></span>
 
-                <h4 class="service-title txt-bold mt-30">Easy Payments</h4>
+                <h4 class="service-title txt-bold">Easy Payments</h4>
                 <p class="service-desc">
                   All payments are processed instant lover a secure payment
                   protocol.
@@ -222,11 +236,11 @@
             </li>
             <li class="service-item">
               <a class="guarantee-link" href="">
-                <span class="border-icon"
+                <span class="wrapper-ic wrapper-ic-white mb-40"
                   ><i class="guarantee-icon-b"></i
                 ></span>
 
-                <h4 class="service-title mt-30">Money-Back Guarantee</h4>
+                <h4 class="service-title">Money-Back Guarantee</h4>
                 <p class="service-desc">
                   If an item arrived damaged or you'vechanged your mind, you can
                   send itback for a full refund.
@@ -235,9 +249,11 @@
             </li>
             <li class="service-item">
               <a class="quality-link" href="">
-                <span class="border-icon"><i class="quality-icon"></i></span>
+                <span class="wrapper-ic wrapper-ic-white mb-40"
+                  ><i class="quality-icon"></i
+                ></span>
 
-                <h4 class="service-title txt-bold mt-30">Finest Quality</h4>
+                <h4 class="service-title txt-bold">Finest Quality</h4>
                 <p class="service-desc">
                   Designed to last, each of our products hasbeen crafted with
                   the finest materials.
@@ -248,21 +264,23 @@
         </div>
       </section>
 
-      <section class="section section-new-arrived">
-        <div class="container pb-30">
-          <h3 class="section-title center-text mb-30">Product in today</h3>
-          <ul class="product-list row mb-30">
+      <section class="section section-new-arrived padding-section">
+        <div class="container">
+          <h3 class="section-title mb-40 center-text">Product in today</h3>
+          <ul class="product-list row">
             <li class="product-item col col-3">
               <a class="product-link" href="">
-                <span class="btn product-discount absolute">-30%</span>
+                <span class="badge badge-danger product-discount absolute"
+                  >-30%</span
+                >
                 <img
                   src="assets/img/product-1.png"
                   alt="T-Shirt Summer Vibes"
                 />
                 <h4 class="product-name">T-Shirt Summer Vibes</h4>
-                <div class="product-price-group flex justify-space-between">
-                  <p class="product-price product-discounted-price">$89,99</p>
-                  <p class="product-price product-before-discount">$119,99</p>
+                <div class="product-price-group d-flex justify-space-between">
+                  <p class="product-price text-danger">$89,99</p>
+                  <p class="product-price text-gray">$119,99</p>
                 </div>
               </a>
             </li>
@@ -324,99 +342,102 @@
     </main>
 
     <footer>
-      <div class="container">
-        <div class="footer-top pt-30 flex justify-space-between">
-          <div class="shop-details-sums">
-            <h2 class="shop-details-logo">
-              <a class="logo-link" href="">
-                <img class="logo-img" src="assets/img/logo.png" alt="E-Shop" />
-              </a>
-            </h2>
-            <p class="shop-details-desc">
-              House My Brand designs clothing for the young, the old &everyone
-              in between – but most importantly, for the fashionable
-            </p>
-            <ul class="social-list flex mt-30 justify-space-between">
-              <li class="social-item">
-                <a class="social-ic" href=""
-                  ><img src="assets/img/ic-facebook.svg" alt="Facebook Logo"
-                /></a>
+      <div class="padding-section">
+        <div class="container">
+          <div class="footer-top d-flex justify-space-between ">
+            <div class="shop-details-sums">
+              <h2 class="shop-details-logo">
+                <a class="logo-link" href="">
+                  <img class="logo-img" src="assets/img/logo.png" alt="E-Shop" />
+                </a>
+              </h2>
+              <p class="shop-details-desc">
+                House My Brand designs clothing for the young, the old &everyone
+                in between – but most importantly, for the fashionable
+              </p>
+              <ul class="social-list d-flex justify-space-between">
+                <li class="social-item">
+                  <a class="social-ic" href=""
+                    ><img src="assets/img/ic-facebook.svg" alt="Facebook Logo"
+                  /></a>
+                </li>
+                <li class="social-item">
+                  <a class="social-ic" href=""
+                    ><img src="assets/img/ic-twitter.svg" alt="Twitter Logo"
+                  /></a>
+                </li>
+                <li class="social-item">
+                  <a class="social-ic" href=""
+                    ><img src="assets/img/ic-linkedin.svg" alt="Linkedin Logo"
+                  /></a>
+                </li>
+                <li class="social-item">
+                  <a class="social-ic" href=""
+                    ><img src="assets/img/ic-instagram.svg" alt="Instagram Logo"
+                  /></a>
+                </li>
+                <li class="social-item">
+                  <a class="social-ic" href=""
+                    ><img src="assets/img/ic-youtube.svg" alt="Youtube Logo"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+  
+            <ul class="shop-details-list d-flex justify-space-between">
+              <li class="shop-details-item">
+                <p class="infor-shop-title">Shopping online</p>
+                <ul class="infor-shop-list">
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Order Status</a>
+                  </li>
+                  <li class="infor-shop-item">
+                    <a href="">Shipping and Delivery</a>
+                  </li>
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Returns</a>
+                  </li>
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Payment Options</a>
+                  </li>
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Contact Us</a>
+                  </li>
+                </ul>
               </li>
-              <li class="social-item">
-                <a class="social-ic" href=""
-                  ><img src="assets/img/ic-twitter.svg" alt="Twitter Logo"
-                /></a>
+              <li class="shop-details-item">
+                <p class="infor-shop-title">Information</p>
+                <ul class="infor-shop-list">
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Gift Cards</a>
+                  </li>
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Find a store</a>
+                  </li>
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Newsletter</a>
+                  </li>
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Become a member</a>
+                  </li>
+                  <li class="infor-shop-item">
+                    <a class="info-item-link" href="">Site feedback</a>
+                  </li>
+                </ul>
               </li>
-              <li class="social-item">
-                <a class="social-ic" href=""
-                  ><img src="assets/img/ic-linkedin.svg" alt="Linkedin Logo"
-                /></a>
-              </li>
-              <li class="social-item">
-                <a class="social-ic" href=""
-                  ><img src="assets/img/ic-instagram.svg" alt="Instagram Logo"
-                /></a>
-              </li>
-              <li class="social-item">
-                <a class="social-ic" href=""
-                  ><img src="assets/img/ic-youtube.svg" alt="Youtube Logo"
-                /></a>
+              <li class="shop-details-item">
+                <p class="infor-shop-title">Contact</p>
+                <ul class="infor-shop-list">
+                  <li class="infor-shop-item">store@uikit.com</li>
+                  <li class="infor-shop-item">Hotline: +1 131 138 138</li>
+                </ul>
               </li>
             </ul>
           </div>
-
-          <ul class="shop-details-list flex justify-space-between">
-            <li class="shop-details-item">
-              <p class="infor-shop-title">Shopping online</p>
-              <ul class="infor-shop-list">
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Order Status</a>
-                </li>
-                <li class="infor-shop-item">
-                  <a href="">Shipping and Delivery</a>
-                </li>
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Returns</a>
-                </li>
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Payment Options</a>
-                </li>
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Contact Us</a>
-                </li>
-              </ul>
-            </li>
-            <li class="shop-details-item">
-              <p class="infor-shop-title">Information</p>
-              <ul class="infor-shop-list">
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Gift Cards</a>
-                </li>
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Find a store</a>
-                </li>
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Newsletter</a>
-                </li>
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Become a member</a>
-                </li>
-                <li class="infor-shop-item">
-                  <a class="info-item-link" href="">Site feedback</a>
-                </li>
-              </ul>
-            </li>
-            <li class="shop-details-item">
-              <p class="infor-shop-title">Contact</p>
-              <ul class="infor-shop-list">
-                <li class="infor-shop-item">store@uikit.com</li>
-                <li class="infor-shop-item">Hotline: +1 131 138 138</li>
-              </ul>
-            </li>
-          </ul>
         </div>
       </div>
-      <div class="footer-bottom mt-30">
+      
+      <div class="footer-bottom">
         <p class="copyright">DESIGN BY CEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
       </div>
     </footer>
