@@ -27,13 +27,11 @@ br {
   margin: 0 5px;
 }
 
-
 .container {
   max-width: 1152px;
   width: 100%;
   margin: 0 auto;
 }
-
 
 /* flex-box */
 .d-flex {
@@ -43,7 +41,6 @@ br {
 .justify-start {
   justify-content: flex-start;
 }
-
 
 .justify-end {
   justify-content: flex-end;
@@ -68,7 +65,6 @@ br {
 .justify-evenly {
   justify-content: space-evenly;
 }
-
 
 .justify-space-between {
   justify-content: space-between;
@@ -97,48 +93,46 @@ br {
   padding: 0 10px;
 }
 
-.col-1 {
+.col.col-1 {
   width: 8.333333%;
 }
-.col-2 {
+.col.col-2 {
   width: 16.666667%;
 }
-.col-3 {
+.col.col-3 {
   width: 25%;
 }
-.col-4 {
+.col.col-4 {
   width: 33.333333%;
 }
-.col-5 {
+.col.col-5 {
   width: 41.666667%;
 }
-.col-6 {
+.col.col-6 {
   width: 50%;
 }
-.col-7 {
+.col.col-7 {
   width: 58.333333%;
 }
-.col-8 {
+.col.col-8 {
   width: 66.666667%;
 }
-.col-9 {
+.col.col-9 {
   width: 75%;
 }
-.col-10 {
+.col.col-10 {
   width: 83.333333%;
 }
-.col-11 {
+.col.col-11 {
   width: 91.666667%;
 }
-.col-12 {
+.col.col-12 {
   width: 100%;
 }
 
 .margin-20 {
   margin: 20px;
 }
-
-
 
 .relative {
   position: relative;
@@ -147,7 +141,6 @@ br {
 .absolute {
   position: absolute;
 }
-
 
 .mb-40 {
   margin-bottom: 40px;
@@ -179,7 +172,7 @@ br {
   color: var(--primary);
 }
 
-.text-danger{
+.text-danger {
   color: var(--red);
 }
 
@@ -191,7 +184,6 @@ br {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .badge {
@@ -199,7 +191,6 @@ br {
   align-items: center;
   justify-content: center;
 }
-
 
 .btn {
   font-size: 13px;
@@ -222,24 +213,68 @@ br {
   font-size: 32px;
 }
 
-
-
-
-
-
-
 /* Responsive */
 
 @media only screen and (max-width: 768px) {
   .container {
     max-width: 327px !important;
   }
+  .row-sm {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+  }
+  .col {
+    padding: 0 4px;
+  }
+  .col-sm {
+    padding:8px 4px;
+  }
+  .col.col-sm-1 {
+    width: 8.333333%;
+  }
+  .col.col-sm-2 {
+    width: 16.666667%;
+  }
+  .col.col-sm-3 {
+    width: 25%;
+  }
+  .col.col-sm-4 {
+    width: 33.333333%;
+  }
+  .col.col-sm-5 {
+    width: 41.666667%;
+  }
+  .col.col-sm-6 {
+    width: 50%;
+  }
+  .col.col-sm-7 {
+    width: 58.333333%;
+  }
+  .col.col-sm-8 {
+    width: 66.666667%;
+  }
+  .col.col-sm-9 {
+    width: 75%;
+  }
+  .col.col-sm-10 {
+    width: 83.333333%;
+  }
+  .col.col-sm-11 {
+    width: 91.666667%;
+  }
+  .col.col-sm-12 {
+    width: 100%;
+  }
+  
 
-  .banner-features{
+  .banner-features {
     display: none !important;
   }
 
-  .padding-section{
+  .padding-section {
     padding: 24px;
   }
+
+  
 }
