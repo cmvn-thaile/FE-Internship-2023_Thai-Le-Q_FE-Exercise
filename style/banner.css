@@ -5,6 +5,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../assets/img/banner.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   /* z-index: 1; */
 }
 
@@ -93,21 +94,23 @@
 /* responsive */
 
 @media only screen and (max-width: 768px) {
-  .section-features {
+
+
+  .feature-list {
     display: none !important;
   }
 
   .section-banner {
-    background-image: url("../assets/img/banner-sm.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../assets/img/banner-sm.png");
   }
 
   .banner-desc {
     display: flex;
     flex-direction: column;
-
+    margin-left: 24px;
     gap: 16px;
     position: relative;
-    transform: translate(5%, 5%);
+    transform: translate(0, 30%);
   }
 
   .banner-title {
