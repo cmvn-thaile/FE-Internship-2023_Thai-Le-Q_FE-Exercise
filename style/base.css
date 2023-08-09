@@ -213,6 +213,14 @@ br {
   font-size: 32px;
 }
 
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
 /* Responsive */
 
 @media only screen and (max-width: 768px) {

@@ -1,6 +1,10 @@
 footer {
   background-color: var(--primary);
 }
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
 
 .footer-bottom {
   border-top: 2px solid var(--white);
@@ -17,6 +21,9 @@ footer {
 }
 
 .social-list {
+  display: flex;
+  justify-content: space-between;
+
   max-width: 200px;
   padding: 60px 0 10px 0px;
 }
@@ -44,4 +51,37 @@ footer {
   padding: 20px 0;
   font-size: 14px;
   color: var(--white);
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .social-list {
+    display: none;
+  }
+
+  .shop-details-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .infor-shop-item {
+    font-size: 12px;
+  }
+
+  .infor-shop-list {
+    margin-top: 0;
+    gap: 6px;
+  }
+
+  .infor-shop-title {
+  padding: 12px 0;
+  }
+
+  .shop-details-sums{
+    padding-bottom: 12px;
+  }
 }

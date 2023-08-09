@@ -1,6 +1,7 @@
 
 .service-desc {
   max-width: 245px;
+color: var(--dark-gray);  
 }
 
 .service-list{
@@ -31,7 +32,10 @@
   }
 
   .service-info {
+    display: flex;
+    flex-direction: column;
     max-width: 245px;
+    gap:6px
   }
 
   .service-desc {
