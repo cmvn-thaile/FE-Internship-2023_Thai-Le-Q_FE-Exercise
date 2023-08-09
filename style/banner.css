@@ -1,15 +1,13 @@
 .section-banner {
   position: relative;
-  height: 100vh;
+  height: 800px;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../assets/img/banner.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("../assets/img/banner.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* z-index: 1; */
 }
-
-
 
 .banner-desc {
   display: flex;
@@ -38,13 +36,12 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  /* z-index: 1; */
-
+height: 125px;
   border-top-right-radius: 70px;
-  padding-left: calc((100vw - 1152px)/2 + 96px - 24px);
+  padding-left: calc((100vw - 1152px) / 2 + 96px - 24px);
   padding-right: 64px;
 
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .feature-item {
@@ -54,8 +51,6 @@
   font-size: 12px;
   padding: 24px;
   gap: 15px;
-
-
 }
 
 .feature-detail {
@@ -94,14 +89,14 @@
 /* responsive */
 
 @media only screen and (max-width: 768px) {
-
-
   .feature-list {
     display: none !important;
   }
 
   .section-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../assets/img/banner-sm.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+      url("../assets/img/banner-sm.png");
+    height: 100vh;
   }
 
   .banner-desc {
