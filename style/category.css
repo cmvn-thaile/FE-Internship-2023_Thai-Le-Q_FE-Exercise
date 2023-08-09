@@ -41,12 +41,12 @@ li:nth-of-type(3) .category {
 
 .category-discount {
   top: 40%;
-  left: 40px;
+  left: 11%;
 }
 
 .category-desc {
   top: 50%;
-  left: 40px;
+  left: 11%;
   /* transform: translate(-5%, -20%); */
   font-size: 24px;
   font-weight: 300;
@@ -56,14 +56,16 @@ li:nth-of-type(3) .category {
 
 .category-btn {
   bottom: 10%;
-  left: 40px;
+  left: 11%;
   /* transform: translate(-10%, -20%); */
   z-index: 1;
   background-color: var(--white);
+  white-space: nowrap;
 }
 
 .side-item-category {
   max-width: 179px;
+  
 }
 
 .category-btn {
