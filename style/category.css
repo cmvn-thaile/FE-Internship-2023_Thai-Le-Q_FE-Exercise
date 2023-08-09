@@ -86,3 +86,11 @@ li:nth-of-type(3) .category {
   padding: 6px 9px;
   border-radius: 20px;
 }
+
+/* responsive */
+
+@media only screen and (max-width: 576px) {
+  .banner-features{
+    display: none !important;
+  }
+}

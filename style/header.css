@@ -8,6 +8,8 @@
 
 .header-container {
   padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-icons-list {
@@ -24,3 +26,23 @@
   color: var(--primary);
 }
 
+/* Responsive */
+
+@media only screen and (max-width: 576px) {
+  .nav {
+    display: none !important;
+  }
+  .header-icons-list {
+    width: 120px;
+  }
+
+  .header-container{
+    justify-content: space-between;
+    max-width: 327px;
+  }
+
+  .logo {
+    max-width: 125px;
+    max-height: 32px ;
+  }
+}
