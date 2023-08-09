@@ -1,0 +1,47 @@
+footer {
+  background-color: var(--primary);
+}
+
+.footer-bottom {
+  border-top: 2px solid var(--white);
+}
+
+.shop-details-list {
+  width: 600px;
+}
+
+.shop-details-desc {
+  max-width: 370px;
+  font-size: 14px;
+  color: var(--white);
+}
+
+.social-list {
+  max-width: 200px;
+  padding: 60px 0 10px 0px;
+}
+
+.infor-shop-title {
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.infor-shop-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.infor-shop-item {
+  font-size: 14px;
+  color: var(--white);
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: var(--white);
+}

@@ -1,0 +1,26 @@
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-container {
+  padding: 40px 0;
+}
+
+.header-icons-list {
+  width: 120px;
+}
+
+.nav {
+  width: 300px;
+}
+
+.nav-item {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+}
+

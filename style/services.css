@@ -1,0 +1,20 @@
+
+
+
+.service-title {
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.service-desc {
+  max-width: 245px;
+}
+
+.section-reason {
+  background-color: var(--light-gray);
+}
+
+
+
