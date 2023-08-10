@@ -198,6 +198,7 @@ br {
   line-height: 19.5px;
   padding: 14px 18px;
   text-align: center;
+  cursor: pointer;
 }
 
 .padding-section {
