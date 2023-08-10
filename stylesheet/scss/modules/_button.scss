@@ -11,6 +11,12 @@
     background-color: map-get($color, white);
     border-radius: 32px;
     border: 1px solid map-get($color, gray-2);
+    bottom: 10%;
+    left: 11%;
+    /* transform: translate(-10%, -20%); */
+    z-index: 1;
+    background-color: map-get($color, white);
+    white-space: nowrap;
   }
 
   &-recommended {
@@ -21,9 +27,9 @@
   }
 
   &-subscribe {
-    background-color: map-get($color, primary); 
+    background-color: map-get($color, primary);
     border-radius: 32px;
-    border: 1px solid  map-get($color, primary); 
+    border: 1px solid map-get($color, primary);
     font-weight: 700;
     padding: 15px 50px;
     z-index: 1;
