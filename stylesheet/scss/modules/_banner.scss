@@ -1,0 +1,32 @@
+@import "./../base/variables";
+
+.banner {
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 25vh;
+    margin-left: 96px;
+    z-index: 1;
+  }
+  &-button {
+    max-width: 190px;
+  }
+
+  &-btn-desc {
+    text-decoration: underline;
+    font-size: map-get($font-size, large);
+    color: map-get($color, white);
+    font-weight: map-get($font-weight, bold);
+  }
+
+  &-title {
+    font-size: map-get($font-size, extra-extra-large);
+    font-weight: map-get($font-weight, bold);
+    color: map-get($color, white);
+    line-height: 1;
+    max-width: 405px;
+  }
+}
+
+

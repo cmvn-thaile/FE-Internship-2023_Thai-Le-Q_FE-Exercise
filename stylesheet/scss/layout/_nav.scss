@@ -1,0 +1,11 @@
+@import "./../base/variables";
+
+.nav {
+  width: 300px;
+}
+
+.nav-item {
+  font-size: 18px;
+  font-weight: 700;
+  color: map-get($color, primary );
+}

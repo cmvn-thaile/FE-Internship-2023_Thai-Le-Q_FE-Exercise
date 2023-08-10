@@ -1,0 +1,49 @@
+@import "./../base/variables";
+
+.btn {
+  font-weight: map-get($font-weight, bold);
+  line-height: map-get($line-height, normal);
+  padding: 14px 18px;
+  text-align: center;
+  cursor: pointer;
+
+  &-category {
+    background-color: map-get($color, white);
+    border-radius: 32px;
+    border: 1px solid map-get($color, gray-2);
+  }
+
+  &-recommended {
+    background-color: map-get($color, white);
+    padding: 15px 30px;
+    border-radius: 32px;
+    border: 1px solid map-get($color, gray-2);
+  }
+
+  &-subscribe {
+    background-color: map-get($color, primary); 
+    border-radius: 32px;
+    border: 1px solid  map-get($color, primary); 
+    font-weight: 700;
+    padding: 15px 50px;
+    z-index: 1;
+  }
+}
+
+// .recommended-btn {
+//   background-color: var(--white);
+//   padding: 15px 30px;
+//   border-radius: 32px;
+
+//   border: 1px solid var(--cool-gray);
+// }
+
+// .subscribe-btn {
+//   background-color: var(--primary);
+//   border-radius: 32px;
+//   border: 1px solid var(--primary) !important;
+//   font-weight: 700;
+//   font-size: 13px;
+//   padding: 15px 50px;
+//   z-index: 1;
+// }

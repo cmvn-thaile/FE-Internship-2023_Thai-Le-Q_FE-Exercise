@@ -1,0 +1,31 @@
+
+.header {
+  &-desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  &-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: black;
+  }
+
+  &-container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &-icons-list {
+    width: 120px;
+  }
+
+}

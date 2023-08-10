@@ -1,0 +1,7 @@
+@import "variables";
+@import "./../state/color";
+/* Set default font family and size */
+body {
+  font-family: $font-family;
+  font-size: map-get($font-size, small);
+}

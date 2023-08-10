@@ -1,4 +1,4 @@
-.header-desktop {
+/* .header-desktop {
   position: absolute;
   top: 0;
   left: 0;
@@ -24,9 +24,9 @@
 
 .header-icons-list {
   width: 120px;
-}
+} */
 
-.nav {
+/* .nav {
   width: 300px;
 }
 
@@ -34,7 +34,7 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--primary);
-}
+} */
 
 /* Responsive */
 

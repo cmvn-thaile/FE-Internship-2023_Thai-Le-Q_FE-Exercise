@@ -67,14 +67,14 @@ li:nth-of-type(3) .category {
   max-width: 179px;
   
 }
-
+/* 
 .category-btn {
   background-color: var(--white);
   padding: 14px 18px;
   border-radius: 32px;
 
   border: 1px solid var(--cool-gray) !important;
-}
+} */
 
 .badge-danger {
   color: var(--light-gray);

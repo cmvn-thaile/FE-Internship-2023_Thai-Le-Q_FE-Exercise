@@ -42,7 +42,7 @@
   z-index: 1;
 }
 
-.subscribe-btn {
+/* .subscribe-btn {
   background-color: var(--primary);
   border-radius: 32px;
   border: 1px solid var(--primary) !important;
@@ -50,7 +50,7 @@
   font-size: 13px;
   padding: 15px 50px;
   z-index: 1;
-}
+} */
 
 @media only screen and (max-width: 768px) {
   .section-subscribe {
