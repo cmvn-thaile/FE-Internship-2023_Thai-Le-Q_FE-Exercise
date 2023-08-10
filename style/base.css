@@ -227,17 +227,17 @@ br {
   .container {
     max-width: 327px !important;
   }
-  .row-sm {
+  .row {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -4px;
   }
   .col {
-    padding: 0 4px;
+    padding: 4px;
   }
-  .col-sm {
+  /* .col-sm {
     padding:8px 4px;
-  }
+  } */
   .col.col-sm-1 {
     width: 8.333333%;
   }

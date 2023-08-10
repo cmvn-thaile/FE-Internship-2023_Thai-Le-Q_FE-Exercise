@@ -11,8 +11,8 @@
   background-image: url("../assets/img/ic-user.svg");
 }
 
-.menu-icon {
-  background-image: url("../assets/img/ic-menu.svg");
+.search-icon-black {
+  background-image: url("../assets/img/ic-search-black.svg");
 }
 
 .cart-icon-black {
@@ -33,7 +33,7 @@
 .menu-icon,
 .cart-icon-black,
 .user-icon-black,
-.menu-icon-black {
+.search-icon-black {
   display: inline-block;
   width: 20px;
   height: 20px;
