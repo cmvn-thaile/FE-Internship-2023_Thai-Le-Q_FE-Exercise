@@ -191,15 +191,15 @@
     height: 100%;
   }
   &-desc {
-    max-width: 490px;
+
     color: map-get($color, white);
-    font-size: map-get($font-size, lg-1);
-    font-weight: 300;
+    font-size: map-get($font-size, md-2);
+    font-weight: map-get($font-weight, normal);
     z-index: 1;
   }
 
   &-input-group {
-    max-width: 600px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -208,7 +208,7 @@
   }
 
   &-input {
-    max-width: 351px;
+
     width: 100%;
     padding: 15px 24px;
     border-radius: 24px;
