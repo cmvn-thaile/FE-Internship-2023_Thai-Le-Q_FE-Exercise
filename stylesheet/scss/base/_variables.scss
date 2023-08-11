@@ -3,7 +3,7 @@ $font-weight: (
   normal: 400,
   light: 300,
 );
-
+  
 $line-height: (
   small: 1,
   normal: 1.5,
@@ -12,12 +12,16 @@ $line-height: (
 $font-family: "Poppins", sans-serif;
 
 $font-size: (
-  small: 13px,
-  medium: 14px,
-  medium-large: 16px,
-  large: 24px,
-  extra-large: 32px,
-  extra-extra-large: 72px,
+  x-sm: 8px,
+  x-sm-1:10px,
+  sm-1: 12px,
+  sm-2: 14px,
+  sm-3: 16px,
+  sm-4: 18px,
+  md-1: 20px,
+  md-2: 24px,
+  lg-1: 32px,
+  lg-2: 72px,
 );
 
 $color: (

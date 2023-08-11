@@ -1,0 +1,49 @@
+@import "./../base/variables";
+@import "./../base/mixins";
+.service {
+  &-desc {
+    max-width: 240px;
+    color: map-get($color, gray-2);
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-title {
+    font-weight: map-get($font-weight, bold);
+    font-size: map-get($font-size, sm-3);
+  }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  .service {
+    &-item {
+      margin: 8px 0;
+    }
+
+    &-item a {
+      @include center();
+      justify-content: space-between;
+    }
+
+    &-desc {
+      font-size: map-get($font-size, x-sm-1 );
+    }
+
+    &-info {
+      display: flex;
+      max-width: 245px;
+      gap:6px
+    }
+
+    &-title {
+      font-size:  map-get($font-size, sm-1 );
+    }
+
+  }
+}

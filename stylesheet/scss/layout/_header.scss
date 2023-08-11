@@ -1,4 +1,3 @@
-
 .header {
   &-desktop {
     position: absolute;
@@ -15,7 +14,7 @@
     left: 0;
     width: 100%;
     z-index: 9999;
-    background-color: black;
+    background-color: map-get($color, black );
   }
 
   &-container {
@@ -23,9 +22,36 @@
     display: flex;
     justify-content: space-between;
   }
-  
+
   &-icons-list {
     width: 120px;
   }
+}
 
+@media only screen and (max-width: 576px) {
+  .logo {
+    max-width: 20px;
+  }
+  .header {
+    &-mobile {
+      display: block;
+      width: 100vw;
+      height: 72px;
+      background-color: map-get($color, white );
+    }
+    &-desktop {
+      display: none;
+    }
+    &-icons-list {
+      max-width: 110px;
+    }
+
+    &-container {
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 20px 0;
+      width: 327px !important;
+    }
+  }
 }

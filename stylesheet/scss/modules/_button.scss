@@ -36,20 +36,26 @@
   }
 }
 
-// .recommended-btn {
-//   background-color: var(--white);
-//   padding: 15px 30px;
-//   border-radius: 32px;
+@media only screen and (max-width: 768px) {
+  .btn {
+    &-category {
+      font-size: map-get($font-size, x-sm-1);
+      line-height: map-get($line-height, small);
+      padding: 5px 10px;
+      left: 16px;
+    }
 
-//   border: 1px solid var(--cool-gray);
-// }
+    &-recommended {
+      border: none ;
+      font-size: map-get($font-size, x-sm-1);
+      padding: 0;
+    }
+  
+    &-subscribe {
+      border-radius: 56px;
 
-// .subscribe-btn {
-//   background-color: var(--primary);
-//   border-radius: 32px;
-//   border: 1px solid var(--primary) !important;
-//   font-weight: 700;
-//   font-size: 13px;
-//   padding: 15px 50px;
-//   z-index: 1;
-// }
+      font-size: map-get($font-size, sm-1);
+      padding: 7px 22px;
+    }
+  }
+}

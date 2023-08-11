@@ -1,0 +1,34 @@
+@import "./../base/variables";
+
+.link {
+  
+  &-free-ship:hover .icon-shipping {
+    background-image: url("../../assets/img/ic-truck-yellow.svg");
+  }
+  &-free-ship:hover .service-title{
+    color: map-get($color, primary); 
+  }
+
+  &-payment:hover .icon-payment {
+    background-image: url("../../assets/img/ic-payment-hl.svg");
+  }
+  &-payment:hover .service-title{
+    color: map-get($color, primary); 
+  }
+
+  &-guarantee:hover .icon-guarantee-b {
+    background-image: url("../../assets/img/ic-guarantee-yellow.svg");
+  }
+  &-guarantee:hover .service-title{
+    color: map-get($color, primary); 
+  }
+
+  &-quality:hover .icon-quality {
+    background-image: url("../../assets/img/ic-quality-hl.svg");
+  }
+  &-quality:hover .service-title{
+    color: map-get($color, primary); 
+  }
+}
+
+

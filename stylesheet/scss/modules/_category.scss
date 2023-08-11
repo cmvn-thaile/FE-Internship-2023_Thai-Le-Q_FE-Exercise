@@ -44,8 +44,8 @@
     top: 50%;
     left: 11%;
     /* transform: translate(-5%, -20%); */
-    font-size:  map-get($font-size, large);
-    font-weight: map-get($font-weight, light);;
+    font-size: map-get($font-size, md-2);
+    font-weight: map-get($font-weight, normal);
     color: map-get($color, white);
     z-index: 1;
   }
@@ -59,4 +59,22 @@
 
 .side-item-category {
   max-width: 179px;
+}
+
+@media only screen and (max-width: 768px) {
+  .category {
+    &-desc {
+      left: 16px;
+      max-width: 125px;
+      font-size: map-get($font-size, sm-2);
+    }
+
+    &-discount {
+      left: 16px;
+    }
+  }
+
+  .side-item-category {
+    max-width: 100px;
+  }
 }

@@ -90,9 +90,8 @@
 
   &-left-arrow {
     background-image: url("../../assets/img/ic-left-arrow.svg");
-    width: 25px;
-    height: 25px;
-    background-size: contain;
+    width: 26px;
+    height: 26px;
   }
 
   &-left-arrow::after {
@@ -129,4 +128,28 @@
   height: 40px;
   border-radius: 30px;
   background-color: map-get($color, primary);
+}
+
+@media only screen and (max-width: 768px) {
+  .left-arrow-bg {
+    width: 32px;
+    height: 32px;
+  }
+  .icon {
+    &-left-arrow {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .wrapper-ic {
+    &-white {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 0;
+
+      border-radius: 8px;
+  
+    }
+  }
 }
