@@ -203,14 +203,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 12px;
     z-index: 1;
   }
 
   &-input {
 
     width: 100%;
-    padding: 15px 24px;
+    padding: 14px 24px;
     border-radius: 24px;
     border: map-get($color, white);
     background-color: map-get($color, white);

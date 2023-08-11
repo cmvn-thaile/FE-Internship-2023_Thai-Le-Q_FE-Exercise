@@ -24,13 +24,15 @@
 
 @media only screen and (max-width: 768px) {
   .container {
-    max-width: 327px !important;
+    padding: 0 24px;
   }
+
   .row {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -4px;
   }
+
   .col {
     padding: 4px;
   }
@@ -72,7 +74,7 @@
   }
 
   .banner-features {
-    display: none !important;
+    display: none 
   }
 
   .padding-section {
