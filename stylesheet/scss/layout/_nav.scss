@@ -7,14 +7,11 @@
 .nav-item {
   font-size: 18px;
   font-weight: 700;
-  color: map-get($color, primary );
+  color: map-get($color, primary);
 }
 
-
 @media only screen and (max-width: 576px) {
-
   .nav {
     display: none !important;
   }
-
 }

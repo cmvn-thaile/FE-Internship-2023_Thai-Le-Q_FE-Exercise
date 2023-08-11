@@ -4,8 +4,6 @@
   margin: 0 auto;
 }
 
-
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +70,6 @@
   .col.col-sm-12 {
     width: 100%;
   }
-  
 
   .banner-features {
     display: none !important;
@@ -82,7 +79,7 @@
     padding: 24px;
   }
 
-  .section-title{
+  .section-title {
     font-size: 18px;
   }
 }
