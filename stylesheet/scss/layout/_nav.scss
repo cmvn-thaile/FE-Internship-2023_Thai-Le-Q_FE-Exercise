@@ -1,13 +1,17 @@
 @import "./../base/variables";
-
+@import "./../base/mixins";
 .nav {
-  width: 300px;
-}
+  @include center();
+  &-list {
+    @include center();
+    gap: 96px;
+  }
 
-.nav-item {
-  font-size: 18px;
-  font-weight: 700;
-  color: map-get($color, primary);
+  &-item {
+    font-size: map-get($color, sm-4);
+    font-weight: map-get($font-weight, bold);
+    color: map-get($color, primary);
+  }
 }
 
 @media only screen and (max-width: 576px) {

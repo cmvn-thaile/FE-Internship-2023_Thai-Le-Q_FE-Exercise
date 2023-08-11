@@ -12,4 +12,8 @@
   &-gray {
     color: map-get($color, gray-1);
   }
+
+  &-gray-2 {
+    color: map-get($color, gray-2);
+  }
 }
