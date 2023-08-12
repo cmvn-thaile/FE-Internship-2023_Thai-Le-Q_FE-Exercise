@@ -15,13 +15,12 @@
     <header>
       <div class="container">
         <div class="header-container">
-          <div class="logo">
-            <h1 class="logo-title">
-              <a href="logo-link">
-                <img class="logo-img" src="" alt="" />
-              </a>
-            </h1>
-          </div>
+          <h1 class="logo">
+            <a href="logo-link">
+              <img class="logo-img" src="" alt="Website logo" />
+            </a>
+          </h1>
+
           <nav class="nav">
             <ul class="nav-list">
               <li class="nav-item"><a href="nav-link">Pets</a></li>
@@ -31,12 +30,11 @@
               <li class="nav-item"><a href="nav-link">Brands</a></li>
             </ul>
           </nav>
-          <span class="btn btn-outline">
-            <a href="btn cart-link">
-              <span class="btn-wrapper-icon"><i class="icon-cart"></i></span>
-              <span class="btn-text">Cart(0)</span>
-            </a>
-          </span>
+
+          <a href="btn btn-outline-primary">
+            <span class="btn-wrapper-icon"><i class="icon-cart"></i></span>
+            <span class="btn-text">Cart(0)</span>
+          </a>
         </div>
       </div>
     </header>
@@ -44,14 +42,14 @@
       <section class="section section-banner">
         <div class="container">
           <div class="banner-container">
-            <h2 class="banner-title">Pet care in the store</h2>
+            <h2 class="section-title">Pet care in the store</h2>
             <p class="banner-desc">
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book.
             </p>
             <span class="banner-wrapper-link">
-              <a class="btn banner-link" href=""> SHOP NOW </a>
+              <a class="btn btn-primary" href=""> SHOP NOW </a>
             </span>
           </div>
         </div>
@@ -60,7 +58,7 @@
       <section class="section section-category">
         <div class="container">
           <div class="category-container">
-            <h3 class="category-title">
+            <h3 class="section-title">
               <a class="category-link" href=""> Shop By Category </a>
             </h3>
 
@@ -68,7 +66,7 @@
               <li class="category-item col">
                 <div class="category">
                   <a href="category-item-link">
-                    <img class="category-img" src="" alt="" />
+                    <img class="category-img" src="" alt="Cat Food" />
                     <h4 class="category-name">Cat Food</h4>
                   </a>
                 </div>
@@ -76,7 +74,7 @@
               <li class="category-item col">
                 <div class="category">
                   <a href="category-item-link">
-                    <img class="category-img" src="" alt="" />
+                    <img class="category-img" src="" alt="Cat Food" />
                     <h4 class="category-name">Cat Food</h4>
                   </a>
                 </div>
@@ -84,7 +82,7 @@
               <li class="category-item col">
                 <div class="category">
                   <a href="category-item-link">
-                    <img class="category-img" src="" alt="" />
+                    <img class="category-img" src="" alt="Cat Food" />
                     <h4 class="category-name">Cat Food</h4>
                   </a>
                 </div>
@@ -92,7 +90,7 @@
               <li class="category-item col">
                 <div class="category">
                   <a href="category-item-link">
-                    <img class="category-img" src="" alt="" />
+                    <img class="category-img" src="" alt="Cat Food" />
                     <h4 class="category-name">Cat Food</h4>
                   </a>
                 </div>
@@ -100,7 +98,7 @@
               <li class="category-item col">
                 <div class="category">
                   <a href="category-item-link">
-                    <img class="category-img" src="" alt="" />
+                    <img class="category-img" src="" alt="Cat Food" />
                     <h4 class="category-name">Cat Food</h4>
                   </a>
                 </div>
@@ -113,11 +111,11 @@
       <section class="section section-trending">
         <div class="container">
           <div class="trending-container">
-            <h3 class="trending-title">
-              <a class="trending-link" href=""> Trending Products</a>
+            <h3 class="section-title">
+              <a class="trending-title-link" href=""> Trending Products</a>
             </h3>
-            <div class="trending-container">
-              <div class="filter">
+            <div class="trending-content row">
+              <div class="filter col-3">
                 <ul class="filter-list">
                   <li class="filter-item filter-active">
                     <a class="filter-item-link" href="">Accessories</a>
@@ -143,32 +141,29 @@
                 </ul>
               </div>
 
-              <ul class="trending-list row">
+              <ul class="trending-list row col-9">
                 <li class="trending-item col col-6">
                   <div class="trending">
-                    <a href="trending-link">
+                    <a href="trending-wrapper-link">
                       <div class="trending-card">
-                        <div class="trending-wrapper-img">
-                          <span class="trending-discount">
-                            <a class="badge badge-danger" href=""></a>
-                          </span>
-                          <img class="trending-card-img" src="" alt="" />
-                        </div>
-
-                        <div class="trending-content">
-                          <h5 class="trending-card-name">
-                            Lorem Ipsum passage
-                          </h5>
-                          <p class="trending-card-text">
+                        <span class="trending-discount">
+                          <a class="badge badge-danger" href=""></a>
+                        </span>
+                        <img
+                          class="trending-img"
+                          src=""
+                          alt="Trending product image"
+                        />
+                        <div class="trending-card-content">
+                          <h5 class="trending-name">Lorem Ipsum passage</h5>
+                          <p class="trending-desc text-truncation">
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry....
                           </p>
-                          <span class="trending-card-price">$ 20.00</span>
-                          <button class="btn btn-outline">
-                            <span class="btn-wrapper-icon"
-                              ><i class="icon-cart"></i
-                            ></span>
-                            <span class="btn-text">Add to cart</span>
+                          <span class="trending-price">$ 20.00</span>
+                          <button class="btn btn-outline-primary">
+                            <i class="icon-cart"></i>
+                            Add to cart
                           </button>
                         </div>
                       </div>
@@ -178,29 +173,26 @@
 
                 <li class="trending-item col col-6">
                   <div class="trending">
-                    <a href="trending-link">
+                    <a href="trending-wrapper-link">
                       <div class="trending-card">
-                        <div class="trending-wrapper-img">
-                          <span class="trending-discount">
-                            <a class="badge badge-danger" href=""></a>
-                          </span>
-                          <img class="trending-card-img" src="" alt="" />
-                        </div>
-
-                        <div class="trending-content">
-                          <h5 class="trending-card-name">
-                            Lorem Ipsum passage
-                          </h5>
-                          <p class="trending-card-text">
+                        <span class="trending-discount">
+                          <a class="badge badge-danger" href=""></a>
+                        </span>
+                        <img
+                          class="trending-img"
+                          src=""
+                          alt="Trending product image"
+                        />
+                        <div class="trending-card-content">
+                          <h5 class="trending-name">Lorem Ipsum passage</h5>
+                          <p class="trending-desc text-truncation">
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry....
                           </p>
-                          <span class="trending-card-price">$ 20.00</span>
-                          <button class="btn btn-outline">
-                            <span class="btn-wrapper-icon"
-                              ><i class="icon-cart"></i
-                            ></span>
-                            <span class="btn-text">Add to cart</span>
+                          <span class="trending-price">$ 20.00</span>
+                          <button class="btn btn-outline-primary">
+                            <i class="icon-cart"></i>
+                            Add to cart
                           </button>
                         </div>
                       </div>
@@ -210,29 +202,26 @@
 
                 <li class="trending-item col col-6">
                   <div class="trending">
-                    <a href="trending-link">
+                    <a href="trending-wrapper-link">
                       <div class="trending-card">
-                        <div class="trending-wrapper-img">
-                          <span class="trending-discount">
-                            <a class="badge badge-danger" href=""></a>
-                          </span>
-                          <img class="trending-card-img" src="" alt="" />
-                        </div>
-
-                        <div class="trending-content">
-                          <h5 class="trending-card-name">
-                            Lorem Ipsum passage
-                          </h5>
-                          <p class="trending-card-text">
+                        <span class="trending-discount">
+                          <a class="badge badge-danger" href=""></a>
+                        </span>
+                        <img
+                          class="trending-img"
+                          src=""
+                          alt="Trending product image"
+                        />
+                        <div class="trending-card-content">
+                          <h5 class="trending-name">Lorem Ipsum passage</h5>
+                          <p class="trending-desc text-truncation">
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry....
                           </p>
-                          <span class="trending-card-price">$ 20.00</span>
-                          <button class="btn btn-outline">
-                            <span class="btn-wrapper-icon"
-                              ><i class="icon-cart"></i
-                            ></span>
-                            <span class="btn-text">Add to cart</span>
+                          <span class="trending-price">$ 20.00</span>
+                          <button class="btn btn-outline-primary">
+                            <i class="icon-cart"></i>
+                            Add to cart
                           </button>
                         </div>
                       </div>
@@ -242,29 +231,26 @@
 
                 <li class="trending-item col col-6">
                   <div class="trending">
-                    <a href="trending-link">
+                    <a href="trending-wrapper-link">
                       <div class="trending-card">
-                        <div class="trending-wrapper-img">
-                          <span class="trending-discount">
-                            <a class="badge badge-danger" href=""></a>
-                          </span>
-                          <img class="trending-card-img" src="" alt="" />
-                        </div>
-
-                        <div class="trending-content">
-                          <h5 class="trending-card-name">
-                            Lorem Ipsum passage
-                          </h5>
-                          <p class="trending-card-text">
+                        <span class="trending-discount">
+                          <a class="badge badge-danger" href=""></a>
+                        </span>
+                        <img
+                          class="trending-img"
+                          src=""
+                          alt="Trending product image"
+                        />
+                        <div class="trending-card-content">
+                          <h5 class="trending-name">Lorem Ipsum passage</h5>
+                          <p class="trending-desc text-truncation">
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry....
                           </p>
-                          <span class="trending-card-price">$ 20.00</span>
-                          <button class="btn btn-outline">
-                            <span class="btn-wrapper-icon"
-                              ><i class="icon-cart"></i
-                            ></span>
-                            <span class="btn-text">Add to cart</span>
+                          <span class="trending-price">$ 20.00</span>
+                          <button class="btn btn-outline-primary">
+                            <i class="icon-cart"></i>
+                            Add to cart
                           </button>
                         </div>
                       </div>
@@ -278,125 +264,104 @@
       </section>
 
       <section class="section section-gallery">
-        <div class="container">
-          <div class="gallery-container">
-            <h3 class="gallery-title">
-              <a class="gallery-link" href=""> Our Product Gallery </a>
-            </h3>
-            <ul class="galley-list row row-cols-5">
-              <li class="galley-item col">
-                <div class="galley-content">
-                  <a href="gallery-link">
-                    <img class="gallery-img" src="" alt="" />
+        <div class="gallery-container">
+          <h3 class="section-title">
+            <a class="gallery-link" href=""> Our Product Gallery </a>
+          </h3>
+          <ul class="galley-list row row-cols-5">
+            <li class="galley-item col">
+              <div class="galley-content">
+                <a href="gallery-link">
+                  <img class="gallery-img" src="" alt="Gallery image" />
+                </a>
+                <span class="gallery-wrapper-btn">
+                  <a class="btn btn-outline-primary" href="">
+                    <h4 class="gallery-name">Healthy Food</h4>
                   </a>
-                  <span class="gallery-wrapper-btn">
-                    <a class="btn btn-outline" href=""></a
-                  ></span>
-                </div>
-              </li>
+                </span>
+              </div>
+            </li>
 
-              <li class="galley-item col flex-reverse">
-                <div class="galley-content">
-                  <a href="gallery-link">
-                    <img class="gallery-img" src="" alt="" />
+            <li class="galley-item col flex-reverse">
+              <div class="galley-content">
+                <a href="gallery-link">
+                  <img class="gallery-img" src="" alt="Gallery image" />
+                </a>
+                <span class="gallery-wrapper-btn">
+                  <a class="btn btn-outline-primary" href="">
+                    <h4 class="gallery-name">Healthy Food</h4>
                   </a>
-                  <span class="gallery-wrapper-btn">
-                    <a class="btn btn-outline" href=""></a
-                  ></span>
-                </div>
-              </li>
+                </span>
+              </div>
+            </li>
 
-              <li class="galley-item col">
-                <div class="galley-content">
-                  <a href="gallery-link">
-                    <img class="gallery-img" src="" alt="" />
+            <li class="galley-item col">
+              <div class="galley-content">
+                <a href="gallery-link">
+                  <img class="gallery-img" src="" alt="Gallery image" />
+                </a>
+                <span class="gallery-wrapper-btn">
+                  <a class="btn btn-outline-primary" href="">
+                    <h4 class="gallery-name">Healthy Food</h4>
                   </a>
-                  <span class="gallery-wrapper-btn">
-                    <a class="btn btn-outline" href=""></a
-                  ></span>
-                </div>
-              </li>
+                </span>
+              </div>
+            </li>
 
-              <li class="galley-item col flex-reverse">
-                <div class="galley-content">
-                  <a href="gallery-link">
-                    <img class="gallery-img" src="" alt="" />
+            <li class="galley-item col flex-reverse">
+              <div class="galley-content">
+                <a href="gallery-link">
+                  <img class="gallery-img" src="" alt="Gallery image" />
+                </a>
+                <span class="gallery-wrapper-btn">
+                  <a class="btn btn-outline-primary" href="">
+                    <h4 class="gallery-name">Healthy Food</h4>
                   </a>
-                  <span class="gallery-wrapper-btn">
-                    <a class="btn btn-outline" href=""></a
-                  ></span>
-                </div>
-              </li>
+                </span>
+              </div>
+            </li>
 
-              <li class="galley-item col">
-                <div class="galley-content">
-                  <a href="gallery-link">
-                    <img class="gallery-img" src="" alt="" />
+            <li class="galley-item col">
+              <div class="galley-content">
+                <a href="gallery-link">
+                  <img class="gallery-img" src="" alt="Gallery image" />
+                </a>
+                <span class="gallery-wrapper-btn">
+                  <a class="btn btn-outline-primary" href="">
+                    <h4 class="gallery-name">Healthy Food</h4>
                   </a>
-                  <span class="gallery-wrapper-btn">
-                    <a class="btn btn-outline" href=""></a
-                  ></span>
-                </div>
-              </li>
-
-              <li class="galley-item col">
-                <div class="galley-content">
-                  <a href="gallery-link">
-                    <img class="gallery-img" src="" alt="" />
-                  </a>
-                  <span class="gallery-wrapper-btn">
-                    <a class="btn btn-outline" href=""></a
-                  ></span>
-                </div>
-              </li>
-            </ul>
-          </div>
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
     <footer>
       <section>
-        <div class="container">
-          <div class="footer-container text-center">
-            <h2 class="footer-title">
-              <a class="footer-link" href="">Pet Shop</a>
-            </h2>
+        <div class="footer-container text-center">
+          <h2 class="section-title">
+            <a class="footer-link" href="">Pet Shop</a>
+          </h2>
 
-            <div class="footer-content">
-              <ul class="footer-list">
-                <li class="footer-item">
-                  <div class="footer-info">
-                    <a class="footer-info-link" href="">
-                      <i class="footer-icon icon-email"></i>
-                      <span class="footer-text">petshop@yeudongvat.vn</span>
-                    </a>
-                  </div>
-                </li>
+          <div class="footer-content">
+            <a class="footer-info-link" href="mailto:petshop@yeudongvat.vn">
+              <i class="footer-icon icon-email"></i>
+              <span class="footer-text">petshop@yeudongvat.vn</span>
+            </a>
 
-                <li class="footer-item">
-                  <div class="footer-info">
-                    <a class="footer-info-link" href="">
-                      <i class="footer-icon icon-tele"></i>
-                      <span class="footer-text"
-                        >(+84) 0367574000 (Ms. Chu)</span
-                      >
-                    </a>
-                  </div>
-                </li>
+            <a class="footer-info-link" href="callto:+84367574000">
+              <i class="footer-icon icon-tele"></i>
+              <span class="footer-text">(+84) 0367574000 (Ms. Chu)</span>
+            </a>
 
-                <li class="footer-item">
-                  <div class="footer-info">
-                    <a class="footer-info-link" href="">
-                      <i class="footer-icon icon-location"></i>
-                      <span class="footer-text"
-                        >Tầng 2 toà nhà Ricco, số 363 Nguyễn Hữu Thọ, Quận Cẩm
-                        lệ, Đà Nẵng, Việt Nam</span
-                      >
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <a class="footer-info-link" href="">
+              <i class="footer-icon icon-location"></i>
+              <span class="footer-text"
+                >Tầng 2 toà nhà Ricco, số 363 Nguyễn Hữu Thọ, Quận Cẩm lệ, Đà
+                Nẵng, Việt Nam</span
+              >
+            </a>
           </div>
         </div>
       </section>
