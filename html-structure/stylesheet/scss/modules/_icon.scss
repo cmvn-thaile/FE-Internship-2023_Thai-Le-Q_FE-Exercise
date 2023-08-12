@@ -1,0 +1,11 @@
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &-cart {
+    background-image: url("../../assets/img/ic-cart.svg");
+  }
+}

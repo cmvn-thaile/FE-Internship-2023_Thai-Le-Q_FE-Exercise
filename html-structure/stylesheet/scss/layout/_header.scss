@@ -1,0 +1,16 @@
+header {
+
+  width: 100%;
+  z-index: 9999;
+  background-color: map-get($color, white );
+
+}
+
+.header {
+  &-container {
+    padding: 13px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
