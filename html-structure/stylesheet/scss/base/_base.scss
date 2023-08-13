@@ -1,7 +1,5 @@
 body {
   font-family: $font-family;
   font-size: map-get($font-size, sm);
-  font-weight: map-get($font-weight, normal );
-
+  font-weight: map-get($font-weight, normal);
 }
-

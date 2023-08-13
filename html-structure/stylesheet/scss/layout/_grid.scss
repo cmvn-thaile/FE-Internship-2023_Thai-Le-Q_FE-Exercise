@@ -8,11 +8,11 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: -5px -10px;
 }
 
 .col {
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 @for $i from 1 through 12 {
@@ -26,6 +26,7 @@
     display: grid;
     grid-template-columns: repeat(#{$i}, 1fr);
     grid-gap: 40px;
+    margin:  -10px;
   }
 }
 

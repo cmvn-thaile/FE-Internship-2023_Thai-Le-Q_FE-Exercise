@@ -1,6 +1,7 @@
 .section {
   // margin-right: 10px;
   &-title {
+    padding-bottom: 40px;
     font-size: map-get($font-size, lg-2);
     font-weight: map-get($font-weight, bold);
     text-align: center;
@@ -59,19 +60,34 @@
     }
   }
 
-
-  &-gallery {
-    padding: 40px 0;
-  }
-
-  .gallery{
-    &-content{
+  .trending {
+    padding: 5px 0px;
+    &-card-content {
       display: flex;
       flex-direction: column;
-      gap:16px;
-      align-items: center;
+      align-items: flex-start;
+      gap: 16px;
     }
 
-   
+    &-wrapper-link {
+      position: relative;
+    }
+
+    // &-list {
+
+    // }
+  }
+
+  &-gallery {
+    padding: 70px 0;
+  }
+
+  .gallery {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
   }
 }

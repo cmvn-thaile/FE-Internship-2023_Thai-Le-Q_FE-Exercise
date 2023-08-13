@@ -13,7 +13,7 @@
     font-weight: map-get($font-weight, md);
     color: map-get($color, black);
     &:hover {
-      color: map-get($color, primary );
+      color: map-get($color, primary);
     }
   }
 }
