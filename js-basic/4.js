@@ -42,7 +42,7 @@ function randomArr(arrLength, min, max) {
       arr.push(randomNumber);
     }
   }
-  console.log(generatedNums)
+  console.log(generatedNums);
   return arr;
 }
 

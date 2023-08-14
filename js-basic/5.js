@@ -1,4 +1,3 @@
-
 // 5. Write a function to generate a random hex color code.
 // Input: ()
 // Output: string

@@ -1,5 +1,3 @@
-
-
 // 6. Write a function that calculates the sum of the ordered elements that are divisible by a specified number in the array.
 // Input: (array, number)
 // Output: number

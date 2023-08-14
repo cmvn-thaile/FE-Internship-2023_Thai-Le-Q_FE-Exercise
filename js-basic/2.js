@@ -1,4 +1,3 @@
-
 // 2. Write a JavaScript function to count the occurrence of a substring in a string.
 // Input: (string, substring)
 // Output: the occurrence of a substring in a string

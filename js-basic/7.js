@@ -16,4 +16,3 @@ function maxSumOfTwoConsecutive(arr) {
 }
 
 console.log(maxSumOfTwoConsecutive([1, 2, 3, 7, 5, 6, 4]));
-
