@@ -3,6 +3,10 @@
 // Output: string
 // Ex: () => #1A7B9D
 
+/**
+ * Generates a random hexadecimal color code.
+ * @returns {string} The randomly generated hexadecimal color code.
+ */
 function randomHexColor() {
   let hex = "0123456789ABCDEF";
   let color = "#";

@@ -2,9 +2,14 @@
 // Input: (string, number)
 // Output: new string
 // Ex: ('The quick brown fox jumps over the lazy dog', 4) => "The quick brown fox"
+/**
+ * Truncates a given string to a specified number of words.
+ * @param {string} str - The string to truncate.
+ * @param {number} num - The number of words to keep in the truncated string.
+ * @returns {string} The truncated string.
+ */
 function truncateString(str, num) {
-  const arr = str.split(" ");
-  return arr.slice(0, num).join(" ");
+  return str.split(" ").slice(0, num).join(" ");
 }
 
 // const result3 = truncateString("str str2 str3 sfs sksk sksk sksk sksk", 3);

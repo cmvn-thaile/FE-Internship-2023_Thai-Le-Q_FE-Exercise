@@ -3,6 +3,13 @@
 // Output: new array
 // Ex: (4, 1, 10) => [3, 6, 1, 9]
 // with o(n) complexity
+/**
+ * Generates an array of unique random numbers within a specified range.
+ * @param {number} arrLength - The length of the array to be generated.
+ * @param {number} min - The minimum value of the range (inclusive).
+ * @param {number} max - The maximum value of the range (exclusive).
+ * @returns {number[]} - An array of unique random numbers within the specified range.
+ */
 function randomArr(arrLength, min, max) {
   const randomNum = () => {
     return Math.floor(Math.random() * (max - min) + min);
@@ -10,7 +17,7 @@ function randomArr(arrLength, min, max) {
 
   let arr = [];
   for (let i = 0; i < arrLength; i++) {
-    let randomNumber = randomNum();
+    const randomNumber = randomNum();
 
     if (!arr.includes(randomNumber)) {
       arr.push(randomNumber);

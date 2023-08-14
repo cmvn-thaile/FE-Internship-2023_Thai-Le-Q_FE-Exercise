@@ -3,9 +3,15 @@
 // Output: the new string
 // Ex: ("FE", 4) => 'FEFEFEFE'
 
+/**
+ * Repeats a given string a specified number of times.
+ * @param {string} str - The string to repeat.
+ * @param {number} time - The number of times to repeat the string.
+ * @returns {string} The repeated string.
+ */
 function repeatStr(str, time) {
   let repeatedStr = "";
-  for (var i = 0; i < time; i++) {
+  for (let i = 0; i < time; i++) {
     repeatedStr += str;
   }
 
@@ -18,7 +24,7 @@ function repeatStr(str, time) {
 //using build-in
 
 function repeatStr(str, time) {
-  const str = str;
-  const repeatedStr = str.repeat(time);
-  return repeatedStr;
+  return str.repeat(time);
 }
+
+console.log(repeatStr("fe", 3));

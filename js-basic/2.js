@@ -3,6 +3,12 @@
 // Output: the occurrence of a substring in a string
 // Ex: ("The quick brown fox jumps over the lazy dog", 'the') => 2
 // Ex: ("The quick brown fox jumps over the lazy dog", 'fox') => 1
+/**
+ * Counts the number of occurrences of a substring in a given string.
+ * @param {string} str - The string to search in.
+ * @param {string} subStr - The substring to search for.
+ * @returns {number} - The number of occurrences of the substring in the string.
+ */
 function occurrenceOfSubstring(str, subStr) {
   let count = 0;
   let index = str.indexOf(subStr);
