@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -112,6 +113,7 @@ body {
 }
 .filter-list {
   background-color: #FAFAFA;
+  position: relative;
 }
 .filter-products {
   padding: 0 40px;
@@ -125,7 +127,13 @@ body {
 .filter-item-active {
   font-weight: 700;
 }
-.filter-list > li:not(:last-child)::before {
+.filter-item-active::before {
+  content: "•"; /* Unicode character for a bullet point */
+  vertical-align: middle;
+  margin-right: 10px;
+  color: #ffc017;
+}
+.filter-list > li:not(:last-child)::after {
   /* Styles for all list items except the last one */
   content: "";
   position: absolute;
@@ -145,11 +153,11 @@ body {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  margin: -5px -10px;
+  margin: 0 -10px;
 }
 
 .col {
-  padding: 5px 10px;
+  padding: 0 10px;
 }
 
 .col-1 {
@@ -200,88 +208,52 @@ body {
   width: 100%;
 }
 
-.row-cols-1 {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-1 .col {
+  width: 100%;
 }
 
-.row-cols-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-2 .col {
+  width: 50%;
 }
 
-.row-cols-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-3 .col {
+  width: 33.3333333333%;
 }
 
-.row-cols-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-4 .col {
+  width: 25%;
 }
 
-.row-cols-5 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-5 .col {
+  width: 20%;
 }
 
-.row-cols-6 {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-6 .col {
+  width: 16.6666666667%;
 }
 
-.row-cols-7 {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-7 .col {
+  width: 14.2857142857%;
 }
 
-.row-cols-8 {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-8 .col {
+  width: 12.5%;
 }
 
-.row-cols-9 {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-9 .col {
+  width: 11.1111111111%;
 }
 
-.row-cols-10 {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-10 .col {
+  width: 10%;
 }
 
-.row-cols-11 {
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-11 .col {
+  width: 9.0909090909%;
 }
 
-.row-cols-12 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 40px;
-  margin: -10px;
+.row.row-cols-12 .col {
+  width: 8.3333333333%;
 }
 
 header {

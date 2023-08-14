@@ -9,6 +9,7 @@
   }
   &-list {
     background-color: map-get($color, gray-2);
+    position: relative;
   }
 
   &-products {
@@ -23,14 +24,19 @@
 
     &-active {
       font-weight: map-get($font-weight, bold);
-      
+      &::before {
+        content: "\2022"; /* Unicode character for a bullet point */
+        vertical-align: middle;
+        margin-right: 10px;
+        color: map-get($color, primary );
+      }
     }
   }
 
-  &-list > li:not(:last-child)::before {
+  &-list > li:not(:last-child)::after {
     /* Styles for all list items except the last one */
     content: "";
-
+    
     position: absolute;
     width: 80%;
     margin-top: 45px;
