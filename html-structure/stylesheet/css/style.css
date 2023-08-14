@@ -154,11 +154,11 @@ body {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: -10px -20px;
 }
 
 .col {
-  padding: 0 10px;
+  padding: 10px 20px;
 }
 
 .col-1 {
@@ -359,9 +359,6 @@ footer {
   text-align: center;
   padding-top: 24px;
 }
-.section .trending {
-  padding: 5px 0px;
-}
 .section .trending-card-content {
   display: flex;
   flex-direction: column;
@@ -370,6 +367,12 @@ footer {
 }
 .section .trending-wrapper-link {
   position: relative;
+}
+.section .trending-card {
+  margin: -7.5px;
+}
+.section .trending-img, .section .trending-card-content {
+  padding: 7.5px;
 }
 .section-gallery {
   padding: 70px 0;

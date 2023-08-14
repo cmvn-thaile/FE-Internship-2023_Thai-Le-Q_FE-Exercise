@@ -61,7 +61,7 @@
   }
 
   .trending {
-    padding: 5px 0px;
+
     &-card-content {
       display: flex;
       flex-direction: column;
@@ -71,6 +71,14 @@
 
     &-wrapper-link {
       position: relative;
+    }
+
+    &-card{
+      margin: -7.5px;
+    }
+
+    &-img, &-card-content{
+      padding: 7.5px;
     }
 
   }
