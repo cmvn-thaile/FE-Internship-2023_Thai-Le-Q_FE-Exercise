@@ -11,7 +11,6 @@ function sumDivisibleByNumber(arr, num) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % num === 0) {
       sum += arr[i];
-      console.log(sum);
     }
   }
   return sum;

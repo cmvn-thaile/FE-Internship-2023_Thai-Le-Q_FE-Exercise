@@ -22,5 +22,29 @@ function randomArr(arrLength, min, max) {
   return arr;
 }
 
+// const result4 = randomArr(4, 3, 10);
+// console.log(result4);
+
+//make to O(n)
+function randomArr(arrLength, min, max) {
+  const randomNum = () => {
+    return Math.floor(Math.random() * (max - min) + min);
+  };
+
+  let arr = [];
+  let generatedNums = {};
+
+  while (arr.length < arrLength) {
+    let randomNumber = randomNum();
+
+    if (!generatedNums[randomNumber]) {
+      generatedNums[randomNumber] = true;
+      arr.push(randomNumber);
+    }
+  }
+  console.log(generatedNums)
+  return arr;
+}
+
 const result4 = randomArr(4, 3, 10);
 console.log(result4);

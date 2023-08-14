@@ -1,5 +1,3 @@
-
-
 // 8. Write a function to find the new time after a specified time from the given time.
 // Input: (givenTime string, period number(s))
 // Output: newTime string
@@ -21,7 +19,11 @@ function newTime(givenTime, period) {
   newMinute = newMinute % 60;
   newHour = newHour % 24;
 
-  return `${newHour}:${newMinute}:${newSecond}`;
+  const formattedHour = newHour < 10 ? `0${newHour}` : newHour;
+  const formattedMinute = newMinute < 10 ? `0${newMinute}` : newMinute;
+  const formattedSecond = newSecond < 10 ? `0${newSecond}` : newSecond;
+
+  return `${formattedHour}:${formattedMinute}:${formattedSecond}`;
 }
 
-// console.log(newTime("12:30:29", 600));
+console.log(newTime("3:59:30", 90));

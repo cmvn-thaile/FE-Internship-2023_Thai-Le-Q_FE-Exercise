@@ -12,6 +12,13 @@ function repeatStr(str, time) {
   return repeatedStr;
 }
 
-
 // const result = repeatStr("fe", 3);
 // console.log(result);
+
+//using build-in
+
+function repeatStr(str, time) {
+  const str = str;
+  const repeatedStr = str.repeat(time);
+  return repeatedStr;
+}

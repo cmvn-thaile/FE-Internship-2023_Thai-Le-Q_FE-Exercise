@@ -15,5 +15,5 @@ function maxSumOfTwoConsecutive(arr) {
   return max;
 }
 
-console.log(maxSum([1, 2, 3, 7, 5, 6, 4]));
+console.log(maxSumOfTwoConsecutive([1, 2, 3, 7, 5, 6, 4]));
 
