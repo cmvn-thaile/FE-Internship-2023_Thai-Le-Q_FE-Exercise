@@ -37,9 +37,10 @@
     /* Styles for all list items except the last one */
     content: "";
     
+    display: block;
     position: absolute;
     width: 80%;
-    margin-top: 45px;
+    margin-top: 20px;
     height: 1px;
     background-color: map-get($color, gray-3);
   }
