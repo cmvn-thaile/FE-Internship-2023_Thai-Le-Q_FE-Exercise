@@ -227,6 +227,9 @@ footer {
 .link-quality:hover .service-title {
   color: #fbb03b;
 }
+.link-cart {
+  position: relative;
+}
 
 .text-primary {
   color: #fbb03b;
@@ -262,6 +265,26 @@ footer {
 }
 .product-sm-title {
   text-align: center;
+}
+.product-image-wrapper:hover > button {
+  display: block;
+}
+
+.btn-add-to-cart {
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fbb03b;
+  border-radius: 32px;
+  border: 1px solid #fbb03b;
+  font-weight: 700;
+  padding: 10px 25px;
+  display: none;
+}
+.btn-add-to-cart:hover {
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 @media only screen and (max-width: 768px) {
@@ -577,6 +600,22 @@ footer {
 .nav-item {
   font-weight: 700;
   color: #fbb03b;
+}
+.nav-item > a {
+  display: relative;
+}
+
+.cart-quantity {
+  position: absolute;
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 8px;
+  padding: 3px 4px;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -70%);
 }
 
 @media only screen and (max-width: 576px) {
