@@ -1,0 +1,154 @@
+@import "./../base/variables";
+@import "./../base/mixins";
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &-truck {
+    background-image: url("../../assets/img/ic-truck-yellow.svg");
+  }
+
+  &-happy {
+    background-image: url("../../assets/img/ic-happy.svg");
+  }
+
+  &-guarantee {
+    background-image: url("../../assets/img/ic-guarantee-yellow.svg");
+  }
+
+  &-search {
+    background-image: url("../../assets/img/ic-search.svg");
+  }
+
+  &-cart {
+    background-image: url("../../assets/img/ic-cart.svg");
+  }
+
+  &-user {
+    background-image: url("../../assets/img/ic-user.svg");
+  }
+
+  &-search-black {
+    background-image: url("../../assets/img/ic-search-black.svg");
+  }
+
+  &-cart-black {
+    background-image: url("../../assets/img/ic-cart-black.svg");
+  }
+
+  &-user-black {
+    background-image: url("../../assets/img/ic-user-black.svg");
+  }
+
+  &-menu-black {
+    background-image: url("../../assets/img/ic-menu-black.svg");
+  }
+
+  &-shipping {
+    background-image: url("../../assets/img/ic-truck.svg");
+    width: 25px;
+    height: 25px;
+  }
+
+  &-payment {
+    background-image: url("../../assets/img/ic-payment.svg");
+    width: 25px;
+    height: 25px;
+  }
+
+  &-guarantee-b {
+    background-image: url("../../assets/img/ic-guarantee.svg");
+    width: 25px;
+    height: 25px;
+  }
+
+  &-quality {
+    background-image: url("../../assets/img/ic-quality.svg");
+    width: 25px;
+    height: 25px;
+  }
+
+  &-shipping:hover {
+    background-image: url("../../assets/img/ic-truck-yellow.svg");
+  }
+
+  &-payment:hover {
+    background-image: url("../../assets/img/ic-payment-hl.svg");
+  }
+
+  &-guarantee-b:hover {
+    background-image: url("../../assets/img/ic-guarantee-yellow.svg");
+  }
+
+  &-quality:hover {
+    background-image: url("../../assets/img/ic-quality-hl.svg");
+  }
+
+  &-left-arrow {
+    background-image: url("../../assets/img/ic-left-arrow.svg");
+    width: 26px;
+    height: 26px;
+  }
+
+  &-left-arrow::after {
+    padding: 10px;
+    border-radius: 16px;
+    background-color: map-get($color, white);
+  }
+}
+
+.wrapper-ic {
+  @include center();
+  &-white {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 40px;
+
+    border-radius: 8px;
+    background-color: map-get($color, white);
+  }
+
+  &-primary {
+    width: 40px;
+    height: 40px;
+
+    background-color: map-get($color, beige);
+    border-radius: 12px;
+  }
+}
+
+.left-arrow-bg {
+  @include center();
+
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: map-get($color, primary);
+}
+
+@media only screen and (max-width: 768px) {
+  .left-arrow-bg {
+    width: 32px;
+    height: 32px;
+  }
+  .icon {
+    &-left-arrow {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .wrapper-ic {
+    &-white {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 0;
+
+      border-radius: 8px;
+    }
+  }
+}

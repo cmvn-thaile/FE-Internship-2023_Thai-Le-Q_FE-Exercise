@@ -1,0 +1,25 @@
+@import "./../base/variables";
+@import "./../base/mixins";
+
+.badge {
+  @include center();
+  font-weight: map-get($font-weight, bold);
+
+  &-danger {
+    color: map-get($color, gray-1);
+    font-size: map-get($font-size, sm-1);
+    background-color: map-get($color, red);
+    padding: 6px 9px;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .badge {
+    &-danger {
+      font-size: map-get($font-size, x-sm);
+      padding: 2px 4px;
+      border-radius: 9px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "./../base/variables";
+
+.text {
+  &-primary {
+    color: map-get($color, primary);
+  }
+
+  &-danger {
+    color: map-get($color, red);
+  }
+
+  &-gray {
+    color: map-get($color, gray-1);
+  }
+
+  &-gray-2 {
+    color: map-get($color, gray-2);
+  }
+}

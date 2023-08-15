@@ -1,0 +1,36 @@
+$font-weight: (
+  bold: 700,
+  normal: 400,
+  light: 300,
+);
+
+$line-height: (
+  small: 1,
+  normal: 1.5,
+);
+
+$font-family: "Poppins", sans-serif;
+
+$font-size: (
+  x-sm: 8px,
+  x-sm-1: 10px,
+  sm-1: 12px,
+  sm-2: 14px,
+  sm-3: 16px,
+  sm-4: 18px,
+  md-1: 20px,
+  md-2: 24px,
+  lg-1: 32px,
+  lg-2: 72px,
+);
+
+$color: (
+  primary: #fbb03b,
+  gray-3: #808080,
+  gray-2: #c4c4c4,
+  gray-1: #f6f6f6,
+  beige: #fff3df,
+  white: #fff,
+  black: #000,
+  red: #ff0000,
+);

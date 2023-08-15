@@ -1,0 +1,11 @@
+@import "variables";
+@import "./../base/variables";
+/* Set default font family and size */
+body {
+  font-family: $font-family;
+  font-size: map-get($font-size, sm-2);
+}
+
+footer {
+  background-color: map-get($color, primary);
+}

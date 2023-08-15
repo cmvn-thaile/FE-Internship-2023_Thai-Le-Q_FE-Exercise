@@ -1,0 +1,57 @@
+@import "./../base/variables";
+@import "./../state/color";
+
+.product {
+  &-item {
+    position: relative;
+  }
+
+  &-price {
+    font-size: map-get($font-size, md-1);
+    font-weight: map-get($font-weight, normal);
+  }
+
+  &-name {
+    font-size: map-get($font-size, sm-3);
+    font-weight: map-get($font-weight, light);
+  }
+
+  &-link {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-discount {
+    top: 5%;
+    left: 10%;
+  }
+
+  &-sm-title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .product {
+    &-img {
+      width: 100%;
+    }
+
+    &-name {
+      font-size: map-get($font-size, sm-1);
+    }
+
+    &-price {
+      font-size: map-get($font-size, x-sm-1);
+    }
+
+    &-discount {
+      top: 7%;
+      left: 9%;
+    }
+
+    &-sm-title {
+      text-align: left;
+    }
+  }
+}

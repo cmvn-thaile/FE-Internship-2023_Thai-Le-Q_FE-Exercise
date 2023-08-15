@@ -1,0 +1,21 @@
+@import "./../base/variables";
+@import "./../base/mixins";
+.nav {
+  @include center();
+  &-list {
+    @include center();
+    gap: 96px;
+  }
+
+  &-item {
+    font-size: map-get($color, sm-4);
+    font-weight: map-get($font-weight, bold);
+    color: map-get($color, primary);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .nav {
+    display: none !important;
+  }
+}

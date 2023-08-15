@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style/variable.css" />
+    <!-- <link rel="stylesheet" href="./style/variable.css" />
     <link rel="stylesheet" href="./style/base.css" />
     <link rel="stylesheet" href="./style/icon.css" />
     <link rel="stylesheet" href="./style/header.css" />
@@ -23,52 +23,20 @@
     <link rel="stylesheet" href="./style/services.css" />
     <link rel="stylesheet" href="./style/product.css" />
     <link rel="stylesheet" href="./style/subscribe.css" />
-    <link rel="stylesheet" href="./style/footer.css" />
+    <link rel="stylesheet" href="./style/footer.css" /> -->
+    <link rel="stylesheet" href="./stylesheet/css/style.css" />
   </head>
 
   <body>
     <header>
-      <div class="header-desktop">
+      <div class="header">
         <div class="container">
           <div class="header-container">
             <h1 class="logo">
-              <a class="logo-link" href="">
+              <a class="logo-lg" href="">
                 <img class="logo-img" src="assets/img/logo.png" alt="E-Shop" />
               </a>
-            </h1>
-            <nav class="nav">
-              <ul class="nav-list d-flex justify-space-between">
-                <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
-              </ul>
-            </nav>
-            <ul class="header-icons-list d-flex justify-space-between">
-              <li class="header-icon-item">
-                <a class="search-link" href="">
-                  <i class="search-icon"></i>
-                </a>
-              </li>
-              <li class="header-icon-item">
-                <a class="cart-link" href="">
-                  <i class="cart-icon"></i>
-                </a>
-              </li>
-              <li class="header-icon-item">
-                <a class="user-link" href="">
-                  <i class="user-icon"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="header-mobile">
-        <div class="container">
-          <div class="header-container">
-            <h1 class="logo">
-              <a href="">
+              <a class="logo-sm" href="">
                 <img
                   class="logo-img"
                   src="assets/img/logo-black.png"
@@ -77,29 +45,46 @@
               </a>
             </h1>
             <nav class="nav">
-              <ul class="nav-list d-flex justify-space-between">
+              <ul class="nav-list ">
                 <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
               </ul>
             </nav>
-            <ul
-              class="header-icons-list d-flex justify-space-between align-center"
-            >
-              <li class="header-icon-item">
-                <a class="menu-link" href="">
-                  <i class="search-icon-black"></i>
+            <ul class="header-icons-list-lg ">
+              <li class="header-icons-item">
+                <a class="link-search" href="">
+                  <i class="icon icon-search"></i>
                 </a>
               </li>
-              <li class="header-icon-item">
-                <a class="cart-link" href="">
-                  <i class="cart-icon-black"></i>
+              <li class="header-icons-item">
+                <a class="link-cart" href="">
+                  <i class="icon icon-cart"></i>
+                </a>
+              </li>
+              <li class="header-icons-item">
+                <a class="link-user" href="">
+                  <i class="icon icon-user"></i>
+                </a>
+              </li>
+            </ul>
+            <ul
+              class="header-icons-list-sm "
+            >
+              <li class="header-icons-item">
+                <a class="link-search" href="">
+                  <i class="icon icon-search-black"></i>
+                </a>
+              </li>
+              <li class="header-icons-item">
+                <a class="link-cart" href="">
+                  <i class="icon icon-cart-black"></i>
                 </a>
               </li>
 
-              <li class="header-icon-item">
-                <a class="user-link" href="">
-                  <i class="user-icon-black"></i>
+              <li class="header-icons-item">
+                <a class="link-user" href="">
+                  <i class="icon icon-user-black"></i>
                 </a>
               </li>
             </ul>
@@ -117,7 +102,9 @@
               collection
             </h2>
             <a class="banner-button d-flex align-center justify-space-between">
-              <span class="left-arrow-bg"><i class="left-arrow-icon"></i></span>
+              <span class="left-arrow-bg"
+                ><i class="icon icon-left-arrow"></i
+              ></span>
 
               <p class="banner-btn-desc">SHOP NOW</p>
             </a>
@@ -126,7 +113,7 @@
         <ul class="feature-list">
           <li class="feature-item">
             <span class="wrapper-ic wrapper-ic-primary"
-              ><i class="truck-icon"></i
+              ><i class="icon icon-truck"></i
             ></span>
             <div class="feature-detail">
               <h4 class="feature-name">Free shipping</h4>
@@ -135,7 +122,7 @@
           </li>
           <li class="feature-item">
             <span class="wrapper-ic wrapper-ic-primary"
-              ><i class="happy-icon"></i
+              ><i class="icon icon-happy"></i
             ></span>
             <div class="feature-detail">
               <h4 class="feature-name">99% Satisfied Customers</h4>
@@ -146,7 +133,7 @@
           </li>
           <li class="feature-item">
             <span class="wrapper-ic wrapper-ic-primary"
-              ><i class="guarantee-icon"></i
+              ><i class="icon icon icon-guarantee"></i
             ></span>
             <div class="feature-detail">
               <h4 class="feature-name">Originality Guaranteed</h4>
@@ -158,13 +145,13 @@
         </ul>
       </section>
 
-      <section class="section section-categories padding-section">
+      <section class="section section-categories">
         <div class="container">
           <ul class="category-list row">
             <li class="category-item col col-6 col-sm-12 relative">
               <div class="category relative">
                 <h4 class="category-desc absolute">New arrival sale now in!</h4>
-                <a class="btn category-btn absolute"> SHOW COLLECTION </a>
+                <a class="btn btn-category absolute"> SHOW COLLECTION </a>
               </div>
             </li>
             <li class="category-item col col-3 col-sm-6 relative">
@@ -172,7 +159,7 @@
                 <h4 class="category-desc side-item-category absolute">
                   <a class="product-link" href="">Basic t-shirts $29,99</a>
                 </h4>
-                <a class="btn category-btn absolute"> MORE DETAILS </a>
+                <a class="btn btn-category absolute"> MORE DETAILS </a>
               </div>
             </li>
             <li class="category-item col col-3 col-sm-6 relative">
@@ -183,20 +170,20 @@
                 <h4 class="category-desc side-item-category absolute">
                   <a class="category-link" href="">Sale this summer</a>
                 </h4>
-                <a class="btn category-btn absolute">VIEW ALL</a>
+                <a class="btn btn-category absolute">VIEW ALL</a>
               </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="section section-recommended padding-section">
+      <section class="section section-recommended">
         <div class="container">
-          <div class="d-flex justify-space-between mb-40 align-center">
+          <div class="d-flex justify-space-between pb-24 sm-pb-16 align-center">
             <h3 class="section-title">Selected just for you</h3>
-            <a class="btn recommended-btn" href="">SHOW MORE</a>
+            <a class="btn btn-recommended" href="">SHOW MORE</a>
           </div>
-          <ul class="product-list row">
+          <ul class="product-list pt-12 sm-p-reset row">
             <li class="product-item col col-3 col-sm-6">
               <a class="product-link" href="">
                 <span class="badge badge-danger product-discount absolute"
@@ -210,7 +197,7 @@
                 <h4 class="product-name">T-Shirt Summer Vibes</h4>
                 <div class="product-price-group d-flex justify-space-between">
                   <p class="product-price text-danger">$89,99</p>
-                  <p class="product-price text-gray">$119,99</p>
+                  <p class="product-price text-gray-2">$119,99</p>
                 </div>
               </a>
             </li>
@@ -257,16 +244,16 @@
         </div>
       </section>
 
-      <section class="section section-reason padding-section">
+      <section class="section section-reason">
         <div class="container">
-          <h3 class="section-title mb-40 center-text">
+          <h3 class="section-title pb-24 sm-pb-16 center-text">
             Why should you choose us?
           </h3>
-          <ul class="service-list">
-            <li class="service-item">
-              <a class="free-ship-link" href="">
+          <ul class="service-list p-24 sm-p-reset sm-pt-16 row">
+            <li class="service-item col col-3 col-sm-12">
+              <a class="link-free-ship" href="">
                 <span class="wrapper-ic wrapper-ic-white"
-                  ><i class="shipping-icon"></i
+                  ><i class="icon icon-shipping"></i
                 ></span>
                 <div class="service-info">
                   <h4 class="service-title txt-bold">Free shipping</h4>
@@ -277,10 +264,10 @@
                 </div>
               </a>
             </li>
-            <li class="service-item service-item-active">
-              <a class="payment-link" href="">
+            <li class="service-item col col-3 col-sm-12">
+              <a class="link-payment" href="">
                 <span class="wrapper-ic wrapper-ic-white"
-                  ><i class="payment-icon"></i
+                  ><i class="icon icon-payment"></i
                 ></span>
                 <div class="service-info">
                   <h4 class="service-title txt-bold">Easy Payments</h4>
@@ -291,10 +278,10 @@
                 </div>
               </a>
             </li>
-            <li class="service-item">
-              <a class="guarantee-link" href="">
+            <li class="service-item col col-3 col-sm-12">
+              <a class="link-guarantee" href="">
                 <span class="wrapper-ic wrapper-ic-white"
-                  ><i class="guarantee-icon-b"></i
+                  ><i class="icon icon-guarantee-b"></i
                 ></span>
                 <div class="service-info">
                   <h4 class="service-title">Money-Back Guarantee</h4>
@@ -305,10 +292,10 @@
                 </div>
               </a>
             </li>
-            <li class="service-item">
-              <a class="quality-link" href="">
+            <li class="service-item col col-3 col-sm-12">
+              <a class="link-quality" href="">
                 <span class="wrapper-ic wrapper-ic-white"
-                  ><i class="quality-icon"></i
+                  ><i class="icon icon-quality"></i
                 ></span>
                 <div class="service-info">
                   <h4 class="service-title txt-bold">Finest Quality</h4>
@@ -323,10 +310,12 @@
         </div>
       </section>
 
-      <section class="section section-new-arrived padding-section">
+      <section class="section section-new-arrived">
         <div class="container">
-          <h3 class="section-title mb-40 center-text">Product in today</h3>
-          <ul class="product-list row">
+          <h3 class="section-title pb-24 sm-pb-16 product-sm-title">
+            Product in today
+          </h3>
+          <ul class="product-list row pt-12 sm-p-reset">
             <li class="product-item col col-3 col-sm-6">
               <a class="product-link" href="">
                 <span class="badge badge-danger product-discount absolute"
@@ -340,7 +329,7 @@
                 <h4 class="product-name">T-Shirt Summer Vibes</h4>
                 <div class="product-price-group d-flex justify-space-between">
                   <p class="product-price text-danger">$89,99</p>
-                  <p class="product-price text-gray">$119,99</p>
+                  <p class="product-price text-gray-2">$119,99</p>
                 </div>
               </a>
             </li>
@@ -387,7 +376,7 @@
         </div>
       </section>
 
-      <section class="section section-subscribe padding-section">
+      <section class="section section-subscribe">
         <div class="container">
           <form action="">
             <div class="subscribe-container row">
@@ -395,9 +384,9 @@
                 Subscribe to our newsletter and receive exclusive offers every
                 week
               </p>
-              <div class="input-group col col-6 col-sm-12">
+              <div class="subscribe-input-group col col-6 col-sm-12">
                 <input placeholder="Enter your email" class="subscribe-input" />
-                <button type="submit" class="btn subscribe-btn upper-case">
+                <button type="submit" class="btn btn-subscribe upper-case">
                   SUBSCRIBE
                 </button>
               </div>
@@ -408,10 +397,10 @@
     </main>
 
     <footer>
-      <div class="padding-section">
+      <div class="section">
         <div class="container">
-          <div class="footer-top">
-            <div class="shop-details-sums">
+          <div class="footer-top row">
+            <div class="shop-details-sums col col-5 col-sm-12">
               <h2 class="shop-details-logo">
                 <a class="logo-link" href="">
                   <img
@@ -456,8 +445,8 @@
               </ul>
             </div>
 
-            <ul class="shop-details-list d-flex justify-space-between">
-              <li class="shop-details-item">
+            <ul class="shop-details-list row col col-6 col-sm-12">
+              <li class="shop-details-item col col-4 col-sm-12">
                 <p class="infor-shop-title">Shopping online</p>
                 <ul class="infor-shop-list">
                   <li class="infor-shop-item">
@@ -477,7 +466,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="shop-details-item">
+              <li class="shop-details-item col col-4 col-sm-12">
                 <p class="infor-shop-title">Information</p>
                 <ul class="infor-shop-list">
                   <li class="infor-shop-item">
@@ -497,7 +486,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="shop-details-item">
+              <li class="shop-details-item col col-4 col-sm-12">
                 <p class="infor-shop-title">Contact</p>
                 <ul class="infor-shop-list">
                   <li class="infor-shop-item">store@uikit.com</li>

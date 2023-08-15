@@ -1,0 +1,70 @@
+@import "./../base/mixins";
+
+.logo {
+  &-lg {
+    display: block;
+  }
+  &-sm {
+    display: none;
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  &-container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-icons-list {
+    &-lg {
+      @include center();
+      gap: 24px;
+    }
+    &-sm {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .logo {
+    max-width: 20px;
+    &-lg {
+      display: none;
+    }
+    &-sm {
+      display: block;
+    }
+  }
+  .header {
+    display: block;
+    width: 100vw;
+    height: 72px;
+    background-color: map-get($color, white);
+
+    &-icons-list {
+      &-lg {
+        display: none;
+      }
+      &-sm {
+        @include center();
+        gap: 24px;
+      }
+    }
+
+    &-container {
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 20px 0;
+      width: 327px !important;
+    }
+  }
+}
