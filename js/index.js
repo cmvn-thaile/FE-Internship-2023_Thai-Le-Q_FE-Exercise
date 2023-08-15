@@ -2,6 +2,10 @@ import productsData from "./products-data.js";
 
 //get container
 var productContainer = document.getElementById("product-container");
+var cartIconGroup = document.getElementsByClassName("link-cart")[0];
+var cartItems = JSON.parse(localStorage.getItem("cartItems"));
+var cartQuantity = document.createElement("span");
+cartQuantity.className = "cart-quantity";
 
 //discount badger element
 function productDiscount(
@@ -127,19 +131,14 @@ if (productsData.length > 0) {
       } else {
         localStorage.setItem("cartItems", JSON.stringify([productToCart]));
       }
+
+      getQuantity();
     });
 
     // change cart icon count product in cart
     //get cart i4
-    
-  });
 
-  var cartIconGroup = document.getElementsByClassName("link-cart")[0];
 
-    var cartItems = JSON.parse(localStorage.getItem("cartItems"));
-
-    var cartQuantity = document.createElement("span");
-    cartQuantity.className = "cart-quantity";
 
     cartQuantity.textContent = cartItems.reduce(function (accumulator, item) {
       return accumulator + item.quantity;
@@ -147,6 +146,18 @@ if (productsData.length > 0) {
 
     cartIconGroup.appendChild(cartQuantity);
     productImageWrapper.appendChild(btnAddToCart);
+
+  });
+
+  
+}
+
+function getQuantity(){
+  var cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  cartQuantity.textContent = cartItems.reduce(function (accumulator, item) {
+    return accumulator + item.quantity;
+  }, 0);
+
 }
 
 productContainer.appendChild(productList);
