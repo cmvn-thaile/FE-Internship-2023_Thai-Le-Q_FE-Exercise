@@ -12,6 +12,22 @@
     font-weight: map-get($font-weight, bold);
     color: map-get($color, primary);
   }
+
+  &-item > a {
+    display: relative;
+  }
+}
+.cart-quantity {
+  position: absolute;
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 8px;
+  padding: 3px 4px;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-70%);
 }
 
 @media only screen and (max-width: 576px) {

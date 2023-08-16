@@ -28,4 +28,8 @@
   &-quality:hover .service-title {
     color: map-get($color, primary);
   }
+
+  &-cart{
+     position: relative;
+  }
 }
