@@ -3,11 +3,9 @@ import {
   productsDataArr as productsData,
 } from "./productEntity.js";
 
-import { createProductList } from "./renderProducts.js";
+import { createProductList, displayProducts } from "./renderProducts.js";
 //get container
 
 
-
-
-createProductList(productsData, "product-container");
-createProductList(arrivedProduct, "new-arrived-container");
+displayProducts(productsData, "category-product");
+displayProducts(arrivedProduct, "new-arrived-product");
