@@ -7,6 +7,7 @@
   text-align: center;
   cursor: pointer;
   border: none;
+  transition: 0.23s ease-in;
 
   &-category {
     background-color: map-get($color, white);
