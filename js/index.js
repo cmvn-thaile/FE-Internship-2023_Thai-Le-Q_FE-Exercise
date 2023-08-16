@@ -167,5 +167,5 @@ function createProductList(data, id) {
   productContainer.appendChild(productList);
 }
 
-createProductList(productsData,'product-container');
-createProductList(arrivedProduct,'new-arrived-container');
+createProductList(productsData, "product-container");
+createProductList(arrivedProduct, "new-arrived-container");
