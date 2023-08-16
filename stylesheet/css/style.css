@@ -615,7 +615,7 @@ footer {
   display: relative;
 }
 
-.cart-quantity {
+#cart-quantity {
   position: absolute;
   display: inline-block;
   background-color: red;
@@ -626,6 +626,7 @@ footer {
   top: 0;
   left: 0;
   transform: translate(-50%, -70%);
+  display: none;
 }
 
 @media only screen and (max-width: 576px) {
