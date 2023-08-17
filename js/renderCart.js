@@ -1,6 +1,12 @@
 // retrieve cart items from local storage
+import {
+  cartItemsArr as cartItems,
+
+} from "./cartEntity.js";
+
 
 export const createCart = (cartItems) => {
+
   const cartTable = document.createElement("table");
   cartTable.className = "cart-table ";
   document.body.appendChild(cartTable);
@@ -18,7 +24,7 @@ export const createCart = (cartItems) => {
   if (cartItems.length > 0) {
     cartItems.forEach((cartItem) => {
       cartTable.innerHTML += `
-      <tr>
+      <tr id="row-product-${cartItem.id}">
       <td>${cartItem.id}</td>
       <td>${cartItem.name}</td>
       <td>${cartItem.price}</td>
@@ -33,21 +39,25 @@ export const createCart = (cartItems) => {
       <td id="sub-total-${cartItem.id}" class="sub-total">${(
         cartItem.price * cartItem.quantity
       ).toFixed(2)}</td>
+      <td >
+      <button name="${cartItem.id}"id="delete-btn-${cartItem.id}" class="delete-btn">Delete</button>
+      </td>
     </tr>
       `;
     });
   }
 
-
   return cartTable;
 };
 
-export const displayCart = () => {
-  const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+export const displayCart = (cartItems) => {
+  // const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  console.log(cartItems)
   createCart(cartItems);
   calculateTotal();
   const plusBtn = document.getElementsByClassName("plus-btn");
   const minusBtn = document.getElementsByClassName("minus-btn");
+  const deleteBtn = document.getElementsByClassName("delete-btn");
   console.log(plusBtn);
   for (let minus of minusBtn) {
     minus.addEventListener("click", (e) => {
@@ -71,7 +81,6 @@ export const displayCart = () => {
       }
       calculateTotal();
     });
-
   }
 
   for (let plus of plusBtn) {
@@ -93,6 +102,23 @@ export const displayCart = () => {
     });
   }
 
+  for (let dte of deleteBtn) {
+    dte.addEventListener("click", (e) => {
+      e.preventDefault();
+      const cartItem = cartItems.find(
+        (item) => item.id === parseInt(dte.name)
+      );
+      if (cartItem) {
+        const index = cartItems.indexOf(cartItem);
+        cartItems.splice(index, 1);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        const rowCartItem = document.getElementById(`row-product-${cartItem.id}`);
+        rowCartItem.remove();
+        calculateTotal();
+      }
+    });
+  }
+  
 };
 const calculateTotal = () => {
   const totalTextElement = document.getElementById("total-text");
@@ -104,4 +130,4 @@ const calculateTotal = () => {
   totalTextElement.innerHTML = total.toFixed(2);
   console.log(total);
 };
-displayCart();
+displayCart(cartItems);
