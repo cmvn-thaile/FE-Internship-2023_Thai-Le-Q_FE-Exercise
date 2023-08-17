@@ -9,12 +9,16 @@ export const createProductList = (productContainer, data, id) => {
   productList.className = "product-list row pt-12 sm-p-reset";
   productContainer.appendChild(productList);
   if (data.length > 0) {
-    data.map((product) => {
+    data.forEach((product) => {
       productList.innerHTML += `<li class="product-item col col-3 col-sm-6">
               <a class="product-link" >
-                <span class="badge badge-danger product-discount absolute"
-                  >-30%</span
-                >
+                ${
+                  product.discount
+                    ? `<span class="badge badge-danger product-discount absolute">
+                  -${product.discount}%
+                </span>`
+                    : ""
+                } 
                 <div id="product-${
                   product.id
                 }" class="relative product-image-wrapper">
@@ -23,7 +27,9 @@ export const createProductList = (productContainer, data, id) => {
                   src="${product.image}"
                   alt="${product.name}"
                 />
-                <button id=${product.id} class="btn ${id} btn-add-to-cart absolute"> Add to cart </button>
+                <button id=${
+                  product.id
+                } class="btn ${id} btn-add-to-cart absolute"> Add to cart </button>
                 </div>
                 <h4 class="product-name">${product.name}s</h4>
                 <div class="product-price-group d-flex justify-space-between">
@@ -49,11 +55,11 @@ export const displayProducts = (data, id) => {
   const productContainer = document.getElementById(id);
   createProductList(productContainer, data, id);
   const button = document.getElementsByClassName(`${id} btn-add-to-cart`);
-  console.log(button)
+  console.log(button);
 
   for (let a of button) {
     a.addEventListener("click", () => {
-      const product = data.find((item) => (item.id = a.id));
+      const product = data.find((item) => item.id == a.id);
       console.log(product);
       addToCart(product);
     });

@@ -1,8 +1,11 @@
 export const addToCart = (product) => {
+  console.log(product);
   const productToCart = {
     id: product?.id,
     name: product?.name,
     price: product?.price,
+    image: product?.image,
+    discount: product?.discount || null,
     quantity: 1,
   };
   const cartItems = JSON.parse(localStorage.getItem("cartItems"));
