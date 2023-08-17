@@ -62,6 +62,22 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 }
+
+.cart-btn-disabled{
+  background-color: map-get($color, red);
+  border-radius: 32px;
+  border: 1px solid map-get($color, red);
+  color: map-get($color, white );
+  font-weight: 700;
+  padding: 10px 25px;
+  display: none;
+
+  &:hover {
+    border: 1px solid map-get($color, red);
+    background-color: map-get($color, white);
+    color: map-get($color, red);
+  }
+}
 @media only screen and (max-width: 768px) {
   .product {
     &-img {

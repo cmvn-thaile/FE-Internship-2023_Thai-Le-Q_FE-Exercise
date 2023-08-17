@@ -1,11 +1,16 @@
-import { Product } from "./productEntity.js";
-export class Cart extends Product {
-    constructor(id, name, image, price, discount, quantity) {
-        super(id, name, image, price, discount);
+export class CartItem {
+    constructor({ id, name, image, price, discount, quantity }) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.price = price;
+        this.discount = discount;
         this.quantity = quantity;
     }
 }
-const cartItemsJson = localStorage.getItem("cartItems");
-const cartItems = cartItemsJson ? JSON.parse(cartItemsJson) : [];
-export const cartItemsArr = cartItems.map((cart) => new Cart(cart.id, cart.name, cart.image, cart.price, cart.discount, cart.quantity));
+export const cartItemsJson = localStorage.getItem("cartItems");
+export const cartItems = cartItemsJson
+    ? JSON.parse(cartItemsJson)
+    : [];
+export const cartItemsArr = cartItems.map((cart) => new CartItem(cart));
 //# sourceMappingURL=cartEntity.js.map

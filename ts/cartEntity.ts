@@ -1,21 +1,3 @@
-import { Product } from "./productEntity.js";
-
-export class Cart extends Product {
-  quantity: number;
-
-  constructor(
-    id: number,
-    name: string,
-    image: string,
-    price: number,
-    discount: number | null,
-    quantity: number
-  ) {
-    super(id, name, image, price, discount);
-    this.quantity = quantity;
-  }
-}
-
 export interface CartItemIF {
   id: number;
   name: string;
@@ -24,18 +6,28 @@ export interface CartItemIF {
   discount: number | null;
   quantity: number;
 }
+export class CartItem implements CartItemIF {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+  discount: number | null;
+  quantity: number;
+  constructor({ id, name, image, price, discount, quantity }: CartItemIF) {
+    this.id = id;
+    this.name = name;
+    this.image = image;
+    this.price = price;
+    this.discount = discount;
+    this.quantity = quantity;
+  }
+}
 
-const cartItemsJson = localStorage.getItem("cartItems");
-const cartItems: CartItemIF[] = cartItemsJson ? JSON.parse(cartItemsJson) : [];
+export const cartItemsJson = localStorage.getItem("cartItems");
+export const cartItems: CartItemIF[] = cartItemsJson
+  ? JSON.parse(cartItemsJson)
+  : [];
 
 export const cartItemsArr = cartItems.map(
-  (cart) =>
-    new Cart(
-      cart.id,
-      cart.name,
-      cart.image,
-      cart.price,
-      cart.discount,
-      cart.quantity
-    )
+  (cart: CartItemIF) => new CartItem(cart)
 );

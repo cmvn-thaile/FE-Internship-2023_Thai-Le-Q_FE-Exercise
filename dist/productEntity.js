@@ -1,10 +1,11 @@
 export class Product {
-    constructor(id, name, image, price, discount) {
+    constructor({ id, name, image, price, discount, status }) {
         this.id = id;
         this.name = name;
         this.image = image;
         this.price = price;
         this.discount = discount;
+        this.status = status;
     }
 }
 const arrivedProduct = [
@@ -14,6 +15,7 @@ const arrivedProduct = [
         image: "assets/img/product-1.png",
         price: 13.99,
         discount: 30,
+        status: "available",
     },
     {
         id: 6,
@@ -21,6 +23,7 @@ const arrivedProduct = [
         image: "assets/img/product-2.png",
         price: 11.99,
         discount: null,
+        status: "outOfStock",
     },
     {
         id: 7,
@@ -28,6 +31,7 @@ const arrivedProduct = [
         image: "assets/img/product-3.png",
         price: 9.9,
         discount: null,
+        status: "available",
     },
     {
         id: 8,
@@ -35,6 +39,7 @@ const arrivedProduct = [
         image: "assets/img/product-4.png",
         price: 11.99,
         discount: null,
+        status: "available",
     },
 ];
 const productsData = [
@@ -44,6 +49,7 @@ const productsData = [
         image: "assets/img/product-1.png",
         price: 119.99,
         discount: 30,
+        status: "outOfStock",
     },
     {
         id: 2,
@@ -51,6 +57,7 @@ const productsData = [
         image: "assets/img/product-2.png",
         price: 119.99,
         discount: null,
+        status: "outOfStock",
     },
     {
         id: 3,
@@ -58,6 +65,7 @@ const productsData = [
         image: "assets/img/product-3.png",
         price: 99.9,
         discount: null,
+        status: "available",
     },
     {
         id: 4,
@@ -65,8 +73,9 @@ const productsData = [
         image: "assets/img/product-4.png",
         price: 11.99,
         discount: null,
+        status: "available",
     },
 ];
-export const arrivedProductsArr = arrivedProduct.map((product) => new Product(product.id, product.name, product.image, product.price, product.discount));
-export const productsDataArr = productsData.map((product) => new Product(product.id, product.name, product.image, product.price, product.discount));
+export const arrivedProductsArr = arrivedProduct.map((product) => new Product(product));
+export const productsDataArr = productsData.map((product) => new Product(product));
 //# sourceMappingURL=productEntity.js.map

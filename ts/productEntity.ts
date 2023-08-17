@@ -4,6 +4,7 @@ export interface ProductIF {
   image: string;
   price: number;
   discount: number | null;
+  status: "available" | "outOfStock";
 }
 
 export class Product implements ProductIF {
@@ -12,28 +13,25 @@ export class Product implements ProductIF {
   image: string;
   price: number;
   discount: number | null;
-  constructor(
-    id: number,
-    name: string,
-    image: string,
-    price: number,
-    discount: number | null
-  ) {
+  status: "available" | "outOfStock";
+  constructor({ id, name, image, price, discount, status }: ProductIF) {
     this.id = id;
     this.name = name;
     this.image = image;
     this.price = price;
     this.discount = discount;
+    this.status = status;
   }
 }
 
-const arrivedProduct = [
+const arrivedProduct: ProductIF[] = [
   {
     id: 5,
     name: "T-Shirt Summer Vibes 2",
     image: "assets/img/product-1.png",
     price: 13.99,
     discount: 30,
+    status: "available",
   },
   {
     id: 6,
@@ -41,6 +39,7 @@ const arrivedProduct = [
     image: "assets/img/product-2.png",
     price: 11.99,
     discount: null,
+    status: "outOfStock",
   },
   {
     id: 7,
@@ -48,6 +47,7 @@ const arrivedProduct = [
     image: "assets/img/product-3.png",
     price: 9.9,
     discount: null,
+    status: "available",
   },
   {
     id: 8,
@@ -55,16 +55,18 @@ const arrivedProduct = [
     image: "assets/img/product-4.png",
     price: 11.99,
     discount: null,
+    status: "available",
   },
 ];
 
-const productsData = [
+const productsData: ProductIF[] = [
   {
     id: 1,
     name: "T-Shirt Summer Vibes",
     image: "assets/img/product-1.png",
     price: 119.99,
     discount: 30,
+    status: "outOfStock",
   },
   {
     id: 2,
@@ -72,6 +74,7 @@ const productsData = [
     image: "assets/img/product-2.png",
     price: 119.99,
     discount: null,
+    status: "outOfStock",
   },
   {
     id: 3,
@@ -79,6 +82,7 @@ const productsData = [
     image: "assets/img/product-3.png",
     price: 99.9,
     discount: null,
+    status: "available",
   },
   {
     id: 4,
@@ -86,27 +90,14 @@ const productsData = [
     image: "assets/img/product-4.png",
     price: 11.99,
     discount: null,
+    status: "available",
   },
 ];
 
 export const arrivedProductsArr = arrivedProduct.map(
-  (product) =>
-    new Product(
-      product.id,
-      product.name,
-      product.image,
-      product.price,
-      product.discount
-    )
+  (product: ProductIF) => new Product(product)
 );
 
 export const productsDataArr = productsData.map(
-  (product) =>
-    new Product(
-      product.id,
-      product.name,
-      product.image,
-      product.price,
-      product.discount
-    )
+  (product: ProductIF) => new Product(product)
 );

@@ -33,9 +33,9 @@ export const createProductList = (
                   src="${product.image}"
                   alt="${product.name}"
                 />
-                <button id=${
-                  product.id
-                } class="btn ${id} btn-add-to-cart absolute"> Add to cart </button>
+                <button dis id=${product.id} class="btn ${id} btn-add-to-cart ${
+        product.status === "outOfStock" ? "cart-btn-disabled" : ""
+      } absolute"> Add to cart </button>
                 </div>
                 <h4 class="product-name">${product.name}s</h4>
                 <div class="product-price-group d-flex justify-space-between">
@@ -74,21 +74,20 @@ export const displayProducts = (data: ProductIF[], id: string) => {
     document.querySelectorAll(`.${id}.btn-add-to-cart`);
 
   addToCartBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const product = data.find((item) => item.id === parseInt(btn.id));
-      if (product !== undefined) {
-        addToCart(product);
-        console.log(product);
+    const product = data.find((item) => item.id === parseInt(btn.id));
+    if (product !== undefined) {
+      if (btn.classList.contains("cart-btn-disabled")) {
+        btn.innerText = "Out of stock";
+
+        btn.addEventListener("click", () => {
+          alert("This product is currently out of stock.");
+        });
+      } else {
+        btn.addEventListener("click", () => {
+          addToCart(product);
+          console.log(product);
+        });
       }
-    });
+    }
   });
-  // for (let a of button) {
-  //   a.addEventListener("click", () => {
-  //     const product = data.find((item) => item.id === parseInt(a.id));
-  //     if (product !== undefined) {
-  //       addToCart(product);
-  //       console.log(product);
-  //     }
-  //   });
-  // }
 };
