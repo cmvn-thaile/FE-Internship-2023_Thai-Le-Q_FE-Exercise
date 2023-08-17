@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "lib": ["ES2015", "dom"],
+    "target": "ES6",
+    "outDir": "./dist",
+    "strict": true
+  },
+}
