@@ -11,6 +11,7 @@ export const createCart = (cartItems: CartItemIF[]) => {
   if (cartContainer !== null) {
     cartContainer.appendChild(cartTable);
   }
+
   cartTable.innerHTML = `
     <thead >
       <tr class="cart-table-header" >
@@ -38,9 +39,21 @@ export const createCart = (cartItems: CartItemIF[]) => {
         <button name=${cartItem.id}  id="plus-btn-${
         cartItem.id
       }"  class="plus-btn">+</button></td>
-        <td id="sub-total-${cartItem.id}" class="sub-total">${(
-        cartItem.price * cartItem.quantity
-      ).toFixed(2)}</td>
+      ${
+        cartItem.discount
+          ? `<td id="sub-total-${cartItem.id}" class="sub-total">${
+              cartItem.price -
+              parseFloat(
+                ((cartItem.price * cartItem.discount) / 100).toFixed(2)
+              ) *
+                cartItem.quantity
+            }</td>`
+          : `<td id="sub-total-${cartItem.id}" class="sub-total">${(
+              cartItem.price * cartItem.quantity
+            ).toFixed(2)}</td>`
+      }
+
+
         <td >
         <button name="${cartItem.id}"id="delete-btn-${
         cartItem.id
@@ -62,7 +75,7 @@ export const displayCart = (cartItems: CartItemIF[]) => {
     createCart(cartItems);
     calculateTotal();
   } else {
-    cartEmpty()
+    cartEmpty();
   }
 
   const plusBtn: NodeListOf<HTMLButtonElement> =
@@ -96,9 +109,19 @@ export const displayCart = (cartItems: CartItemIF[]) => {
           `sub-total-${cartItem.id}`
         );
         if (subTotalCell !== null) {
-          subTotalCell.textContent = (
-            cartItem.price * cartItem.quantity
-          ).toFixed(2);
+          if (cartItem.discount) {
+            subTotalCell.textContent = (
+              (cartItem.price -
+                parseFloat(
+                  ((cartItem.price * cartItem.discount) / 100).toFixed(2)
+                )) *
+              cartItem.quantity
+            ).toFixed(2);
+          } else {
+            subTotalCell.textContent = (
+              cartItem.price * cartItem.quantity
+            ).toFixed(2);
+          }
         }
       }
       calculateTotal();
@@ -123,9 +146,19 @@ export const displayCart = (cartItems: CartItemIF[]) => {
           `sub-total-${cartItem.id}`
         );
         if (subTotalCell !== null) {
-          subTotalCell.textContent = (
-            cartItem.price * cartItem.quantity
-          ).toFixed(2);
+          if (cartItem.discount) {
+            subTotalCell.textContent = (
+              (cartItem.price -
+                parseFloat(
+                  ((cartItem.price * cartItem.discount) / 100).toFixed(2)
+                )) *
+              cartItem.quantity
+            ).toFixed(2);
+          } else {
+            subTotalCell.textContent = (
+              cartItem.price * cartItem.quantity
+            ).toFixed(2);
+          }
         }
       }
       calculateTotal();

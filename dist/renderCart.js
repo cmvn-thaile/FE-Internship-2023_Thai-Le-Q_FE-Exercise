@@ -29,7 +29,13 @@ export const createCart = (cartItems) => {
         <td class="cart-table-quantity-group" ><button name=${cartItem.id} id="minus-btn-${cartItem.id}" class="minus-btn">-</button>
         <p id="quantity-${cartItem.id}">${cartItem.quantity}</p>
         <button name=${cartItem.id}  id="plus-btn-${cartItem.id}"  class="plus-btn">+</button></td>
-        <td id="sub-total-${cartItem.id}" class="sub-total">${(cartItem.price * cartItem.quantity).toFixed(2)}</td>
+      ${cartItem.discount
+                ? `<td id="sub-total-${cartItem.id}" class="sub-total">${cartItem.price -
+                    parseFloat(((cartItem.price * cartItem.discount) / 100).toFixed(2)) *
+                        cartItem.quantity}</td>`
+                : `<td id="sub-total-${cartItem.id}" class="sub-total">${(cartItem.price * cartItem.quantity).toFixed(2)}</td>`}
+
+
         <td >
         <button name="${cartItem.id}"id="delete-btn-${cartItem.id}" class="delete-btn">Delete</button>
         </td>
@@ -68,7 +74,14 @@ export const displayCart = (cartItems) => {
                 }
                 const subTotalCell = document.getElementById(`sub-total-${cartItem.id}`);
                 if (subTotalCell !== null) {
-                    subTotalCell.textContent = (cartItem.price * cartItem.quantity).toFixed(2);
+                    if (cartItem.discount) {
+                        subTotalCell.textContent = ((cartItem.price -
+                            parseFloat(((cartItem.price * cartItem.discount) / 100).toFixed(2))) *
+                            cartItem.quantity).toFixed(2);
+                    }
+                    else {
+                        subTotalCell.textContent = (cartItem.price * cartItem.quantity).toFixed(2);
+                    }
                 }
             }
             calculateTotal();
@@ -87,7 +100,14 @@ export const displayCart = (cartItems) => {
                 }
                 const subTotalCell = document.getElementById(`sub-total-${cartItem.id}`);
                 if (subTotalCell !== null) {
-                    subTotalCell.textContent = (cartItem.price * cartItem.quantity).toFixed(2);
+                    if (cartItem.discount) {
+                        subTotalCell.textContent = ((cartItem.price -
+                            parseFloat(((cartItem.price * cartItem.discount) / 100).toFixed(2))) *
+                            cartItem.quantity).toFixed(2);
+                    }
+                    else {
+                        subTotalCell.textContent = (cartItem.price * cartItem.quantity).toFixed(2);
+                    }
                 }
             }
             calculateTotal();
