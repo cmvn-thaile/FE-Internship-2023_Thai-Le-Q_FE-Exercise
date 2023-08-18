@@ -1,12 +1,12 @@
 import { ProductProps } from "./product.interface.js";
-
+import { productStatus } from "./product.interface.js";
 export class Product implements ProductProps {
   id: number;
   name: string;
   image: string;
   price: number;
   discount: number | null;
-  status: "available" | "outOfStock";
+  status: productStatus;
   constructor({ id, name, image, price, discount, status }: ProductProps) {
     this.id = id;
     this.name = name;
@@ -24,7 +24,7 @@ const arrivedProduct: ProductProps[] = [
     image: "assets/img/product-1.png",
     price: 13.99,
     discount: 30,
-    status: "available",
+    status: productStatus.available,
   },
   {
     id: 6,
@@ -32,7 +32,7 @@ const arrivedProduct: ProductProps[] = [
     image: "assets/img/product-2.png",
     price: 11.99,
     discount: null,
-    status: "outOfStock",
+    status: productStatus.outOfStock,
   },
   {
     id: 7,
@@ -40,7 +40,7 @@ const arrivedProduct: ProductProps[] = [
     image: "assets/img/product-3.png",
     price: 9.9,
     discount: null,
-    status: "available",
+    status: productStatus.available,
   },
   {
     id: 8,
@@ -48,7 +48,7 @@ const arrivedProduct: ProductProps[] = [
     image: "assets/img/product-4.png",
     price: 11.99,
     discount: null,
-    status: "available",
+    status: productStatus.available,
   },
 ];
 
@@ -59,7 +59,7 @@ const productsData: ProductProps[] = [
     image: "assets/img/product-1.png",
     price: 119.99,
     discount: 30,
-    status: "outOfStock",
+    status: productStatus.outOfStock,
   },
   {
     id: 2,
@@ -67,7 +67,7 @@ const productsData: ProductProps[] = [
     image: "assets/img/product-2.png",
     price: 119.99,
     discount: null,
-    status: "outOfStock",
+    status: productStatus.available,
   },
   {
     id: 3,
@@ -75,7 +75,7 @@ const productsData: ProductProps[] = [
     image: "assets/img/product-3.png",
     price: 99.9,
     discount: null,
-    status: "available",
+    status: productStatus.available,
   },
   {
     id: 4,
@@ -83,7 +83,7 @@ const productsData: ProductProps[] = [
     image: "assets/img/product-4.png",
     price: 11.99,
     discount: null,
-    status: "available",
+    status: productStatus.outOfStock,
   },
 ];
 

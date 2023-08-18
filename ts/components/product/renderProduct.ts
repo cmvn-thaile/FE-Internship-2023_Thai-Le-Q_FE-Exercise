@@ -1,4 +1,4 @@
-import { addToCart } from "./addCart.js";
+import { addToCart } from "./cart.function.js";
 import {
   arrivedProductsArr as arrivedProduct,
   productsDataArr as productsData,

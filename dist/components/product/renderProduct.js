@@ -1,4 +1,4 @@
-import { addToCart } from "./addCart.js";
+import { addToCart } from "./cart.function.js";
 export const createProductList = (productContainer, data, id) => {
     const productList = document.createElement("ul");
     productList.className = "product-list row pt-12 sm-p-reset";

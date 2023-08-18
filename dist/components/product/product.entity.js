@@ -1,3 +1,4 @@
+import { productStatus } from "./product.interface.js";
 export class Product {
     constructor({ id, name, image, price, discount, status }) {
         this.id = id;
@@ -15,7 +16,7 @@ const arrivedProduct = [
         image: "assets/img/product-1.png",
         price: 13.99,
         discount: 30,
-        status: "available",
+        status: productStatus.available,
     },
     {
         id: 6,
@@ -23,7 +24,7 @@ const arrivedProduct = [
         image: "assets/img/product-2.png",
         price: 11.99,
         discount: null,
-        status: "outOfStock",
+        status: productStatus.outOfStock,
     },
     {
         id: 7,
@@ -31,7 +32,7 @@ const arrivedProduct = [
         image: "assets/img/product-3.png",
         price: 9.9,
         discount: null,
-        status: "available",
+        status: productStatus.available,
     },
     {
         id: 8,
@@ -39,7 +40,7 @@ const arrivedProduct = [
         image: "assets/img/product-4.png",
         price: 11.99,
         discount: null,
-        status: "available",
+        status: productStatus.available,
     },
 ];
 const productsData = [
@@ -49,7 +50,7 @@ const productsData = [
         image: "assets/img/product-1.png",
         price: 119.99,
         discount: 30,
-        status: "outOfStock",
+        status: productStatus.outOfStock,
     },
     {
         id: 2,
@@ -57,7 +58,7 @@ const productsData = [
         image: "assets/img/product-2.png",
         price: 119.99,
         discount: null,
-        status: "outOfStock",
+        status: productStatus.available,
     },
     {
         id: 3,
@@ -65,7 +66,7 @@ const productsData = [
         image: "assets/img/product-3.png",
         price: 99.9,
         discount: null,
-        status: "available",
+        status: productStatus.available,
     },
     {
         id: 4,
@@ -73,7 +74,7 @@ const productsData = [
         image: "assets/img/product-4.png",
         price: 11.99,
         discount: null,
-        status: "available",
+        status: productStatus.outOfStock,
     },
 ];
 export const arrivedProductsArr = arrivedProduct.map((product) => new Product(product));

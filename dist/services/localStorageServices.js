@@ -1,6 +1,6 @@
 export var StorageKey;
 (function (StorageKey) {
-    StorageKey["Product"] = "product";
+    StorageKey["CartItems"] = "cartItems";
 })(StorageKey || (StorageKey = {}));
 export function saveToLocalStorage(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
