@@ -1,6 +1,6 @@
-import { updateCartQty } from "./addCart.js";
-import { arrivedProductsArr as arrivedProduct, productsDataArr as productsData, } from "./productEntity.js";
-import { displayProducts } from "./renderProduct.js";
+import { updateCartQty } from "./components/product/addCart.js";
+import { arrivedProductsArr as arrivedProduct, productsDataArr as productsData, } from "./components/product/product.entity.js";
+import { displayProducts } from "./components/product/renderProduct.js";
 updateCartQty();
 displayProducts(productsData, "category-product");
 displayProducts(arrivedProduct, "new-arrived-product");

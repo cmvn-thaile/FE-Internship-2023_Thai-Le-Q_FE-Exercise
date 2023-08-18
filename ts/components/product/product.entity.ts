@@ -1,20 +1,13 @@
-export interface ProductIF {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-  discount: number | null;
-  status: "available" | "outOfStock";
-}
+import { ProductProps } from "./product.interface.js";
 
-export class Product implements ProductIF {
+export class Product implements ProductProps {
   id: number;
   name: string;
   image: string;
   price: number;
   discount: number | null;
   status: "available" | "outOfStock";
-  constructor({ id, name, image, price, discount, status }: ProductIF) {
+  constructor({ id, name, image, price, discount, status }: ProductProps) {
     this.id = id;
     this.name = name;
     this.image = image;
@@ -24,7 +17,7 @@ export class Product implements ProductIF {
   }
 }
 
-const arrivedProduct: ProductIF[] = [
+const arrivedProduct: ProductProps[] = [
   {
     id: 5,
     name: "T-Shirt Summer Vibes 2",
@@ -59,7 +52,7 @@ const arrivedProduct: ProductIF[] = [
   },
 ];
 
-const productsData: ProductIF[] = [
+const productsData: ProductProps[] = [
   {
     id: 1,
     name: "T-Shirt Summer Vibes",
@@ -95,9 +88,9 @@ const productsData: ProductIF[] = [
 ];
 
 export const arrivedProductsArr = arrivedProduct.map(
-  (product: ProductIF) => new Product(product)
+  (product: ProductProps) => new Product(product)
 );
 
 export const productsDataArr = productsData.map(
-  (product: ProductIF) => new Product(product)
+  (product: ProductProps) => new Product(product)
 );

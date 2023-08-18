@@ -1,8 +1,8 @@
 // retrieve cart items from local storage
-import { cartItemsArr as cartItems } from "./cartEntity.js";
-import { CartItemIF } from "./cartEntity.js";
+import { cartItemsArr as cartItems } from "./cart.entity.js";
+import { CartItemProps } from "./cart.interface.js";
 
-export const createCart = (cartItems: CartItemIF[]) => {
+export const createCart = (cartItems: CartItemProps[]) => {
   if (cartItems.length === 0) return null;
 
   const cartTable = document.createElement("table");
@@ -67,7 +67,7 @@ export const createCart = (cartItems: CartItemIF[]) => {
   return cartTable;
 };
 
-export const displayCart = (cartItems: CartItemIF[]) => {
+export const displayCart = (cartItems: CartItemProps[]) => {
   // const cartItems = JSON.parse(localStorage.getItem("cartItems"));
   console.log(cartItems);
 
@@ -92,7 +92,7 @@ export const displayCart = (cartItems: CartItemIF[]) => {
   for (let minus of minusBtnArray) {
     minus.addEventListener("click", (e: any) => {
       e.preventDefault();
-      const cartItem: CartItemIF = cartItems.filter(
+      const cartItem: CartItemProps = cartItems.filter(
         (item) => item.id === parseInt((minus as HTMLButtonElement).name)
       )[0];
 
@@ -131,7 +131,7 @@ export const displayCart = (cartItems: CartItemIF[]) => {
   for (let plus of plusBtnArray) {
     plus.addEventListener("click", (e: any) => {
       e.preventDefault();
-      const cartItem: CartItemIF = cartItems.filter(
+      const cartItem: CartItemProps = cartItems.filter(
         (item) => item.id === parseInt(plus.name)
       )[0];
       if (cartItem && cartItem.quantity >= 1) {

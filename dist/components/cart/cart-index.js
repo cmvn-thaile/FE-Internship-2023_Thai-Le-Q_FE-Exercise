@@ -1,4 +1,4 @@
-import { cartItemsArr as cartItems } from "./cartEntity.js";
+import { cartItemsArr as cartItems } from "./cart.entity.js";
 export const createCart = (cartItems) => {
     if (cartItems.length === 0)
         return null;
@@ -164,4 +164,4 @@ const cartEmpty = () => {
     }
 };
 displayCart(cartItems);
-//# sourceMappingURL=renderCart.js.map
+//# sourceMappingURL=cart-index.js.map

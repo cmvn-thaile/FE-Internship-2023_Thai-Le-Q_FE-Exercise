@@ -13,4 +13,4 @@ export const cartItems = cartItemsJson
     ? JSON.parse(cartItemsJson)
     : [];
 export const cartItemsArr = cartItems.map((cart) => new CartItem(cart));
-//# sourceMappingURL=cartEntity.js.map
+//# sourceMappingURL=cart.entity.js.map

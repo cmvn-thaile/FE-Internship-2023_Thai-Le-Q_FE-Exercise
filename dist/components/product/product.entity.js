@@ -78,4 +78,4 @@ const productsData = [
 ];
 export const arrivedProductsArr = arrivedProduct.map((product) => new Product(product));
 export const productsDataArr = productsData.map((product) => new Product(product));
-//# sourceMappingURL=productEntity.js.map
+//# sourceMappingURL=product.entity.js.map

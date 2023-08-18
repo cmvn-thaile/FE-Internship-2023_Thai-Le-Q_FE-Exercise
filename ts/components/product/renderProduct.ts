@@ -2,13 +2,13 @@ import { addToCart } from "./addCart.js";
 import {
   arrivedProductsArr as arrivedProduct,
   productsDataArr as productsData,
-} from "./productEntity.js";
-import { ProductIF } from "./productEntity.js";
-import { CartItemIF } from "./cartEntity.js";
+} from "./product.entity.js";
+import { ProductProps } from "./product.interface.js";
+import { CartItemProps } from "../cart/cart.interface.js";
 
 export const createProductList = (
   productContainer: HTMLElement,
-  data: ProductIF[],
+  data: ProductProps[],
   id: string
 ) => {
   const productList = document.createElement("ul");
@@ -60,7 +60,7 @@ export const createProductList = (
   return productList;
 };
 
-export const displayProducts = (data: ProductIF[], id: string) => {
+export const displayProducts = (data: ProductProps[], id: string) => {
   console.log(data);
 
   const productContainer = document.getElementById(id);

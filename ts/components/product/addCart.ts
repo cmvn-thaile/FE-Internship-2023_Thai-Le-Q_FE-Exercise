@@ -1,7 +1,7 @@
-import { CartItemIF } from "./cartEntity.js";
-import { ProductIF } from "./productEntity.js";
+import { CartItemProps } from "../cart/cart.interface.js";
+import { ProductProps } from "./product.interface.js";
 
-export const addToCart = (product:ProductIF) => {
+export const addToCart = (product:ProductProps) => {
   console.log(product);
   const productToCart = {
     id: product?.id,
@@ -13,7 +13,7 @@ export const addToCart = (product:ProductIF) => {
   };
 
   const cartItemsJson = localStorage.getItem("cartItems");
-  const cartItems: CartItemIF[] = cartItemsJson
+  const cartItems: CartItemProps[] = cartItemsJson
     ? JSON.parse(cartItemsJson)
     : [];
 
@@ -48,7 +48,7 @@ export const updateCartQty = () => {
   const cartQuantity = document.getElementById("cart-quantity");
 
   const cartItemsJson = localStorage.getItem("cartItems");
-  const cartItems: CartItemIF[] = cartItemsJson
+  const cartItems: CartItemProps[] = cartItemsJson
     ? JSON.parse(cartItemsJson)
     : [];
 
