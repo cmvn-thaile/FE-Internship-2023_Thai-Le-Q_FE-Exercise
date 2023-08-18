@@ -1054,7 +1054,11 @@ li:nth-of-type(3) .category {
   border-collapse: collapse;
 }
 .cart-table .cart-table-header > th {
-  color: #fbb03b;
+  color: #fff;
+}
+.cart-table > thead {
+  background-color: #fbb03b;
+  height: 30px;
 }
 .cart-table .cart-product-row {
   border-bottom: 1px solid #fbb03b;

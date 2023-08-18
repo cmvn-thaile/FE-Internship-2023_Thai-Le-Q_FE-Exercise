@@ -16,6 +16,7 @@ export const createCart = (cartItems) => {
         <th>Image</th>
         <th>Quantity</th>
         <th>Sub Total</th>
+        <th></th>
       </tr>
     </thead>`;
     if (cartItems.length > 0) {
@@ -40,15 +41,12 @@ export const createCart = (cartItems) => {
 };
 export const displayCart = (cartItems) => {
     console.log(cartItems);
-    if (cartItems) {
+    if (cartItems && cartItems.length > 0) {
         createCart(cartItems);
         calculateTotal();
     }
     else {
-        const cartContainer = document.getElementById("cart-container");
-        if (cartContainer !== null) {
-            cartContainer.innerHTML = `<h2 class="cart-empty">Cart is empty</h2>`;
-        }
+        cartEmpty();
     }
     const plusBtn = document.querySelectorAll(".plus-btn");
     const minusBtn = document.querySelectorAll(".minus-btn");
@@ -110,8 +108,11 @@ export const displayCart = (cartItems) => {
                 calculateTotal();
             }
             const cartTable = document.querySelector(".cart-table");
+            const cartTotalGroup = document.getElementById("total");
             if (cartTable !== null && cartItems.length === 0) {
                 cartTable.remove();
+                cartTotalGroup === null || cartTotalGroup === void 0 ? void 0 : cartTotalGroup.remove();
+                cartEmpty();
             }
         });
     }
@@ -134,6 +135,12 @@ const calculateTotal = () => {
         </h3>
         <p id="total-text">${total.toFixed(2)}</p>
       `;
+    }
+};
+const cartEmpty = () => {
+    const cartContainer = document.getElementById("cart-container");
+    if (cartContainer !== null) {
+        cartContainer.innerHTML = `<h2 class="cart-empty">Cart is empty</h2>`;
     }
 };
 displayCart(cartItems);

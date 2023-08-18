@@ -19,6 +19,7 @@ export const createCart = (cartItems: CartItemIF[]) => {
         <th>Image</th>
         <th>Quantity</th>
         <th>Sub Total</th>
+        <th></th>
       </tr>
     </thead>`;
   if (cartItems.length > 0) {
@@ -57,14 +58,11 @@ export const displayCart = (cartItems: CartItemIF[]) => {
   // const cartItems = JSON.parse(localStorage.getItem("cartItems"));
   console.log(cartItems);
 
-  if (cartItems) {
+  if (cartItems && cartItems.length > 0) {
     createCart(cartItems);
     calculateTotal();
   } else {
-    const cartContainer = document.getElementById("cart-container");
-    if (cartContainer !== null) {
-      cartContainer.innerHTML = `<h2 class="cart-empty">Cart is empty</h2>`;
-    }
+    cartEmpty()
   }
 
   const plusBtn: NodeListOf<HTMLButtonElement> =
@@ -151,8 +149,11 @@ export const displayCart = (cartItems: CartItemIF[]) => {
         calculateTotal();
       }
       const cartTable = document.querySelector(".cart-table");
+      const cartTotalGroup = document.getElementById("total");
       if (cartTable !== null && cartItems.length === 0) {
         cartTable.remove();
+        cartTotalGroup?.remove();
+        cartEmpty();
       }
     });
   }
@@ -176,6 +177,13 @@ const calculateTotal = () => {
         </h3>
         <p id="total-text">${total.toFixed(2)}</p>
       `;
+  }
+};
+
+const cartEmpty = () => {
+  const cartContainer = document.getElementById("cart-container");
+  if (cartContainer !== null) {
+    cartContainer.innerHTML = `<h2 class="cart-empty">Cart is empty</h2>`;
   }
 };
 

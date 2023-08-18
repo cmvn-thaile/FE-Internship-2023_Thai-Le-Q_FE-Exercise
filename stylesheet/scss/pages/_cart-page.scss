@@ -3,7 +3,13 @@
   border-collapse: collapse;
 
   .cart-table-header > th {
-    color: map-get($color, primary);
+    color: map-get($color, white );
+  }
+
+  & > thead {
+    background-color: map-get($color, primary);
+
+    height: 30px;
   }
 
   .cart-product-row {
