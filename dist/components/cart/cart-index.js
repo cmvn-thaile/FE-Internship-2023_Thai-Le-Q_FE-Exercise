@@ -1,4 +1,6 @@
 import { cartItemsArr as cartItems } from "./cart.entity.js";
+import { saveToLocalStorage, } from "../../services/localStorageServices.js";
+import { StorageKey } from "../../services/localStorageServices.js";
 export const createCart = (cartItems) => {
     if (cartItems.length === 0)
         return null;
@@ -67,7 +69,7 @@ export const displayCart = (cartItems) => {
             console.log(cartItem);
             if (cartItem && cartItem.quantity > 1) {
                 cartItem.quantity -= 1;
-                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                saveToLocalStorage(StorageKey.CartItems, cartItems);
                 let quantityCell = document.getElementById(`quantity-${cartItem.id}`);
                 if (quantityCell !== null) {
                     quantityCell.textContent = cartItem.quantity.toString();
@@ -93,7 +95,7 @@ export const displayCart = (cartItems) => {
             const cartItem = cartItems.filter((item) => item.id === parseInt(plus.name))[0];
             if (cartItem && cartItem.quantity >= 1) {
                 cartItem.quantity += 1;
-                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                saveToLocalStorage(StorageKey.CartItems, cartItems);
                 let quantityCell = document.getElementById(`quantity-${cartItem.id}`);
                 if (quantityCell !== null) {
                     quantityCell.textContent = cartItem.quantity.toString();
@@ -120,7 +122,7 @@ export const displayCart = (cartItems) => {
             if (cartItem) {
                 const index = cartItems.indexOf(cartItem);
                 cartItems.splice(index, 1);
-                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                saveToLocalStorage(StorageKey.CartItems, cartItems);
                 const rowCartItem = document.getElementById(`row-product-${cartItem.id}`);
                 if (rowCartItem !== null) {
                     rowCartItem.remove();

@@ -1,10 +1,5 @@
 import { addToCart } from "./cart.function.js";
-import {
-  arrivedProductsArr as arrivedProduct,
-  productsDataArr as productsData,
-} from "./product.entity.js";
 import { ProductProps } from "./product.interface.js";
-import { CartItemProps } from "../cart/cart.interface.js";
 
 export const createProductList = (
   productContainer: HTMLElement,

@@ -1,3 +1,5 @@
+import { StorageKey } from "../../services/localStorageServices.js";
+import { getFromLocalStorage, saveToLocalStorage, } from "../../services/localStorageServices.js";
 export const addToCart = (product) => {
     console.log(product);
     const productToCart = {
@@ -8,7 +10,7 @@ export const addToCart = (product) => {
         discount: (product === null || product === void 0 ? void 0 : product.discount) || null,
         quantity: 1,
     };
-    const cartItemsJson = localStorage.getItem("cartItems");
+    const cartItemsJson = getFromLocalStorage(StorageKey.CartItems);
     const cartItems = cartItemsJson
         ? JSON.parse(cartItemsJson)
         : [];
@@ -16,7 +18,7 @@ export const addToCart = (product) => {
         const productExists = cartItems.find((item) => item.id === productToCart.id);
         if (!productExists) {
             cartItems.push(productToCart);
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+            saveToLocalStorage(StorageKey.CartItems, cartItems);
             return;
         }
         else {
@@ -26,17 +28,17 @@ export const addToCart = (product) => {
             if (cartItemToUpdate) {
                 cartItemToUpdate.quantity += 1;
             }
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+            saveToLocalStorage(StorageKey.CartItems, cartItems);
         }
     }
     else {
-        localStorage.setItem("cartItems", JSON.stringify([productToCart]));
+        saveToLocalStorage(StorageKey.CartItems, [productToCart]);
     }
     updateCartQty();
 };
 export const updateCartQty = () => {
     const cartQuantity = document.getElementById("cart-quantity");
-    const cartItemsJson = localStorage.getItem("cartItems");
+    const cartItemsJson = getFromLocalStorage(StorageKey.CartItems);
     const cartItems = cartItemsJson
         ? JSON.parse(cartItemsJson)
         : [];

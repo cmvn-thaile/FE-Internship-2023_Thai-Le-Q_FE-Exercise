@@ -1,5 +1,11 @@
 import { CartItemProps } from "../cart/cart.interface.js";
 import { ProductProps } from "./product.interface.js";
+import { StorageKey } from "../../services/localStorageServices.js";
+import { productStatus } from "../product/product.interface.js";
+import {
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "../../services/localStorageServices.js";
 
 export const addToCart = (product:ProductProps) => {
   console.log(product);
@@ -12,7 +18,8 @@ export const addToCart = (product:ProductProps) => {
     quantity: 1,
   };
 
-  const cartItemsJson = localStorage.getItem("cartItems");
+  // const cartItemsJson = localStorage.getItem("cartItems");
+  const cartItemsJson = getFromLocalStorage(StorageKey.CartItems);
   const cartItems: CartItemProps[] = cartItemsJson
     ? JSON.parse(cartItemsJson)
     : [];
@@ -25,7 +32,8 @@ export const addToCart = (product:ProductProps) => {
 
     if (!productExists) {
       cartItems.push(productToCart);
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      // localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      saveToLocalStorage(StorageKey.CartItems, cartItems);
       return;
     } else {
       const cartItemToUpdate = cartItems.find(function (item) {
@@ -35,10 +43,13 @@ export const addToCart = (product:ProductProps) => {
         cartItemToUpdate.quantity += 1;
       }
 
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      // localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      saveToLocalStorage(StorageKey.CartItems, cartItems);
     }
   } else {
-    localStorage.setItem("cartItems", JSON.stringify([productToCart]));
+    // localStorage.setItem("cartItems", JSON.stringify([productToCart]));
+    saveToLocalStorage(StorageKey.CartItems, [productToCart]);
+  
   }
 
   updateCartQty();
@@ -47,7 +58,8 @@ export const addToCart = (product:ProductProps) => {
 export const updateCartQty = () => {
   const cartQuantity = document.getElementById("cart-quantity");
 
-  const cartItemsJson = localStorage.getItem("cartItems");
+  // const cartItemsJson = localStorage.getItem("cartItems");
+  const cartItemsJson = getFromLocalStorage(StorageKey.CartItems);
   const cartItems: CartItemProps[] = cartItemsJson
     ? JSON.parse(cartItemsJson)
     : [];

@@ -1,6 +1,11 @@
 // retrieve cart items from local storage
 import { cartItemsArr as cartItems } from "./cart.entity.js";
 import { CartItemProps } from "./cart.interface.js";
+import {
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "../../services/localStorageServices.js";
+import { StorageKey } from "../../services/localStorageServices.js";
 
 export const createCart = (cartItems: CartItemProps[]) => {
   if (cartItems.length === 0) return null;
@@ -99,7 +104,8 @@ export const displayCart = (cartItems: CartItemProps[]) => {
       console.log(cartItem);
       if (cartItem && cartItem.quantity > 1) {
         cartItem.quantity -= 1;
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        saveToLocalStorage(StorageKey.CartItems, cartItems);
+        // localStorage.setItem("cartItems", JSON.stringify(cartItems));
         let quantityCell = document.getElementById(`quantity-${cartItem.id}`);
         if (quantityCell !== null) {
           quantityCell.textContent = cartItem.quantity.toString();
@@ -136,7 +142,8 @@ export const displayCart = (cartItems: CartItemProps[]) => {
       )[0];
       if (cartItem && cartItem.quantity >= 1) {
         cartItem.quantity += 1;
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        saveToLocalStorage(StorageKey.CartItems, cartItems);
+        // localStorage.setItem("cartItems", JSON.stringify(cartItems));
         let quantityCell = document.getElementById(`quantity-${cartItem.id}`);
         if (quantityCell !== null) {
           quantityCell.textContent = cartItem.quantity.toString();
@@ -172,7 +179,8 @@ export const displayCart = (cartItems: CartItemProps[]) => {
       if (cartItem) {
         const index = cartItems.indexOf(cartItem);
         cartItems.splice(index, 1);
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        saveToLocalStorage(StorageKey.CartItems, cartItems);
+        // localStorage.setItem("cartItems", JSON.stringify(cartItems));
         const rowCartItem = document.getElementById(
           `row-product-${cartItem.id}`
         );
