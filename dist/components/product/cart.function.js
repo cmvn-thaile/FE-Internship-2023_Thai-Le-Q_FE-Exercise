@@ -1,5 +1,6 @@
 import { StorageKey } from "../../services/localStorageServices.js";
 import { getFromLocalStorage, saveToLocalStorage, } from "../../services/localStorageServices.js";
+import { calCartQuantity } from "../../utils/calculation.js";
 export const addToCart = (product) => {
     console.log(product);
     const productToCart = {
@@ -11,9 +12,7 @@ export const addToCart = (product) => {
         quantity: 1,
     };
     const cartItemsJson = getFromLocalStorage(StorageKey.CartItems);
-    const cartItems = cartItemsJson
-        ? JSON.parse(cartItemsJson)
-        : [];
+    const cartItems = cartItemsJson;
     if (cartItems !== null) {
         const productExists = cartItems.find((item) => item.id === productToCart.id);
         if (!productExists) {
@@ -39,10 +38,8 @@ export const addToCart = (product) => {
 export const updateCartQty = () => {
     const cartQuantity = document.getElementById("cart-quantity");
     const cartItemsJson = getFromLocalStorage(StorageKey.CartItems);
-    const cartItems = cartItemsJson
-        ? JSON.parse(cartItemsJson)
-        : [];
-    const cartQuantityNum = cartItems.reduce((accumulator, item) => accumulator + item.quantity, 0);
+    const cartItems = cartItemsJson;
+    const cartQuantityNum = calCartQuantity(cartItems);
     if (cartQuantity !== null) {
         if (cartQuantityNum > 0) {
             cartQuantity.style.display = "block";

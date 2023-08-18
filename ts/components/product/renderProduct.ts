@@ -1,5 +1,6 @@
 import { addToCart } from "./cart.function.js";
 import { ProductProps } from "./product.interface.js";
+import { calDiscountPrice } from "../../utils/calculation.js";
 
 export const createProductList = (
   productContainer: HTMLElement,
@@ -36,14 +37,10 @@ export const createProductList = (
                 <div class="product-price-group d-flex justify-space-between">
                   ${
                     product.discount
-                      ? `<p class="product-price text-danger">${
-                          product.price -
-                          parseFloat(
-                            ((product.price * product.discount) / 100).toFixed(
-                              2
-                            )
-                          )
-                        }</p>`
+                      ? `<p class="product-price text-danger">${calDiscountPrice(
+                          product.price,
+                          product.discount
+                        )}</p>`
                       : ""
                   }
                   <p class="product-price text-gray-2">${product.price}</p>

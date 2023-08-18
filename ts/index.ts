@@ -6,6 +6,6 @@ import {
 import { displayProducts } from "./components/product/renderProduct.js";
 //get container
 
-updateCartQty()
+updateCartQty();
 displayProducts(productsData, "category-product");
 displayProducts(arrivedProduct, "new-arrived-product");

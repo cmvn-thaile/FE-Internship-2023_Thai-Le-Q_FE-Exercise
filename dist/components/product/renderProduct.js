@@ -1,4 +1,5 @@
 import { addToCart } from "./cart.function.js";
+import { calDiscountPrice } from "../../utils/calculation.js";
 export const createProductList = (productContainer, data, id) => {
     const productList = document.createElement("ul");
     productList.className = "product-list row pt-12 sm-p-reset";
@@ -23,8 +24,7 @@ export const createProductList = (productContainer, data, id) => {
                 <h4 class="product-name">${product.name}s</h4>
                 <div class="product-price-group d-flex justify-space-between">
                   ${product.discount
-                ? `<p class="product-price text-danger">${product.price -
-                    parseFloat(((product.price * product.discount) / 100).toFixed(2))}</p>`
+                ? `<p class="product-price text-danger">${calDiscountPrice(product.price, product.discount)}</p>`
                 : ""}
                   <p class="product-price text-gray-2">${product.price}</p>
                 </div>

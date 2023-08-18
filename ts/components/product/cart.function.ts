@@ -6,8 +6,9 @@ import {
   getFromLocalStorage,
   saveToLocalStorage,
 } from "../../services/localStorageServices.js";
+import { calCartQuantity } from "../../utils/calculation.js";
 
-export const addToCart = (product:ProductProps) => {
+export const addToCart = (product: ProductProps) => {
   console.log(product);
   const productToCart = {
     id: product?.id,
@@ -20,9 +21,7 @@ export const addToCart = (product:ProductProps) => {
 
   // const cartItemsJson = localStorage.getItem("cartItems");
   const cartItemsJson = getFromLocalStorage(StorageKey.CartItems);
-  const cartItems: CartItemProps[] = cartItemsJson
-    ? JSON.parse(cartItemsJson)
-    : [];
+  const cartItems: CartItemProps[] = cartItemsJson;
 
   if (cartItems !== null) {
     //find if product exist in cart
@@ -49,7 +48,6 @@ export const addToCart = (product:ProductProps) => {
   } else {
     // localStorage.setItem("cartItems", JSON.stringify([productToCart]));
     saveToLocalStorage(StorageKey.CartItems, [productToCart]);
-  
   }
 
   updateCartQty();
@@ -60,14 +58,9 @@ export const updateCartQty = () => {
 
   // const cartItemsJson = localStorage.getItem("cartItems");
   const cartItemsJson = getFromLocalStorage(StorageKey.CartItems);
-  const cartItems: CartItemProps[] = cartItemsJson
-    ? JSON.parse(cartItemsJson)
-    : [];
+  const cartItems: CartItemProps[] = cartItemsJson;
 
-  const cartQuantityNum: number = cartItems.reduce(
-    (accumulator, item) => accumulator + item.quantity,
-    0
-  );
+  const cartQuantityNum = calCartQuantity(cartItems);
 
   if (cartQuantity !== null) {
     if (cartQuantityNum > 0) {
