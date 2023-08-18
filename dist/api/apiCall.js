@@ -7,16 +7,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { fetchProductData } from "./api/apiCall.js";
-import { endpoint } from "./api/apiUrls.js";
-import { updateCartQty } from "./components/product/cart.function.js";
-import { displayProducts } from "./components/product/renderProduct.js";
-const renderIndex = () => __awaiter(void 0, void 0, void 0, function* () {
-    const productsData = yield fetchProductData(endpoint.categoryProducts);
-    const arrivedProduct = yield fetchProductData(endpoint.arrivedProducts);
-    updateCartQty();
-    displayProducts(productsData, "category-product");
-    displayProducts(arrivedProduct, "new-arrived-product");
+export const fetchProductData = (url) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const response = yield fetch(url);
+        const data = yield response.json();
+        return data;
+    }
+    catch (error) {
+        console.error(error);
+        return [];
+    }
 });
-renderIndex();
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=apiCall.js.map

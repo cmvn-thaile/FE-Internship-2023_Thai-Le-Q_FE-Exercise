@@ -1,11 +1,21 @@
+import { fetchProductData } from "./api/apiCall.js";
+import { endpoint } from "./api/apiUrls.js";
 import { updateCartQty } from "./components/product/cart.function.js";
-import {
-  arrivedProductsArr as arrivedProduct,
-  productsDataArr as productsData,
-} from "./components/product/product.entity.js";
+
 import { displayProducts } from "./components/product/renderProduct.js";
 //get container
 
-updateCartQty();
-displayProducts(productsData, "category-product");
-displayProducts(arrivedProduct, "new-arrived-product");
+//get data
+// const productsData = await fetchProductData(endpoint.categoryProducts); 
+const renderIndex = async () => {
+  const productsData = await fetchProductData(endpoint.categoryProducts);
+  const arrivedProduct = await fetchProductData(endpoint.arrivedProducts);
+
+
+  updateCartQty();
+  displayProducts(productsData, "category-product");
+  displayProducts(arrivedProduct, "new-arrived-product");
+} 
+
+renderIndex();
+
