@@ -1,0 +1,22 @@
+footer {
+  text-align: center;
+  background-color: map-get($color, primary);
+  padding: 47px 0;
+}
+
+.footer {
+  &-title {
+    font-size: map-get($font-size, sm-3);
+  }
+
+  &-item {
+    padding: 12px 0;
+  }
+
+  &-info-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:18px;
+  }
+}

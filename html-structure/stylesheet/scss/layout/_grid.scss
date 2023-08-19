@@ -1,0 +1,32 @@
+.container {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: -10px -20px;
+}
+
+.col {
+  padding: 10px 20px;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: percentage(calc($i / 12));
+  }
+}
+
+@for $i from 1 through 12 {
+  .row.row-cols-#{$i} {
+    .col {
+      width: percentage(calc(1 / $i));
+    }
+  }
+}
+
+//sass stylesheet/scss/style.scss stylesheet/css/style.css --watch

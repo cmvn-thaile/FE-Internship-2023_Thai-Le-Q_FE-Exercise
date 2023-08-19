@@ -1,0 +1,47 @@
+.filter {
+  &-title {
+    display: block;
+    font-weight: map-get($font-weight, bold);
+    font-size: map-get($font-size, sm-3);
+    padding: 13px 25px;
+    border-radius: 10px 10px 0 0;
+    background-color: map-get($color, primary);
+  }
+  &-list {
+    background-color: map-get($color, gray-2);
+    position: relative;
+  }
+
+  &-products {
+    padding: 0 40px;
+  }
+
+  &-item {
+    padding: 20px 25px;
+    position: relative;
+    text-align: left;
+    font-size: map-get($font-size, sm-2);
+
+    &-active {
+      font-weight: map-get($font-weight, bold);
+      &::before {
+        content: "\2022"; /* Unicode character for a bullet point */
+        vertical-align: middle;
+        margin-right: 10px;
+        color: map-get($color, primary );
+      }
+    }
+  }
+
+  &-list > li:not(:last-child)::after {
+    /* Styles for all list items except the last one */
+    content: "";
+    
+    display: block;
+    position: absolute;
+    width: 80%;
+    margin-top: 20px;
+    height: 1px;
+    background-color: map-get($color, gray-3);
+  }
+}
