@@ -1,0 +1,56 @@
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &-cart {
+    background-image: url("../../assets/img/ic-cart.svg");
+  }
+
+  &-more {
+    height: 8px;
+    background-image: url("../../assets/img/ic-more.svg");
+  }
+
+  &-like {
+    width: 13px;
+    height: 15px;
+    background-image: url("../../assets/img/ic-like.svg");
+  }
+
+  &-comment {
+    width: 13px;
+    height: 15px;
+    background-image: url("../../assets/img/ic-comment.svg");
+  }
+
+  
+  &-facebook {
+    width: 13px;
+    height: 13px;
+    background-image: url("../../assets/img/ic-fb.svg");
+  }
+
+    
+  &-insta {
+    width: 13px;
+    height: 13px;
+    background-image: url("../../assets/img/ic-ig.svg");
+  }
+
+      
+  &-youtube {
+    width: 13px;
+    height: 13px;
+    background-image: url("../../assets/img/ic-yt.svg");
+  }
+
+  &-twitter {
+    width: 13px;
+    height: 13px;
+    background-image: url("../../assets/img/ic-twitter.svg");
+  }
+}

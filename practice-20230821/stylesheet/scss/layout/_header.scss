@@ -1,0 +1,18 @@
+header{
+  position: relative;
+  background-color: map-get($color, primary );
+  border-bottom: 1px solid map-get($color, gray-dark);
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+
+  .logo {
+    &-img {
+      height: 42px;
+      width: 100px;
+    }
+  }
+}

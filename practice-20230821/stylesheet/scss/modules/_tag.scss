@@ -1,0 +1,22 @@
+.blog-tag{
+  padding: 4px 8px;
+  color: map-get($color, gray-dark );
+  background-color: map-get($color, gray );
+  border-radius: 50px;
+  transition: all 0.15s ease-in-out;
+
+  &:hover{
+    color: map-get($color, white );
+    background-color: map-get($color, primary );
+  }
+
+  &-list {
+    display: flex;
+    gap:8px;
+    flex-wrap: wrap;
+
+  }
+  &-item{
+    padding: 8px 0;
+  }
+}
