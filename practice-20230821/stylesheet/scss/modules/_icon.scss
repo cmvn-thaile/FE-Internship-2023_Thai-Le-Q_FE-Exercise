@@ -6,49 +6,49 @@
   background-repeat: no-repeat;
   text-align: center;
 
-  &-cart {
+  &.icon-cart {
     background-image: url("../../assets/img/ic-cart.svg");
   }
 
-  &-more {
+  &.icon-more {
     height: 8px;
     background-image: url("../../assets/img/ic-more.svg");
   }
 
-  &-like {
-    width: 13px;
-    height: 15px;
+  &.icon-like {
+    width: 12px;
+    height: 12px;
     background-image: url("../../assets/img/ic-like.svg");
   }
 
-  &-comment {
-    width: 13px;
-    height: 15px;
+  &.icon-comment {
+    width: 12px;
+    height: 12px;
     background-image: url("../../assets/img/ic-comment.svg");
   }
 
   
-  &-facebook {
+  &.icon-facebook {
     width: 13px;
     height: 13px;
     background-image: url("../../assets/img/ic-fb.svg");
   }
 
     
-  &-insta {
+  &.icon-insta {
     width: 13px;
     height: 13px;
     background-image: url("../../assets/img/ic-ig.svg");
   }
 
       
-  &-youtube {
+  &.icon-youtube {
     width: 13px;
     height: 13px;
     background-image: url("../../assets/img/ic-yt.svg");
   }
 
-  &-twitter {
+  &.icon-twitter {
     width: 13px;
     height: 13px;
     background-image: url("../../assets/img/ic-twitter.svg");
