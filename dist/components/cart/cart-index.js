@@ -1,5 +1,5 @@
-import { cartItemsArr as cartItems } from "./cart.entity.js";
-import { saveToLocalStorage, } from "../../services/localStorageServices.js";
+import { Cart, cartItemsArr as cartItems } from "./cart.entity.js";
+import { getFromLocalStorage, saveToLocalStorage, } from "../../services/localStorageServices.js";
 import { StorageKey } from "../../services/localStorageServices.js";
 import { calSubTotal } from "../../utils/calculation.js";
 export const createCart = (cartItems) => {
@@ -24,6 +24,7 @@ export const createCart = (cartItems) => {
     </thead>`;
     if (cartItems.length > 0) {
         cartItems.forEach((cartItem) => {
+            const cart = new Cart(cartItem);
             cartTable.innerHTML += `
         <tr class="cart-product-row" id="row-product-${cartItem.id}">
         <td >${cartItem.name}</td>
@@ -125,23 +126,32 @@ const renderDeleteBtn = (cartItems) => {
             e.preventDefault();
             const cartItem = cartItems.find((item) => item.id === parseInt(dte.name));
             if (cartItem) {
-                const index = cartItems.indexOf(cartItem);
-                cartItems.splice(index, 1);
-                saveToLocalStorage(StorageKey.CartItems, cartItems);
-                const rowCartItem = document.getElementById(`row-product-${cartItem.id}`);
-                if (rowCartItem !== null) {
-                    rowCartItem.remove();
-                }
-                calculateTotal();
-            }
-            const cartTable = document.querySelector(".cart-table");
-            const cartTotalGroup = document.getElementById("total");
-            if (cartTable !== null && cartItems.length === 0) {
-                cartTable.remove();
-                cartTotalGroup === null || cartTotalGroup === void 0 ? void 0 : cartTotalGroup.remove();
-                cartEmpty();
+                const cart = new Cart({
+                    id: cartItem.id,
+                    name: cartItem.name,
+                    image: cartItem.image,
+                    price: cartItem.price,
+                    discount: cartItem.discount,
+                    quantity: cartItem.quantity,
+                });
+                cart.delete(cartItem.id);
             }
         });
+    }
+};
+export const resetCart = (id) => {
+    const rowCartItem = document.getElementById(`row-product-${id}`);
+    if (rowCartItem !== null) {
+        rowCartItem.remove();
+    }
+    calculateTotal();
+    const cartData = getFromLocalStorage(StorageKey.CartItems);
+    const cartTable = document.querySelector(".cart-table");
+    const cartTotalGroup = document.getElementById("total");
+    if (cartTable && !cartData) {
+        cartTable.remove();
+        cartTotalGroup === null || cartTotalGroup === void 0 ? void 0 : cartTotalGroup.remove();
+        cartEmpty();
     }
 };
 displayCart(cartItems);
