@@ -1,5 +1,6 @@
 const blogs = [
   {
+    id: 1,
     author: {
       name: "Trang Nguyen",
       image: "./assets/img/user-img.png",
@@ -14,6 +15,7 @@ const blogs = [
     tags: ["React", "JavaScript", "Remote Work"],
   },
   {
+    id: 2,
     author: {
       name: "John Smith",
       image: "./assets/img/user-img.png",
@@ -28,6 +30,7 @@ const blogs = [
     tags: ["JavaScript", "Clean Code", "Best Practices"],
   },
   {
+    id: 3,
     author: {
       name: "Jane Doe",
       image: "./assets/img/user-img.png",
@@ -64,7 +67,7 @@ const renderBlog = (blogs) => {
 
                     <button class="btn btn-outline-transparent"><i class="icon icon-more"></i></button>
                   </div>
-
+                  <a href="blog.html" class="blog-link">
                   <div class="blog-content row">
                     <div class="col col-8">
                       <h3 class="blog-title">
@@ -80,6 +83,7 @@ const renderBlog = (blogs) => {
                       alt=${blog.title}
                     />
                   </div>
+                  </a>
                   <div class="blog-footer  col-8">
                     <div class="blog-action">
                       <button class="btn btn-outline-transparent">
@@ -92,8 +96,7 @@ const renderBlog = (blogs) => {
                       </a>
                     </div>
 
-                    <ul id="blog-content-list" class="blog-tag-list">
-                    ${renderTag(blog.tags)}
+                    <ul id="blog-content-list-${blog.id}" class="blog-tag-list">
                     </ul>
                   </div>
                 </div>
@@ -101,18 +104,19 @@ const renderBlog = (blogs) => {
   });
 };
 
-const renderTag = (tags) => {
-  const tagList = document.getElementById("blog-content-list");
-  console.log('1111',tagList);
-  if (tagList === null) return;
-  tags.map((tag) => {
-    console.log(tag)
+const renderTag = (blog) => {
+  let tagList = document.getElementById(`blog-content-list-${blog.id}`);
+  if (tagList === null) return "";
+  blog.tags.map((tag) => {
     tagList.innerHTML += `
     <li class="blog-tag-item">
-      <a class="blog-tag" href="#">zzz</a>
+      <a class="blog-tag" href="#">${tag}</a>
     </li>
     `;
   });
 };
 
 renderBlog(blogs);
+blogs.map((blog) => {
+  renderTag(blog);
+});

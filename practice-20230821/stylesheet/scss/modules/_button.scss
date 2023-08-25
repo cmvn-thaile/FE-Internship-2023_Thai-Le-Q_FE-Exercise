@@ -18,6 +18,10 @@
     padding: 12px 18px;
     font-weight: map-get($font-weight, sm);
   }
+
+  &-dark-blog {
+    background-color: map-get($color, primary);
+  }
 }
 
 .btn-outline {

@@ -27,21 +27,18 @@
     background-image: url("../../assets/img/ic-comment.svg");
   }
 
-  
   &.icon-facebook {
     width: 13px;
     height: 13px;
     background-image: url("../../assets/img/ic-fb.svg");
   }
 
-    
   &.icon-insta {
     width: 13px;
     height: 13px;
     background-image: url("../../assets/img/ic-ig.svg");
   }
 
-      
   &.icon-youtube {
     width: 13px;
     height: 13px;
@@ -52,5 +49,17 @@
     width: 13px;
     height: 13px;
     background-image: url("../../assets/img/ic-twitter.svg");
+  }
+
+  &.icon-twitter-share {
+    background-image: url("../../assets/img/ic-twitter-rounded.svg");
+  }
+
+  &.icon-linkedin-share {
+    background-image: url("../../assets/img/ic-linkedin-rounded.svg");
+  }
+
+  &.icon-fb-share {
+    background-image: url("../../assets/img/ic-facebook-rounded.svg");
   }
 }

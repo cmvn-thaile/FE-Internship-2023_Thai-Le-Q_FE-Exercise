@@ -1,7 +1,49 @@
 body {
-  font-size: map-get($font-size, sm );
-  line-height: map-get($line-height, normal );
-  font-weight: map-get($font-weight, normal );
+  font-size: map-get($font-size, sm);
+  line-height: map-get($line-height, normal);
+  font-weight: map-get($font-weight, normal);
   font-family: $font-family;
+}
 
+article {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: map-get($color, gray-dark);
+
+  & > h3 {
+    color: map-get($color, black);
+  }
+
+  & > blockquote {
+    color: #1c1e20;
+    border-left: 4px solid #343a40;
+    padding-left: 20px; /* add some padding to the left of the text */
+  }
+  & > ul  {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+  }
+
+  & > ul li::before {
+    content: "\2022"; /* use a bullet point character */
+
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
+
+figure > figcaption {
+  padding-top: 10px;
+
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  color: #9ea0a8;
 }

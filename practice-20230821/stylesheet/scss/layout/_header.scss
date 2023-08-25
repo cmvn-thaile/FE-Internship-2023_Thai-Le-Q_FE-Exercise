@@ -1,6 +1,6 @@
-header{
+.header {
   position: relative;
-  background-color: map-get($color, primary );
+  background-color: map-get($color, primary);
   border-bottom: 1px solid map-get($color, gray-dark);
   & > div {
     display: flex;
@@ -15,4 +15,9 @@ header{
       width: 100px;
     }
   }
+}
+
+.header-blog {
+  background-color: map-get($color, white);
+  border-bottom: none;
 }
